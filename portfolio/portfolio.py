@@ -1,7 +1,7 @@
 import reflex as rx
-from portoflio.header import Header
-from portoflio.main import Main
-from portoflio.footer import Footer
+from portfolio.header import Header
+from portfolio.main import Main
+from portfolio.footer import Footer
 
 dots_animation = {
     "@keyframes dots": {
