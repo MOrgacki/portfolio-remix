@@ -4,11 +4,12 @@ from reflex.components.radix.themes.layout.stack import HStack, VStack
 
 css: dict = {
     "main": {
-        "height": "100%",
+        "height": "100vh",
+        "min_height": "100vh",
         "width": "100%",
         "padding": ["0.5rem 0.5rem 0.5rem 0.5rem",],
         "align_items": "center",
-        "justify_content": "start"
+        "justify_content": "center"
     }
 }
 
@@ -61,13 +62,13 @@ class Main:
                 "animation": "wave 0.8s cubic-bezier(0.25,0.46,0.45,0.94) infinite alternate-reverse both"
             },)]
 
-        self.badge_stack_max: HStack = rx.hstack(spacing="1rem")
-        self.badge_stack_min: VStack = rx.vstack(
-            spacing="0.85rem", align="center")
+        self.badge_stack_max: rx.Component = rx.hstack(spacing="4")
+        self.badge_stack_min: rx.Component = rx.vstack(
+            spacing="2", align="center")
         self.name_mobile: VStack = rx.vstack(rx.hstack(self.a, self.b), *self.rest, align="center"
                                              )
         self.name_desktop: HStack = rx.hstack(self.a, self.b, *self.rest,
-                                              spacing="1rem", line_height="1", padding=["0.5rem",],)
+                                              spacing="4", line_height="1", padding=["0.5rem",],)
         titles: list = ["QA Manager",
                         "Senior QA Engineer", "Test Automation Specialist"]
         self.badge_stack_max.children = [
@@ -75,7 +76,7 @@ class Main:
         self.badge_stack_min.children = [
             self._create_badges(title) for title in titles]
 
-        self.crumbs: HStack = rx.hstack(spacing="1rem")
+        self.crumbs: rx.Component = rx.hstack(spacing="4")
         data: list = [("github", "GitHub", "https://github.com/MOrgacki"),
                       ["linkedin", "LinkedIn", "https://www.linkedin.com/in/m-orgacki/"]]
         self.crumbs.children = [
