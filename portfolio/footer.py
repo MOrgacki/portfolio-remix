@@ -1,22 +1,23 @@
 import reflex as rx
 from reflex.components.radix.themes.layout.stack import HStack
 css: dict = {
-    "footer":
-    {
-
+    "footer": {
         "align_items": "center",
-        "padding": ["0rem 1rem", "0rem 1rem", "0rem 1rem", "0rem 8rem", "0rem 8rem",],
-        "transition": "all 550ms ease"
+        "padding": ["1rem 1rem", "1rem 1rem", "1rem 2rem", "1rem 2rem", "1rem 2rem"],
+        "transition": "all 550ms ease",
+        "flexShrink": "0",
+        "justifyContent": "center"
     }
 }
 
 
 class Footer:
     def __init__(self) -> None:
-        self.footer: HStack = rx.hstack(style=css.get("footer"))
-        self.footer.children.append(
-            rx.text("Created by Marcin Orgacki with Reflex.dev ❤️",
-                    font_size="10px", font_weight="semibold", align="center")
+        self.footer: HStack = rx.hstack(
+            # Removed footer text for cleaner design
+            justify="center",
+            align="center",
+            style=css.get("footer")
         )
 
     def build(self) -> HStack:
