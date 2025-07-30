@@ -53,11 +53,13 @@ def nav_item_mobile(text: str, icon: str, href: str) -> rx.Component:
     return rx.link(
         rx.hstack(
             rx.icon(icon, color="white", size=20),
-            rx.text(text, size="3", color="white", weight="medium"),
+            rx.text(text, size="4", color="white", weight="medium"),
             align="center",
-            spacing="2",
-            padding_x="1rem",
-            padding_y="0.5rem",
+            justify="center",
+            spacing="3",
+            width="100%",
+            padding_x="2rem",
+            padding_y="1rem",
             style={
                 "_hover": {
                     "bg": "rgba(0, 212, 255, 0.1)",
@@ -65,12 +67,15 @@ def nav_item_mobile(text: str, icon: str, href: str) -> rx.Component:
                     "transform": "translateY(-1px)",
                     "boxShadow": "0 4px 20px rgba(0, 212, 255, 0.2)",
                 },
-                "border-radius": "0.5em",
+                "border-radius": "0.75rem",
                 "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                "minHeight": "60px",
+                "border": "1px solid rgba(255, 255, 255, 0.1)"
             },
         ),
         href=href,
         underline="none",
+        width="100%"
     )
 
 class Header:
@@ -145,18 +150,25 @@ class Header:
                                     text_align="right",
                                     margin_bottom="2rem"
                                 ),
-                                nav_item_mobile("Home", "home", "/"),
-                                nav_item_mobile("Projects", "square-library", "/projects"),
-                                nav_item_mobile("Blog", "bar-chart-4", "/blog"),
-                                spacing="4",
+                                rx.vstack(
+                                    nav_item_mobile("Home", "home", "/"),
+                                    nav_item_mobile("Projects", "square-library", "/projects"),
+                                    nav_item_mobile("Blog", "bar-chart-4", "/blog"),
+                                    spacing="6",
+                                    width="100%",
+                                    align="stretch"
+                                ),
+                                spacing="0",
                                 width="100%",
-                                align="center",
-                                padding="2rem"
+                                height="100%",
+                                justify="center",
+                                align="stretch",
+                                padding="2rem 1.5rem"
                             ),
                             top="0",
                             right="0",
                             height="100%",
-                            width="250px",
+                            width="280px",
                             z_index="20",
                             style={
                                 "background": "rgba(15, 15, 35, 0.95)",

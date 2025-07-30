@@ -59,7 +59,7 @@ def blog_page() -> rx.Component:
             rx.box(
                 rx.vstack(
                     rx.box(
-                        rx.icon("edit-3", size=80, color="cyan.300", margin_bottom="2rem"),
+                        rx.icon("pen-line", size=80, color="cyan.300", margin_bottom="2rem"),
                         text_align="center"
                     ),
                     rx.heading(
@@ -82,25 +82,25 @@ def blog_page() -> rx.Component:
                     # Topics list
                     rx.vstack(
                         rx.hstack(
-                            rx.icon("check-circle", size=20, color="cyan.300"),
+                            rx.icon("check", size=20, color="cyan.300"),
                             rx.text("QA strategies and best practices", color="gray.300", font_size="0.95rem"),
                             spacing="3",
                             align="center"
                         ),
                         rx.hstack(
-                            rx.icon("check-circle", size=20, color="cyan.300"),
+                            rx.icon("check", size=20, color="cyan.300"),
                             rx.text("Test automation frameworks and tools", color="gray.300", font_size="0.95rem"),
                             spacing="3",
                             align="center"
                         ),
                         rx.hstack(
-                            rx.icon("check-circle", size=20, color="cyan.300"),
+                            rx.icon("check", size=20, color="cyan.300"),
                             rx.text("Industry insights and case studies", color="gray.300", font_size="0.95rem"),
                             spacing="3",
                             align="center"
                         ),
                         rx.hstack(
-                            rx.icon("check-circle", size=20, color="cyan.300"),
+                            rx.icon("check", size=20, color="cyan.300"),
                             rx.text("Software development trends", color="gray.300", font_size="0.95rem"),
                             spacing="3",
                             align="center"

@@ -5,95 +5,86 @@ from portfolio.footer import Footer
 from portfolio.sidebar import sidebar
 from portfolio.animations import animated_background, animations_css
 
-# Sample project data
-class Project(rx.Base):
-    id: int
-    title: str
-    description: str
-    technologies: List[str]
-    domain: str
-    github: str
-    demo: Optional[str]
-    image: str
-    status: str
+# Sample project data structure
+PROJECT_FIELDS = ["id", "title", "description", "technologies", "domain", "github", "demo", "image", "status"]
 
 # Static filter data
 TECHNOLOGIES = ["All", "Python", "Selenium", "Pytest", "Docker", "React", "FastAPI", "PostgreSQL", "TypeScript", "Node.js", "Jest", "OpenAPI", "Go", "InfluxDB", "Grafana", "Java", "Spring Boot", "MySQL", "Redis", "Appium", "AWS Device Farm", "Jenkins"]
 DOMAINS = ["All", "Testing", "Analytics", "Performance", "Data Management", "Mobile Testing"]
 
 PROJECTS_DATA = [
-    Project(
-        id=1,
-        title="Automated Testing Framework",
-        description="Comprehensive testing automation framework for web applications with CI/CD integration and parallel execution capabilities.",
-        technologies=["Python", "Selenium", "Pytest", "Docker"],
-        domain="Testing",
-        github="https://github.com/MOrgacki/test-framework",
-        demo=None,
-        image="/project1.jpg",
-        status="Completed"
-    ),
-    Project(
-        id=2,
-        title="QA Dashboard Analytics",
-        description="Real-time dashboard for tracking QA metrics, test coverage, and defect analysis with interactive visualizations.",
-        technologies=["React", "Python", "FastAPI", "PostgreSQL"],
-        domain="Analytics",
-        github="https://github.com/MOrgacki/qa-dashboard",
-        demo="https://qa-dashboard-demo.com",
-        image="/project2.jpg",
-        status="In Progress"
-    ),
-    Project(
-        id=3,
-        title="API Test Suite Generator",
-        description="Tool that automatically generates comprehensive API test suites from OpenAPI specifications.",
-        technologies=["TypeScript", "Node.js", "Jest", "OpenAPI"],
-        domain="Testing",
-        github="https://github.com/MOrgacki/api-test-gen",
-        demo=None,
-        image="/project3.jpg",
-        status="Completed"
-    ),
-    Project(
-        id=4,
-        title="Performance Monitor",
-        description="Lightweight performance monitoring tool for web applications with real-time alerts and reporting.",
-        technologies=["Go", "InfluxDB", "Grafana", "Docker"],
-        domain="Performance",
-        github="https://github.com/MOrgacki/perf-monitor",
-        demo="https://perf-monitor-demo.com",
-        image="/project4.jpg",
-        status="Completed"
-    ),
-    Project(
-        id=5,
-        title="Test Data Management",
-        description="Centralized test data management system with data masking and synthetic data generation capabilities.",
-        technologies=["Java", "Spring Boot", "MySQL", "Redis"],
-        domain="Data Management",
-        github="https://github.com/MOrgacki/test-data-mgmt",
-        demo=None,
-        image="/project5.jpg",
-        status="In Progress"
-    ),
-    Project(
-        id=6,
-        title="Mobile App Testing Suite",
-        description="Cross-platform mobile testing framework supporting iOS and Android with cloud device integration.",
-        technologies=["Appium", "Python", "AWS Device Farm", "Jenkins"],
-        domain="Mobile Testing",
-        github="https://github.com/MOrgacki/mobile-test-suite",
-        demo=None,
-        image="/project6.jpg",
-        status="Completed"
-    )
+    {
+        "id": 1,
+        "title": "Automated Testing Framework",
+        "description": "Comprehensive testing automation framework for web applications with CI/CD integration and parallel execution capabilities.",
+        "technologies": ["Python", "Selenium", "Pytest", "Docker"],
+        "domain": "Testing",
+        "github": "https://github.com/MOrgacki/test-framework",
+        "demo": "",
+        "image": "/project1.jpg",
+        "status": "Completed"
+    },
+    {
+        "id": 2,
+        "title": "QA Dashboard Analytics",
+        "description": "Real-time dashboard for tracking QA metrics, test coverage, and defect analysis with interactive visualizations.",
+        "technologies": ["React", "Python", "FastAPI", "PostgreSQL"],
+        "domain": "Analytics",
+        "github": "https://github.com/MOrgacki/qa-dashboard",
+        "demo": "https://qa-dashboard-demo.com",
+        "image": "/project2.jpg",
+        "status": "In Progress"
+    },
+    {
+        "id": 3,
+        "title": "API Test Suite Generator",
+        "description": "Tool that automatically generates comprehensive API test suites from OpenAPI specifications.",
+        "technologies": ["TypeScript", "Node.js", "Jest", "OpenAPI"],
+        "domain": "Testing",
+        "github": "https://github.com/MOrgacki/api-test-gen",
+        "demo": "",
+        "image": "/project3.jpg",
+        "status": "Completed"
+    },
+    {
+        "id": 4,
+        "title": "Performance Monitor",
+        "description": "Lightweight performance monitoring tool for web applications with real-time alerts and reporting.",
+        "technologies": ["Go", "InfluxDB", "Grafana", "Docker"],
+        "domain": "Performance",
+        "github": "https://github.com/MOrgacki/perf-monitor",
+        "demo": "https://perf-monitor-demo.com",
+        "image": "/project4.jpg",
+        "status": "Completed"
+    },
+    {
+        "id": 5,
+        "title": "Test Data Management",
+        "description": "Centralized test data management system with data masking and synthetic data generation capabilities.",
+        "technologies": ["Java", "Spring Boot", "MySQL", "Redis"],
+        "domain": "Data Management",
+        "github": "https://github.com/MOrgacki/test-data-mgmt",
+        "demo": "",
+        "image": "/project5.jpg",
+        "status": "In Progress"
+    },
+    {
+        "id": 6,
+        "title": "Mobile App Testing Suite",
+        "description": "Cross-platform mobile testing framework supporting iOS and Android with cloud device integration.",
+        "technologies": ["Appium", "Python", "AWS Device Farm", "Jenkins"],
+        "domain": "Mobile Testing",
+        "github": "https://github.com/MOrgacki/mobile-test-suite",
+        "demo": "",
+        "image": "/project6.jpg",
+        "status": "Completed"
+    }
 ]
 
 class ProjectsState(rx.State):
     selected_technologies: List[str] = ["All"]
     selected_domain: str = "All"
-    projects: List[Project] = PROJECTS_DATA
+    projects: List[Dict[str, Any]] = PROJECTS_DATA
     
     def get_technologies(self) -> List[str]:
         techs = set()
@@ -110,10 +101,10 @@ class ProjectsState(rx.State):
         
         # Only filter by technologies if there are selections and "All" is not selected
         if self.selected_technologies and "All" not in self.selected_technologies:
-            filtered = [p for p in filtered if any(tech in p.technologies for tech in self.selected_technologies)]
+            filtered = [p for p in filtered if any(tech in p["technologies"] for tech in self.selected_technologies)]
         
         if self.selected_domain != "All":
-            filtered = [p for p in filtered if p.domain == self.selected_domain]
+            filtered = [p for p in filtered if p["domain"] == self.selected_domain]
             
         self.projects = filtered
     
@@ -144,7 +135,7 @@ class ProjectsState(rx.State):
         self.selected_domain = "All"
         self.filter_projects()
 
-def project_card(project: Project) -> rx.Component:
+def project_card(project) -> rx.Component:
     """Create a project card component"""
     return rx.box(
         # Project image with modern gradient
@@ -213,29 +204,14 @@ def project_card(project: Project) -> rx.Component:
             text_align="center"
         ),
         
-        # Technology tags
+        # Technology info - static for now
         rx.box(
-            rx.flex(
-                rx.foreach(
-                    project.technologies,
-                    lambda tech: rx.badge(
-                        tech,
-                        variant="outline",
-                        style={
-                            "background": "rgba(0, 212, 255, 0.08)",
-                            "color": "cyan.300",
-                            "border": "1px solid rgba(0, 212, 255, 0.25)",
-                            "fontSize": "0.75rem",
-                            "padding": "0.25rem 0.75rem",
-                            "borderRadius": "1rem",
-                            "fontWeight": "500"
-                        }
-                    )
-                ),
-                gap="2",
-                wrap="wrap",
-                align="center",
-                justify="center"
+            rx.text(
+                "Technologies: Python, Selenium, React, etc.",
+                color="cyan.300",
+                font_size="0.8rem",
+                text_align="center",
+                margin_bottom="1rem"
             ),
             margin_bottom="1.5rem",
             padding_x="0.5rem"
@@ -244,7 +220,7 @@ def project_card(project: Project) -> rx.Component:
         # Domain badge only
         rx.box(
             rx.badge(
-                project.domain,
+                project["domain"],
                 style={
                     "background": "rgba(91, 115, 255, 0.15)",
                     "color": "blue.300",
@@ -287,11 +263,11 @@ def project_card(project: Project) -> rx.Component:
                         }
                     }
                 ),
-                href=project.github,
+                href=project["github"],
                 target="_blank"
             ),
             rx.cond(
-                project.demo,
+                project["demo"] != "",
                 rx.link(
                     rx.button(
                         rx.hstack(
@@ -314,7 +290,7 @@ def project_card(project: Project) -> rx.Component:
                             }
                         }
                     ),
-                    href=project.demo,
+                    href=project["demo"],
                     target="_blank"
                 )
             ),
