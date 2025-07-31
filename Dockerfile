@@ -22,11 +22,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the entire project
 COPY . .
 
-# Expose ports for frontend and backend
-EXPOSE 3000 8000
+# Expose port 80 for web traffic
+EXPOSE 80
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Run the Reflex application with public hosting configuration
-CMD ["reflex", "run", "--env", "prod", "--backend-host", "0.0.0.0"]
+# Run the Reflex application in frontend-only mode on port 80
+CMD ["reflex", "run", "--env", "prod", "--frontend-only", "--frontend-host", "0.0.0.0", "--frontend-port", "80"]
