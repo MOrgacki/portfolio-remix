@@ -29,4 +29,4 @@ EXPOSE 80
 ENV PYTHONUNBUFFERED=1
 
 # Run the Reflex application in frontend-only mode on port 80
-CMD ["reflex", "run", "--env", "prod", "--frontend-only", "--frontend-host", "0.0.0.0", "--frontend-port", "80"]
+CMD ["reflex", "run", "--env", "prod", "--frontend-only", "--frontend-port", "80"]
