@@ -5,3 +5,19 @@ assets/external/
 .web
 __pycache__/
 .venv
+
+# Astro / Node
+dist/
+.astro/
+node_modules/
+*.log
+.env*
+playwright-report/
+test-results/
+
+# Private documents are never published or committed (FR-024)
+*.pdf
+
+# OS / editors
+.DS_Store
+Thumbs.db

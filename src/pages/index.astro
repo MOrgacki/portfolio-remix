@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import About from '../components/sections/About.astro';
+---
+
+<BaseLayout titleKey="page_title_home" descriptionKey="page_description_home" nav="home">
+  <div class="page home">
+    <Hero />
+    <About />
+  </div>
+</BaseLayout>

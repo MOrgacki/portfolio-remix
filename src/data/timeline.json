@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "icon": "school",
+    "color": "cyan",
+    "titleKey": "timeline_step1",
+    "descKey": "timeline_step1_desc"
+  },
+  {
+    "id": 2,
+    "icon": "code",
+    "color": "blue",
+    "titleKey": "timeline_step2",
+    "descKey": "timeline_step2_desc"
+  },
+  {
+    "id": 3,
+    "icon": "lightbulb",
+    "color": "purple",
+    "titleKey": "timeline_step3",
+    "descKey": "timeline_step3_desc"
+  },
+  {
+    "id": 4,
+    "icon": "briefcase-business",
+    "color": "pink",
+    "titleKey": "timeline_step4",
+    "descKey": "timeline_step4_desc"
+  },
+  {
+    "id": 5,
+    "icon": "trophy",
+    "color": "orange",
+    "titleKey": "timeline_step5",
+    "descKey": "timeline_step5_desc"
+  },
+  {
+    "id": 6,
+    "icon": "sparkles",
+    "color": "green",
+    "titleKey": "timeline_step6",
+    "descKey": "timeline_step6_desc"
+  }
+]

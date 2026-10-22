@@ -1,0 +1,44 @@
+[
+  {
+    "id": "testing",
+    "icon": "bug",
+    "color": "cyan",
+    "titleKey": "service_testing_title",
+    "descKey": "service_testing_desc"
+  },
+  {
+    "id": "automation",
+    "icon": "workflow",
+    "color": "blue",
+    "titleKey": "service_automation_title",
+    "descKey": "service_automation_desc"
+  },
+  {
+    "id": "ai",
+    "icon": "bot",
+    "color": "purple",
+    "titleKey": "service_ai_title",
+    "descKey": "service_ai_desc"
+  },
+  {
+    "id": "strategy",
+    "icon": "clipboard-list",
+    "color": "pink",
+    "titleKey": "service_strategy_title",
+    "descKey": "service_strategy_desc"
+  },
+  {
+    "id": "relations",
+    "icon": "users",
+    "color": "orange",
+    "titleKey": "service_relations_title",
+    "descKey": "service_relations_desc"
+  },
+  {
+    "id": "security",
+    "icon": "shield",
+    "color": "green",
+    "titleKey": "service_security_title",
+    "descKey": "service_security_desc"
+  }
+]

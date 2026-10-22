@@ -1,0 +1,57 @@
+---
+// Bilingual text: both languages are rendered, CSS shows the active one (research R4).
+// Leading/trailing emoji get their own span so gradient headings don't paint them as blobs.
+import type { HTMLTag } from 'astro/types';
+import { t, type TKey } from '../i18n';
+
+interface Props {
+  k?: TKey;
+  /** Inline values instead of a dictionary key, e.g. project data. */
+  en?: string;
+  pl?: string;
+  as?: HTMLTag;
+  class?: string;
+}
+
+const { k, as: Tag, class: className } = Astro.props;
+const en = k ? t(k, 'en') : (Astro.props.en ?? '');
+const pl = k ? t(k, 'pl') : (Astro.props.pl ?? '');
+
+const EMOJI =
+  /^(\p{Extended_Pictographic}[️‍\p{Extended_Pictographic}]*)\s*|\s*(\p{Extended_Pictographic}[️‍\p{Extended_Pictographic}]*)$/gu;
+
+function parts(text: string) {
+  const out: { emoji: boolean; text: string }[] = [];
+  let last = 0;
+  for (const m of text.matchAll(EMOJI)) {
+    if (m.index > last) out.push({ emoji: false, text: text.slice(last, m.index) });
+    out.push({ emoji: true, text: (m[1] ?? m[2]) + (m[1] ? ' ' : '') });
+    if (m[2]) out[out.length - 1].text = ' ' + m[2];
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) out.push({ emoji: false, text: text.slice(last) });
+  return out;
+}
+const enParts = parts(en);
+const plParts = parts(pl);
+---
+
+{Tag ? (
+  <Tag class={className}>
+    <span lang="en">
+      {enParts.map((p) => (p.emoji ? <span class="emoji-plain">{p.text}</span> : p.text))}
+    </span>
+    <span lang="pl">
+      {plParts.map((p) => (p.emoji ? <span class="emoji-plain">{p.text}</span> : p.text))}
+    </span>
+  </Tag>
+) : (
+  <>
+    <span lang="en" class={className}>
+      {enParts.map((p) => (p.emoji ? <span class="emoji-plain">{p.text}</span> : p.text))}
+    </span>
+    <span lang="pl" class={className}>
+      {plParts.map((p) => (p.emoji ? <span class="emoji-plain">{p.text}</span> : p.text))}
+    </span>
+  </>
+)}

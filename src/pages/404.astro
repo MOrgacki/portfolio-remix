@@ -1,0 +1,46 @@
+---
+import { House } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import T from '../components/T.astro';
+import { url } from '../lib/url';
+---
+
+<BaseLayout titleKey="page_title_not_found" descriptionKey="not_found_text">
+  <div class="page not-found">
+    <p class="code gradient-text" aria-hidden="true">
+      404
+    </p>
+    <h1>
+      <T k="not_found_title" />
+    </h1>
+    <T k="not_found_text" as="p" class="page-lead" />
+    <a class="btn btn-primary" href={url('')}>
+      <House size={20} aria-hidden="true" />
+      <T k="not_found_home" />
+    </a>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-height: 60vh;
+    justify-content: center;
+    text-align: center;
+  }
+  .code {
+    font-size: clamp(5rem, 20vw, 9rem);
+    font-weight: 900;
+    line-height: 1;
+  }
+  h1 {
+    color: #fff;
+    font-size: 2rem;
+  }
+  .btn {
+    margin-top: 1rem;
+  }
+</style>

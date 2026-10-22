@@ -1,0 +1,63 @@
+/* Theme tokens ported from the legacy Reflex styles (portfolio.py, main.py, projects.py). */
+:root {
+  color-scheme: dark;
+
+  /* Background */
+  --bg-0: #0f0f23;
+  --bg-1: #1a1a2e;
+  --bg-2: #16213e;
+  --bg-gradient: linear-gradient(135deg, var(--bg-0) 0%, var(--bg-1) 50%, var(--bg-2) 100%);
+  --surface: rgba(15, 23, 42, 0.5);
+  --surface-strong: rgba(30, 41, 59, 0.8);
+  --surface-header: rgba(15, 15, 35, 0.9);
+  --border: rgba(100, 116, 139, 0.2);
+  --border-strong: rgba(100, 116, 139, 0.3);
+
+  /* Accent palette */
+  --cyan: #00d4ff;
+  --blue: #5b73ff;
+  --purple: #8b5cf6;
+  --pink: #ec4899;
+  --orange: #f97316;
+  --amber: #fbbf24;
+  --green: #22c55e;
+  --accent: var(--cyan);
+  --accent-text: #67e8f9;
+  --accent-gradient: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 100%);
+  --heading-gradient: linear-gradient(135deg, var(--cyan) 0%, var(--blue) 50%, var(--purple) 100%);
+
+  /* Slate grays (text on dark) */
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #a3b1c6;
+  --gray-500: #64748b;
+
+  /* Tech category colors (TECH_CATEGORIES in legacy projects.py) */
+  --tech-cyan: 0, 212, 255;
+  --tech-blue: 91, 115, 255;
+  --tech-purple: 139, 92, 246;
+  --tech-pink: 236, 72, 153;
+  --tech-green: 34, 197, 94;
+  --tech-orange: 251, 191, 36;
+
+  /* Brand colors */
+  --brand-github: rgba(36, 41, 47, 0.8);
+  --brand-github-hover: rgb(36, 41, 47);
+  --brand-linkedin: rgba(0, 119, 181, 0.8);
+  --brand-linkedin-hover: rgb(0, 119, 181);
+  --brand-email: rgba(0, 150, 190, 0.9);
+  --brand-email-hover: rgb(0, 130, 170);
+
+  /* Shape & motion */
+  --radius-sm: 0.5rem;
+  --radius: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-full: 999px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  --transition: all 0.3s ease;
+
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --content-width: 1400px;
+}

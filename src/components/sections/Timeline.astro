@@ -1,0 +1,100 @@
+---
+// Port of the "My Journey" timeline of experience_page(): horizontal on desktop,
+// horizontally scrollable cards on mobile.
+import T from '../T.astro';
+import Icon from '../Icon.astro';
+import { timeline } from '../../lib/content';
+---
+
+<section class="panel timeline-panel" aria-labelledby="timeline-title">
+  <h2 class="section-title warm" id="timeline-title">
+    <T k="timeline_title" />
+  </h2>
+  <ol class="timeline" role="list" tabindex="0" aria-labelledby="timeline-title">
+    {timeline.map((step) => (
+      <li class={`step c-${step.color}`}>
+        <span class="dot">
+          <Icon name={step.icon} size={32} />
+        </span>
+        <T k={step.titleKey} as="h3" class="step-title" />
+        <T k={step.descKey} as="p" class="step-text" />
+      </li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .timeline-panel {
+    margin-bottom: 3rem;
+  }
+  .warm {
+    background: linear-gradient(135deg, #ec4899 0%, #f43f5e 50%, #fb923c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .timeline {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0.25rem 1.25rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 212, 255, 0.3) transparent;
+  }
+  .step {
+    position: relative;
+    display: flex;
+    flex: 0 0 200px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(var(--c), 0.2);
+    border-radius: var(--radius-lg);
+    background: rgba(15, 23, 42, 0.4);
+    text-align: center;
+  }
+  .dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 0.5rem;
+    border: 3px solid rgba(var(--c), 0.5);
+    border-radius: 50%;
+    background: rgba(var(--c), 0.15);
+    box-shadow: 0 0 25px rgba(var(--c), 0.4);
+    color: color-mix(in srgb, rgb(var(--c)) 60%, white);
+  }
+  .step :global(.step-title) {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+  .step :global(.step-text) {
+    color: var(--gray-400);
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  @media (min-width: 1024px) {
+    .timeline {
+      overflow: visible;
+      justify-content: space-between;
+    }
+    .step {
+      flex: 1 1 0;
+      border: 0;
+      background: none;
+    }
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: calc(1rem + 36px);
+      left: calc(50% + 48px);
+      width: calc(100% - 96px + 1rem);
+      height: 3px;
+      background: linear-gradient(90deg, rgba(var(--c), 0.4), rgba(91, 115, 255, 0.4));
+    }
+  }
+</style>

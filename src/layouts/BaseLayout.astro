@@ -1,0 +1,90 @@
+---
+import { getImage } from 'astro:assets';
+import '../styles/global.css';
+import AnimatedBackground from '../components/AnimatedBackground.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LanguageButton from '../components/LanguageButton.astro';
+import T from '../components/T.astro';
+import profile from '../assets/profile.png';
+import { t, type TKey } from '../i18n';
+import { url } from '../lib/url';
+
+import type { NavKey } from '../lib/nav';
+
+interface Props {
+  titleKey: TKey;
+  descriptionKey: TKey;
+  nav?: NavKey;
+}
+
+const { titleKey, descriptionKey, nav } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const ogImage = await getImage({ src: profile, format: 'png', width: 600 });
+---
+
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Resolve the language before first paint so Polish visitors never see English (contracts/i18n.md). -->
+    <script is:inline>
+      (function () {
+        var lang = null;
+        try {
+          lang = localStorage.getItem('portfolio.lang');
+        } catch (e) {}
+        if (lang !== 'en' && lang !== 'pl') {
+          var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+          lang = nav.toLowerCase().indexOf('pl') === 0 ? 'pl' : 'en';
+        }
+        document.documentElement.dataset.lang = lang;
+        document.documentElement.lang = lang;
+      })();
+    </script>
+    <title>{t(titleKey, 'en')}</title>
+    <meta name="i18n-title-pl" content={t(titleKey, 'pl')} />
+    <meta name="description" content={t(descriptionKey, 'en')} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href={url('favicon.ico')} sizes="any" />
+    <meta name="theme-color" content="#0f0f23" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={t(titleKey, 'en')} />
+    <meta property="og:description" content={t(descriptionKey, 'en')} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(ogImage.src, Astro.site)} />
+    <meta name="twitter:card" content="summary" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      <T k="skip_to_content" />
+    </a>
+    <AnimatedBackground />
+    <div class="shell">
+      <Header current={nav} />
+      <main id="main" tabindex="-1">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+    <LanguageButton floating />
+    <script>
+      import '../scripts/lang';
+    </script>
+  </body>
+</html>
+
+<style>
+  .shell {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex: 1;
+    outline: none;
+  }
+</style>

@@ -1,0 +1,9 @@
+[
+  { "id": "github", "labelKey": "contact_github", "href": "https://github.com/MOrgacki" },
+  {
+    "id": "linkedin",
+    "labelKey": "contact_linkedin",
+    "href": "https://www.linkedin.com/in/m-orgacki/"
+  },
+  { "id": "email", "labelKey": "contact_email", "href": "mailto:marcinorgacki@gmail.com" }
+]

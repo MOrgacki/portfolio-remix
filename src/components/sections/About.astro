@@ -1,0 +1,164 @@
+---
+// Port of _create_window_box() + _create_info_view() from portfolio/main.py.
+// The legacy AI-chat placeholder is replaced by a "Let's talk" link to Contact (FR-005).
+import { MessageCircle } from '@lucide/astro';
+import T from '../T.astro';
+import { url } from '../../lib/url';
+
+const tags = [
+  { k: 'about_tag_1', c: 'c-cyan' },
+  { k: 'about_tag_2', c: 'c-blue' },
+  { k: 'about_tag_3', c: 'c-purple' },
+  { k: 'about_tag_4', c: 'c-pink' },
+  { k: 'about_tag_5', c: 'c-orange' },
+] as const;
+---
+
+<section class="window-wrap animate-in" aria-labelledby="about-title">
+  <span class="emoji e1" aria-hidden="true">
+    🚀
+  </span>
+  <span class="emoji e2" aria-hidden="true">
+    ✨
+  </span>
+  <span class="emoji e3" aria-hidden="true">
+    🎯
+  </span>
+  <span class="emoji e4" aria-hidden="true">
+    💡
+  </span>
+
+  <div class="window">
+    <div class="titlebar">
+      <span class="dots" aria-hidden="true">
+        <i></i>
+        <i></i>
+        <i></i>
+      </span>
+      <T k="about_file_title" class="file" />
+    </div>
+    <div class="content">
+      <T k="about_title" as="h2" class="about-title" />
+      <T k="about_intro_1" as="p" />
+      <T k="about_intro_2" as="p" />
+      <ul class="badge-list tags" role="list">
+        {tags.map(({ k, c }) => (
+          <li class={`badge ${c}`}>
+            <T k={k} />
+          </li>
+        ))}
+      </ul>
+      <a class="btn btn-primary" href={url('contact/')} data-cta="lets-talk">
+        <MessageCircle size={20} aria-hidden="true" />
+        <T k="about_cta_lets_talk" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .window-wrap {
+    position: relative;
+    width: min(700px, 95%);
+    margin: 3rem auto;
+    animation-delay: 0.3s;
+  }
+  .emoji {
+    position: absolute;
+    z-index: 15;
+    font-size: 2rem;
+    animation: bob 3s ease-in-out infinite;
+  }
+  .e1 {
+    top: -20px;
+    left: -12px;
+    font-size: 2.5rem;
+  }
+  .e2 {
+    top: -15px;
+    right: 40px;
+    animation-delay: 0.5s;
+  }
+  .e3 {
+    bottom: -20px;
+    right: -12px;
+    font-size: 2.5rem;
+    animation-delay: 1s;
+  }
+  .e4 {
+    bottom: 30px;
+    left: -16px;
+    animation-delay: 1.5s;
+  }
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .window {
+    overflow: hidden;
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    background: var(--surface-strong);
+    backdrop-filter: blur(20px);
+    box-shadow:
+      var(--shadow-lg),
+      0 0 0 1px rgba(255, 255, 255, 0.05);
+  }
+  .titlebar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(30, 41, 59, 0.95);
+    border-bottom: 1px solid var(--border-strong);
+  }
+  .dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .dots i {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f57;
+  }
+  .dots i:nth-child(2) {
+    background: #febc2e;
+  }
+  .dots i:nth-child(3) {
+    background: #28c840;
+  }
+  .titlebar :global(.file) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gray-400);
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    color: var(--gray-300);
+    line-height: 1.7;
+  }
+  .content :global(.about-title) {
+    margin-bottom: 0.5rem;
+    color: var(--accent-text);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .tags {
+    justify-content: center;
+    margin: 1rem 0 1.25rem;
+  }
+</style>

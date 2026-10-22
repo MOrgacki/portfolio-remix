@@ -1,0 +1,233 @@
+{
+  "_note": "DRAFT Polish translations (owner review required, see specs/001-astro-github-pages/checklists/polish-copy.md). Faithful translations of the English source; no new facts.",
+  "descriptions": {
+    "ai-research-analysis-platform-rag": "Platforma SaaS oparta na AI do analizy publikacji naukowych i dokumentów badawczych z wykorzystaniem Retrieval-Augmented Generation (RAG). Frontend w React Native, backend w FastAPI, wektorowa baza danych do indeksowania semantycznego, PostgreSQL dla danych strukturalnych. Rozwinięta w mikroserwis dla korporacyjnych zespołów badawczych.",
+    "nft-marketplace-platform": "Platforma marketplace NFT z integracją OpenSea, umożliwiająca użytkownikom wymianę, kupno i sprzedaż NFT. Backend zbudowany w Go dla wydajnych usług API oraz w Rust do interakcji ze smart kontraktami. Przetestowałem mintowanie NFT, procesy handlowe, integracje portfeli i kompatybilność z API OpenSea. Zweryfikowałem bezpieczeństwo transakcji, optymalizację opłat gas i obsługę metadanych w wielu sieciach blockchain.",
+    "client-app-partner-zone-platform": "System partnerski do zakupu złota, medali, obrączek i biżuterii. Rozwiązanie dwuplatformowe z aplikacją dla klientów do przeglądania produktów, składania zamówień i zarządzania kontem. Strefa partnera zapewnia partnerom biznesowym panel, śledzenie prowizji, zarządzanie zamówieniami i narzędzia analityczne. Przetestowałem integracje między obiema platformami, zapewniając płynną synchronizację danych i zarządzanie stanami magazynowymi.",
+    "job-listings-web-scraper-with-csv-export": "Scraper w Pythonie do pobierania ofert pracy z portali rekrutacyjnych. Zapewnia solidną obsługę błędów z logowaniem wyjątków do plików tekstowych i eksportuje zebrane dane do formatu CSV do łatwej analizy. Implementuje ponawianie prób i obsługuje dynamicznie ładowane treści, aby zapewnić niezawodne zbieranie danych.",
+    "job-market-statistics-web-scraper": "Scraper w Pythonie do zbierania statystyk rynku pracy i zapisywania danych w bazie MongoDB. Wykorzystuje Selenium do automatyzacji przeglądarki na dynamicznych stronach z ofertami oraz bibliotekę requests do zapytań HTTP. Automatycznie pobiera dane o ofertach, w tym stanowiska, wynagrodzenia, lokalizacje i wymagania, a następnie agreguje statystyki do analizy rynku.",
+    "web3-staking-vesting-platform": "Aplikacja Web3 zbudowana w Laravelu obsługująca mechanizmy stakingu, vestingu i rankingu. Przetestowałem integracje ze smart kontraktami stakingu, harmonogramy vestingu i algorytmy rankingowe. Zweryfikowałem obsługę wielu łańcuchów i integracje portfeli Web3 w różnych sieciach blockchain.",
+    "mmorpg-game-bot-tibia-automation": "Bot automatyzujący oparty na analizie pikseli dla gry MMORPG Tibia, z inteligentną automatyzacją funkcji w grze, zaprojektowany do omijania zabezpieczenia anti-cheat BattlEye. Zoptymalizowany pod rozdzielczość 800x600 dla wydajności. Funkcje obejmują nawigację po mapie przez detekcję pikseli, wykrywanie potworów i walkę, tryb automatycznego pościgu, zarządzanie zdrowiem i maną, automatyczne zbieranie łupów oraz jedzenie. Zaimplementowany z użyciem asynchronicznych korutyn, technik RPA i przetwarzania obrazu, z pełnym pokryciem testami w Pytest.",
+    "oil-gas-tubular-goods-management-system": "Platforma webowa do zarządzania zapasami rur wiertniczych (OCTG), operacjami wiertniczymi i logistyką łańcucha dostaw. System obsługuje katalog produktów rurowych, śledzenie zapasów, koordynację logistyki i zarządzanie zamówieniami dla operacji wiertniczych w branży naftowo-gazowej. Przetestowałem złożone procesy dotyczące specyfikacji produktów, zarządzania zapasami, obsługi zamówień i integracji łańcucha dostaw. Zweryfikowałem poprawność danych w specyfikacjach technicznych produktów i śledzeniu dostaw.",
+    "welding-industry-management-platform": "Platforma webowa oparta na Symfony dla branży spawalniczej, umożliwiająca klientom składanie zapytań ofertowych, przeglądanie wyników wykonanych prób spawalniczych, zamawianie nowych inspekcji i generowanie raportów. Przetestowałem procesy składania zapytań, przeglądania wyników testów, system zamawiania inspekcji i automatyczne generowanie raportów. Platforma została pomyślnie wdrożona na produkcję. Zweryfikowałem integralność danych, generowanie raportów PDF i system powiadomień klientów.",
+    "banking-products-sales-platform": "Aplikacja webowa dla pracowników banku do oferowania i sprzedaży produktów finansowych klientom detalicznym. Platforma zintegrowana z infrastrukturą bazodanową dużego szwajcarskiego banku, umożliwiająca dostęp do katalogu produktów w czasie rzeczywistym, zarządzanie danymi klientów i przetwarzanie transakcji. Przetestowałem złożone procesy rekomendacji produktów, onboardingu klientów, kontroli zgodności i śledzenia sprzedaży. Zweryfikowałem bezpieczną integrację z systemami bankowymi i synchronizację danych w rozproszonej architekturze.",
+    "medical-supplements-e-commerce-platform": "Platforma e-commerce z suplementami medycznymi z inteligentnym systemem optymalizacji koszyka. Przetestowałem zaawansowany algorytm, który automatycznie układa zestawy produktów w najbardziej opłacalnej formie i z najszybszą dostawą. Zweryfikowałem logikę inteligentnego łączenia produktów, wyliczenia cen i proces zamówienia, aby klienci otrzymywali optymalne pakiety w najlepszej cenie i z najkrótszym czasem dostawy.",
+    "web3-gaming-mobile-app-rewards-marketplace": "Aplikacja mobilna we Flutterze dla platformy gier Web3 z marketplace'em do wymiany nagród kryptowalutowych na realne korzyści. Zintegrowana z portfelem MetaMask dla bezpiecznych transakcji. Przetestowałem system wymiany kodów nagród na bony do sklepów Żabka i inne korzyści partnerskie. Używałem Fiddler Classic do testów API i analizy ruchu, aby zapewnić bezpieczne przepływy płatności i dystrybucję nagród."
+  },
+  "achievements": {
+    "ai-research-analysis-platform-rag": [
+      "Audyt funkcjonalny przed wdrożeniem wykrył ponad 25 krytycznych problemów przed startem",
+      "Zero krytycznych defektów w wydaniu produkcyjnym",
+      "Zbudowane od podstaw standardy QA i framework automatyzacji testów",
+      "Jako Technical Lead: zaprojektowałem i dostarczyłem pipeline RAG do semantycznego indeksowania dokumentów",
+      "Przeskalowanie platformy do architektury mikroserwisowej SaaS dla korporacyjnych zespołów badawczych"
+    ],
+    "nft-marketplace-platform": [
+      "Pomyślnie przetestowana integracja z API OpenSea",
+      "Zweryfikowane procesy mintowania i handlu NFT",
+      "Zero krytycznych błędów w integracjach portfeli",
+      "Zwalidowana optymalizacja opłat gas w wielu łańcuchach"
+    ],
+    "internal-tv-display-application": [
+      "Przetestowana kompatybilność z ponad 5 platformami smart TV",
+      "Zweryfikowana stabilność 24/7 bez awarii przez 30 dni",
+      "Zwalidowane automatyczne odświeżanie i harmonogram treści",
+      "Zapewnione poprawne wyświetlanie na ekranach 4K i Full HD"
+    ],
+    "depin-decentralized-ai-network": [
+      "Przetestowana zdecentralizowana sieć z ponad 100 aktywnymi węzłami",
+      "Zweryfikowane generowanie treści AI w rozproszonej infrastrukturze",
+      "Zero krytycznych błędów w dystrybucji nagród na blockchainie",
+      "Zwalidowana odporność sieci i tolerancja na awarie"
+    ],
+    "client-app-partner-zone-platform": [
+      "Zweryfikowana płynna synchronizacja danych między platformą klienta i partnera",
+      "Przetestowana kontrola dostępu oparta na rolach dla 3 typów użytkowników",
+      "Zero krytycznych błędów w systemie naliczania prowizji",
+      "Zwalidowana poprawność analityki w panelu partnera"
+    ],
+    "token-distribution-panel-multi-chain-bridge": [
+      "Zweryfikowana dystrybucja tokenów w 3 sieciach blockchain",
+      "Zero krytycznych błędów w transakcjach mostu",
+      "100% poprawności zwolnień według harmonogramu vestingu",
+      "Udane testy interoperacyjności między łańcuchami"
+    ],
+    "transport-e-commerce-ticket-platform": [
+      "99,9% skuteczności transakcji płatniczych",
+      "Zero przypadków podwójnej rezerwacji",
+      "Przetestowane integracje z ponad 5 bramkami płatności",
+      "Zweryfikowana poprawność dostępności miejsc w czasie rzeczywistym"
+    ],
+    "crypto-mining-mobile-app": [
+      "Analiza ruchu HTTP przy użyciu Fiddlera",
+      "Zweryfikowane integracje płatności kryptowalutowych",
+      "Zero krytycznych błędów w mechanizmach doładowań",
+      "Udane testy zakupów w aplikacji"
+    ],
+    "web3-investment-panel": [
+      "Zero poważnych błędów w dystrybucji airdropów",
+      "Udane testy integracji wielu łańcuchów",
+      "Zweryfikowana poprawność stakingu i vestingu",
+      "Płynne wdrożenie systemu rankingowego"
+    ],
+    "automated-testing-frameworks": [
+      "Obsługa wielu platform",
+      "Narzędzia testowe wielokrotnego użytku",
+      "Wkład w projekty open source"
+    ],
+    "web3-gamification-platform": [
+      "50% poprawy stabilności wydań",
+      "Płynny onboarding portfeli Web3",
+      "Zero krytycznych błędów w mechanizmach tokenów"
+    ],
+    "job-listings-web-scraper-with-csv-export": [
+      "Solidna obsługa wyjątków i logowanie",
+      "Eksport danych do CSV",
+      "Automatyczne pobieranie ofert pracy"
+    ],
+    "job-market-statistics-web-scraper": [
+      "Automatyczne zbieranie danych o ofertach pracy",
+      "Integracja z MongoDB do przechowywania danych",
+      "Agregacja statystyk rynku pracy"
+    ],
+    "api-integration-tools": [
+      "Automatyczna walidacja API",
+      "Kontrola jakości danych",
+      "Narzędzia do testów integracyjnych"
+    ],
+    "web3-staking-vesting-platform": [
+      "Pomyślnie przetestowana integracja wielu łańcuchów",
+      "Zero krytycznych błędów w mechanizmach stakingu",
+      "Płynne połączenie portfeli Web3 w różnych łańcuchach",
+      "Zweryfikowana poprawność harmonogramów vestingu"
+    ],
+    "mmorpg-game-bot-tibia-automation": [
+      "Zaimplementowane obejście anti-cheatu BattlEye",
+      "System nawigacji po mapie oparty na pikselach",
+      "Asynchroniczna automatyzacja z użyciem korutyn",
+      "Pełne pokrycie testami w Pytest"
+    ],
+    "oil-gas-tubular-goods-management-system": [
+      "Zweryfikowany złożony system magazynowy",
+      "Przetestowane procesy łańcucha dostaw",
+      "Zwalidowane specyfikacje techniczne"
+    ],
+    "professional-development-e-learning-platform": [
+      "Poprawne śledzenie postępów ponad 5000 użytkowników",
+      "85% zadowolenia z rekomendacji AI",
+      "Zero krytycznych błędów uwierzytelniania"
+    ],
+    "welding-industry-management-platform": [
+      "Pomyślne wdrożenie na produkcję",
+      "Zweryfikowany system zapytań ofertowych i inspekcji",
+      "Przetestowane automatyczne generowanie raportów"
+    ],
+    "brainwave-meditation-mobile-app": [
+      "Przygotowałem skuteczną strategię po dołączeniu do projektu, która umożliwiła wydanie produktu w sklepach",
+      "Udana migracja z przetwarzania MQTT na przetwarzanie lokalne bez krytycznych błędów na produkcji",
+      "Przygotowałem złożony, autorski framework automatyzacji łączący Playwright, Requests i Pytest w Pythonie, przyspieszając proces wydawniczy o około 50%, i wdrożyłem go w CI/CD",
+      "Wdrożyłem kilku agentów AI rozwiązujących problem braku PM-a i juniora QA w projekcie"
+    ],
+    "banking-products-sales-platform": [
+      "Zweryfikowana integracja z bazą danych szwajcarskiego banku",
+      "Przetestowane złożone procesy sprzedażowe",
+      "Zwalidowane bezpieczne przetwarzanie danych finansowych"
+    ],
+    "generative-ai-api-platform": [
+      "99,5% dostępności API",
+      "95% trafności generowanych treści",
+      "Obsługa ponad 1000 równoczesnych zapytań"
+    ],
+    "medical-supplements-e-commerce-platform": [
+      "Zweryfikowany algorytm inteligentnej optymalizacji koszyka",
+      "Przetestowane opłacalne łączenie produktów w zestawy",
+      "Zwalidowana optymalizacja dostaw"
+    ],
+    "ai-powered-gpu-computing-app": [
+      "100% poprawności mechanizmów nagród",
+      "Stabilne generowanie treści AI",
+      "Zoptymalizowane wykorzystanie zasobów GPU"
+    ],
+    "web3-gaming-mobile-app-rewards-marketplace": [
+      "Przetestowana integracja z portfelem MetaMask",
+      "Zweryfikowany bezpieczny system wymiany nagród",
+      "Analiza ruchu API przy użyciu Fiddler Classic"
+    ],
+    "web3-gaming-crypto-platform": [
+      "75% pokrycia testami (z 10%)",
+      "60% mniej błędów na produkcji",
+      "Kierowanie zespołem 3 inżynierów QA"
+    ],
+    "hr-interview-intelligence-platform": [
+      "Płynne uwierzytelnianie ponad 10 000 użytkowników korporacyjnych",
+      "Wykrytych ponad 15 błędów w algorytmach AI",
+      "Zweryfikowana zgodność z RODO i SOC 2"
+    ],
+    "transport-logistics-mobile-app": [
+      "98% dokładności pozycjonowania GPS",
+      "Zweryfikowane pełne działanie offline",
+      "Naprawionych ponad 10 krytycznych błędów powiadomień push"
+    ],
+    "multi-platform-e-learning-system": [
+      "Kompatybilność z ponad 5 platformami smart TV",
+      "Ponad 20 błędów wychwyconych w module administracyjnym",
+      "Zero krytycznych problemów na produkcji"
+    ],
+    "insurance-comparison-platform": [
+      "80% endpointów API objętych automatyzacją",
+      "70% mniej czasu na testy manualne",
+      "50% szybsze testy regresyjne"
+    ],
+    "construction-engineering-software": [
+      "60% wzrostu pokrycia testami",
+      "45% poprawy stabilności",
+      "Naprawionych 8 krytycznych wycieków pamięci"
+    ],
+    "mobile-banking-leasing-app": [
+      "99,9% trafności AI na produkcji",
+      "Wykrytych ponad 15 krytycznych błędów zabezpieczeń biometrycznych",
+      "Zero incydentów bezpieczeństwa po starcie"
+    ],
+    "iot-agricultural-machinery-platform": [
+      "Wykrytych 12 podatności bezpieczeństwa przed wdrożeniem na produkcję",
+      "Opracowana kompletna dokumentacja w języku angielskim",
+      "50% szybszy onboarding użytkowników"
+    ],
+    "fintech-banking-platform": [
+      "35% mniej błędów na produkcji",
+      "40% niższe koszty testowania",
+      "Proces QA zbudowany od podstaw",
+      "Wyeliminowane wszystkie podatności bezpieczeństwa wysokiego ryzyka"
+    ],
+    "waste-management-platform": [
+      "100% zgodności z polskimi przepisami o gospodarce odpadami",
+      "Zero krytycznych błędów w integracji z API MOS",
+      "Zweryfikowane wszystkie integracje systemów płatności"
+    ]
+  },
+  "domains": {
+    "AI": "AI",
+    "Automotive IoT": "IoT motoryzacyjne",
+    "Blockchain": "Blockchain",
+    "Construction": "Budownictwo",
+    "Data Analysis": "Analiza danych",
+    "E-commerce": "E-commerce",
+    "E-learning": "E-learning",
+    "Fintech": "Fintech",
+    "Gaming": "Gry",
+    "HR Tech": "HR Tech",
+    "Health & Fitness": "Zdrowie i fitness",
+    "Industry": "Przemysł",
+    "Oil & Gas": "Ropa i gaz",
+    "Testing": "Testowanie",
+    "Transport": "Transport",
+    "Waste Management": "Gospodarka odpadami",
+    "Web3": "Web3"
+  },
+  "platforms": {
+    "Web": "Web",
+    "Mobile": "Mobile",
+    "Desktop": "Desktop",
+    "AI/Automation": "AI/Automatyzacja"
+  }
+}

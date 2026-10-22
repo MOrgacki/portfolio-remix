@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import T from '../components/T.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ProjectFilters from '../components/ProjectFilters.astro';
+import ProjectDialog from '../components/ProjectDialog.astro';
+import ContactSection from '../components/sections/ContactSection.astro';
+import { loadProjects } from '../lib/projects';
+
+const projects = await loadProjects();
+---
+
+<BaseLayout
+  titleKey="page_title_projects"
+  descriptionKey="page_description_projects"
+  nav="projects"
+>
+  <div class="page">
+    <header class="page-header">
+      <h1 class="page-title gradient-text">
+        <T k="proj_title" />
+      </h1>
+      <T k="proj_description" as="p" class="page-lead" />
+    </header>
+
+    <ProjectFilters projects={projects} />
+
+    <p class="count" aria-live="polite">
+      <T k="projects_count" /> <strong data-count>{projects.length}</strong>
+    </p>
+    <ul class="grid" role="list" data-project-list>
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </ul>
+    <div data-empty hidden>
+      <T k="projects_empty_result" as="p" class="empty" />
+    </div>
+  </div>
+  <ContactSection />
+  <ProjectDialog projects={projects} />
+</BaseLayout>
+
+<script>
+  import '../scripts/projects';
+</script>
+
+<style>
+  .count {
+    margin-bottom: 1rem;
+    color: var(--gray-400);
+    font-size: 0.9rem;
+  }
+  .count strong {
+    color: var(--accent-text);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: 2rem;
+  }
+  .page :global(.empty) {
+    padding: 3rem 1rem;
+    color: var(--gray-400);
+    text-align: center;
+  }
+</style>

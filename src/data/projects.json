@@ -1,0 +1,1276 @@
+[
+  {
+    "id": 35,
+    "slug": "ai-research-analysis-platform-rag",
+    "title": "AI Research Analysis Platform (RAG)",
+    "description": {
+      "en": "AI-powered SaaS platform for analyzing scientific papers and research documents using Retrieval-Augmented Generation. React Native frontend, FastAPI backend, vector database for semantic indexing, PostgreSQL for structured data. Evolved into a microservice for enterprise research teams.",
+      "pl": "Platforma SaaS oparta na AI do analizy publikacji naukowych i dokumentów badawczych z wykorzystaniem Retrieval-Augmented Generation (RAG). Frontend w React Native, backend w FastAPI, wektorowa baza danych do indeksowania semantycznego, PostgreSQL dla danych strukturalnych. Rozwinięta w mikroserwis dla korporacyjnych zespołów badawczych."
+    },
+    "technologies": [
+      "Python",
+      "TypeScript",
+      "React Native",
+      "FastAPI",
+      "PostgreSQL",
+      "Vector Database",
+      "AI",
+      "REST API",
+      "Docker",
+      "Pytest"
+    ],
+    "domain": "AI",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Pre-production functional audit identified 25+ critical issues before launch",
+        "Zero critical defects in production release",
+        "Built QA standards and test automation framework from scratch",
+        "As Technical Lead: designed and delivered RAG pipeline for semantic document indexing",
+        "Scaled platform to SaaS microservice architecture serving enterprise research teams"
+      ],
+      "pl": [
+        "Audyt funkcjonalny przed wdrożeniem wykrył ponad 25 krytycznych problemów przed startem",
+        "Zero krytycznych defektów w wydaniu produkcyjnym",
+        "Zbudowane od podstaw standardy QA i framework automatyzacji testów",
+        "Jako Technical Lead: zaprojektowałem i dostarczyłem pipeline RAG do semantycznego indeksowania dokumentów",
+        "Przeskalowanie platformy do architektury mikroserwisowej SaaS dla korporacyjnych zespołów badawczych"
+      ]
+    },
+    "image": "../assets/projects/ai-research-rag-platform.png",
+    "imageAlt": {
+      "en": "AI Research Analysis Platform (RAG) — screenshot",
+      "pl": "AI Research Analysis Platform (RAG) — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 34,
+    "slug": "nft-marketplace-platform",
+    "title": "NFT Marketplace Platform",
+    "description": {
+      "en": "NFT marketplace platform with OpenSea integration enabling users to trade, buy, and sell NFTs. Backend built with Go for high-performance API services and Rust for blockchain smart contract interactions. Tested NFT minting, trading workflows, wallet integrations, and OpenSea API compatibility. Verified transaction security, gas optimization, and metadata handling across multiple blockchain networks.",
+      "pl": "Platforma marketplace NFT z integracją OpenSea, umożliwiająca użytkownikom wymianę, kupno i sprzedaż NFT. Backend zbudowany w Go dla wydajnych usług API oraz w Rust do interakcji ze smart kontraktami. Przetestowałem mintowanie NFT, procesy handlowe, integracje portfeli i kompatybilność z API OpenSea. Zweryfikowałem bezpieczeństwo transakcji, optymalizację opłat gas i obsługę metadanych w wielu sieciach blockchain."
+    },
+    "technologies": [
+      "Go",
+      "Rust",
+      "Web3",
+      "Blockchain",
+      "NFT",
+      "OpenSea",
+      "Smart Contracts",
+      "API",
+      "Crypto Wallet"
+    ],
+    "domain": "Blockchain",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "OpenSea API integration tested successfully",
+        "Verified NFT minting and trading workflows",
+        "Zero critical bugs in wallet integrations",
+        "Gas optimization validated across multiple chains"
+      ],
+      "pl": [
+        "Pomyślnie przetestowana integracja z API OpenSea",
+        "Zweryfikowane procesy mintowania i handlu NFT",
+        "Zero krytycznych błędów w integracjach portfeli",
+        "Zwalidowana optymalizacja opłat gas w wielu łańcuchach"
+      ]
+    },
+    "image": null,
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 33,
+    "slug": "internal-tv-display-application",
+    "title": "Internal TV Display Application",
+    "description": {
+      "en": "Smart TV application designed for internal corporate displays showing company announcements, KPIs, dashboards, and real-time data. Tested across multiple TV hardware platforms ensuring compatibility with various screen resolutions and TV operating systems. Verified content synchronization, automatic updates, and display scheduling functionality.",
+      "pl": "Aplikacja Smart TV zaprojektowana dla wewnętrznych wyświetlaczy korporacyjnych pokazujących ogłoszenia firmowe, KPI, dashboardy i dane w czasie rzeczywistym. Przetestowano na wielu platformach sprzętowych TV zapewniając kompatybilność z różnymi rozdzielczościami ekranu i systemami operacyjnymi TV. Zweryfikowano synchronizację treści, automatyczne aktualizacje i funkcjonalność harmonogramowania wyświetlania."
+    },
+    "technologies": ["Smart TV", "Hardware", "WebOS", "Tizen", "Android TV", "React", "REST API"],
+    "domain": "E-learning",
+    "platform": "Desktop",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Tested compatibility across 5+ smart TV platforms",
+        "Verified 24/7 stability with zero crashes over 30 days",
+        "Validated automatic content refresh and scheduling",
+        "Ensured proper rendering on 4K and Full HD displays"
+      ],
+      "pl": [
+        "Przetestowana kompatybilność z ponad 5 platformami smart TV",
+        "Zweryfikowana stabilność 24/7 bez awarii przez 30 dni",
+        "Zwalidowane automatyczne odświeżanie i harmonogram treści",
+        "Zapewnione poprawne wyświetlanie na ekranach 4K i Full HD"
+      ]
+    },
+    "image": "../assets/projects/internal-tv-display-app.png",
+    "imageAlt": {
+      "en": "Internal TV Display Application — screenshot",
+      "pl": "Internal TV Display Application — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 32,
+    "slug": "depin-decentralized-ai-network",
+    "title": "DePIN - Decentralized AI Network",
+    "description": {
+      "en": "Decentralized Physical Infrastructure Network (DePIN) platform built on decentralized network infrastructure delivering AI-powered content generation to Web3 communities. Tested decentralized node operations, AI content generation APIs, and blockchain-based reward distribution. Verified network stability and content delivery across distributed nodes.",
+      "pl": "Platforma Zdecentralizowanej Infrastruktury Fizycznej (DePIN), gdzie Gentok buduje na zdecentralizowanej infrastrukturze sieciowej dostarczając generowanie treści AI dla społeczności Web3. Przetestowano operacje zdecentralizowanych węzłów, API generowania treści AI oraz dystrybucję nagród opartą na blockchain. Zweryfikowano stabilność sieci i dostarczanie treści w rozproszonych węzłach."
+    },
+    "technologies": [
+      "DePIN",
+      "Web3",
+      "AI",
+      "Blockchain",
+      "Decentralized Network",
+      "Node Infrastructure",
+      "API"
+    ],
+    "domain": "AI",
+    "platform": "AI/Automation",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Tested decentralized node network with 100+ active nodes",
+        "Verified AI content generation across distributed infrastructure",
+        "Zero critical bugs in blockchain reward distribution",
+        "Validated network resilience and fault tolerance"
+      ],
+      "pl": [
+        "Przetestowana zdecentralizowana sieć z ponad 100 aktywnymi węzłami",
+        "Zweryfikowane generowanie treści AI w rozproszonej infrastrukturze",
+        "Zero krytycznych błędów w dystrybucji nagród na blockchainie",
+        "Zwalidowana odporność sieci i tolerancja na awarie"
+      ]
+    },
+    "image": "../assets/projects/depin-ai-network.png",
+    "imageAlt": {
+      "en": "DePIN - Decentralized AI Network — screenshot",
+      "pl": "DePIN - Decentralized AI Network — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 31,
+    "slug": "client-app-partner-zone-platform",
+    "title": "Client App & Partner Zone Platform",
+    "description": {
+      "en": "Partner system for purchasing gold, medals, wedding rings and jewelry. Dual-platform solution with client-facing application for browsing products, placing orders, and account management. Partner zone provides business partners with dashboard, commission tracking, order management, and analytics tools. Tested integrations between both platforms ensuring seamless data synchronization and inventory management.",
+      "pl": "System partnerski do zakupu złota, medali, obrączek i biżuterii. Rozwiązanie dwuplatformowe z aplikacją dla klientów do przeglądania produktów, składania zamówień i zarządzania kontem. Strefa partnera zapewnia partnerom biznesowym panel, śledzenie prowizji, zarządzanie zamówieniami i narzędzia analityczne. Przetestowałem integracje między obiema platformami, zapewniając płynną synchronizację danych i zarządzanie stanami magazynowymi."
+    },
+    "technologies": ["React", "Node.js", "REST API", "PostgreSQL", "Redis", "Admin Panel"],
+    "domain": "E-commerce",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Verified seamless data sync between client and partner platforms",
+        "Tested role-based access control for 3 user types",
+        "Zero critical bugs in commission calculation system",
+        "Validated partner dashboard analytics accuracy"
+      ],
+      "pl": [
+        "Zweryfikowana płynna synchronizacja danych między platformą klienta i partnera",
+        "Przetestowana kontrola dostępu oparta na rolach dla 3 typów użytkowników",
+        "Zero krytycznych błędów w systemie naliczania prowizji",
+        "Zwalidowana poprawność analityki w panelu partnera"
+      ]
+    },
+    "image": "../assets/projects/client-app-partner-zone.png",
+    "imageAlt": {
+      "en": "Client App & Partner Zone Platform — screenshot",
+      "pl": "Client App & Partner Zone Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 30,
+    "slug": "token-distribution-panel-multi-chain-bridge",
+    "title": "Token Distribution Panel & Multi-Chain Bridge",
+    "description": {
+      "en": "Token distribution panel with token release mechanisms on ERC-20 and cross-chain bridge functionality to BNB Chain and Solana. Tested smart contract integrations for token vesting, distribution schedules, and cross-chain bridge operations. Verified transaction integrity across multiple blockchain networks.",
+      "pl": "Panel dystrybucji tokenów z mechanizmami uwalniania tokenów na ERC-20 i funkcjonalnością cross-chain bridge do BNB Chain i Solana. Przetestowano integracje smart kontraktów dla vestingu tokenów, harmonogramów dystrybucji i operacji bridge między łańcuchami. Zweryfikowano integralność transakcji w wielu sieciach blockchain."
+    },
+    "technologies": [
+      "Web3",
+      "ERC-20",
+      "BNB Chain",
+      "Solana",
+      "Smart Contracts",
+      "Bridge Protocol",
+      "Multi-chain"
+    ],
+    "domain": "Blockchain",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Verified token distribution across 3 blockchain networks",
+        "Zero critical bugs in bridge transactions",
+        "100% accuracy in vesting schedule releases",
+        "Successful cross-chain interoperability testing"
+      ],
+      "pl": [
+        "Zweryfikowana dystrybucja tokenów w 3 sieciach blockchain",
+        "Zero krytycznych błędów w transakcjach mostu",
+        "100% poprawności zwolnień według harmonogramu vestingu",
+        "Udane testy interoperacyjności między łańcuchami"
+      ]
+    },
+    "image": "../assets/projects/token-distribution-bridge.png",
+    "imageAlt": {
+      "en": "Token Distribution Panel & Multi-Chain Bridge — screenshot",
+      "pl": "Token Distribution Panel & Multi-Chain Bridge — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 29,
+    "slug": "transport-e-commerce-ticket-platform",
+    "title": "Transport E-Commerce Ticket Platform",
+    "description": {
+      "en": "E-commerce web platform for purchasing bus and train tickets with seat selection, payment processing, and booking management. Tested payment gateway integrations with multiple providers ensuring 99.9% transaction success rate. Verified seat reservation system preventing double bookings.",
+      "pl": "Platforma e-commerce do zakupu biletów autobusowych i kolejowych z wyborem miejsc, przetwarzaniem płatności i zarządzaniem rezerwacjami. Przetestowano integracje bramek płatności z wieloma dostawcami zapewniając 99,9% sukcesu transakcji. Zweryfikowano system rezerwacji miejsc zapobiegając podwójnym rezerwacjom."
+    },
+    "technologies": ["React", "Node.js", "Payment Gateway", "REST API", "PostgreSQL", "Redis"],
+    "domain": "Transport",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "99.9% payment transaction success rate",
+        "Zero double-booking incidents",
+        "Tested 5+ payment gateway integrations",
+        "Verified real-time seat availability accuracy"
+      ],
+      "pl": [
+        "99,9% skuteczności transakcji płatniczych",
+        "Zero przypadków podwójnej rezerwacji",
+        "Przetestowane integracje z ponad 5 bramkami płatności",
+        "Zweryfikowana poprawność dostępności miejsc w czasie rzeczywistym"
+      ]
+    },
+    "image": "../assets/projects/transport-ticket-platform.png",
+    "imageAlt": {
+      "en": "Transport E-Commerce Ticket Platform — screenshot",
+      "pl": "Transport E-Commerce Ticket Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 28,
+    "slug": "crypto-mining-mobile-app",
+    "title": "Crypto Mining Mobile App",
+    "description": {
+      "en": "Mobile application built in Flutter for crypto mining and in-app purchases. Used Fiddler to capture and analyze HTTP traffic for debugging. Tested top-up mechanisms and cryptocurrency payment integrations for purchasing various in-app items.",
+      "pl": "Aplikacja mobilna zbudowana we Flutter do kopania kryptowalut i zakupów w aplikacji. Użyto Fiddler do przechwytywania i analizy ruchu HTTP. Przetestowano mechanizmy doładowań i integracje płatności kryptowalutowych do zakupu różnych przedmiotów w aplikacji."
+    },
+    "technologies": ["Flutter", "Fiddler", "HTTP", "Crypto Payments", "iOS", "Android", "Mobile"],
+    "domain": "Blockchain",
+    "platform": "Mobile",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "HTTP traffic analysis with Fiddler",
+        "Verified crypto payment integrations",
+        "Zero critical bugs in top-up mechanisms",
+        "Successful in-app purchase testing"
+      ],
+      "pl": [
+        "Analiza ruchu HTTP przy użyciu Fiddlera",
+        "Zweryfikowane integracje płatności kryptowalutowych",
+        "Zero krytycznych błędów w mechanizmach doładowań",
+        "Udane testy zakupów w aplikacji"
+      ]
+    },
+    "image": "../assets/projects/crypto-mining-mobile-app.png",
+    "imageAlt": {
+      "en": "Crypto Mining Mobile App — screenshot",
+      "pl": "Crypto Mining Mobile App — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 27,
+    "slug": "web3-investment-panel",
+    "title": "Web3 Investment Panel",
+    "description": {
+      "en": "Investment panel for managing staking, vesting, ranking, and airdrop mechanisms across multiple blockchain networks. Tested multi-chain integrations and Web3 wallet connectivity ensuring smooth operations. Verified airdrop distribution mechanisms and investor portfolio tracking with no major bugs found.",
+      "pl": "Aplikacja webowa do zarządzania mechanizmami stakingu, vestingu, rankingu i airdropów w wielu sieciach blockchain. Przetestowano integracje multi-chain i łączność portfeli Web3 zapewniając płynne działanie. Zweryfikowano mechanizmy dystrybucji airdropów bez większych błędów."
+    },
+    "technologies": [
+      "Web3",
+      "Blockchain",
+      "Multi-chain",
+      "Smart Contracts",
+      "Airdrop",
+      "Investment Platform"
+    ],
+    "domain": "Web3",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Zero major bugs in airdrop distribution",
+        "Successful multi-chain integration testing",
+        "Verified staking and vesting accuracy",
+        "Seamless ranking system implementation"
+      ],
+      "pl": [
+        "Zero poważnych błędów w dystrybucji airdropów",
+        "Udane testy integracji wielu łańcuchów",
+        "Zweryfikowana poprawność stakingu i vestingu",
+        "Płynne wdrożenie systemu rankingowego"
+      ]
+    },
+    "image": "../assets/projects/web3-investment-panel.png",
+    "imageAlt": {
+      "en": "Web3 Investment Panel — screenshot",
+      "pl": "Web3 Investment Panel — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 26,
+    "slug": "automated-testing-frameworks",
+    "title": "Automated Testing Frameworks",
+    "description": {
+      "en": "Collection of custom testing frameworks and utilities for automated testing across different platforms and technologies.",
+      "pl": "Kolekcja niestandardowych frameworków testowych i narzędzi do automatycznego testowania na różnych platformach i technologiach."
+    },
+    "technologies": ["Python", "Selenium", "Pytest", "Docker"],
+    "domain": "Testing",
+    "platform": "AI/Automation",
+    "type": "personal",
+    "status": "in-progress",
+    "achievements": {
+      "en": ["Multi-platform support", "Reusable test utilities", "Open source contributions"],
+      "pl": [
+        "Obsługa wielu platform",
+        "Narzędzia testowe wielokrotnego użytku",
+        "Wkład w projekty open source"
+      ]
+    },
+    "image": "../assets/projects/automated-testing-frameworks.png",
+    "imageAlt": {
+      "en": "Automated Testing Frameworks — screenshot",
+      "pl": "Automated Testing Frameworks — zrzut ekranu"
+    },
+    "github": "https://github.com/MOrgacki?tab=repositories",
+    "demo": null
+  },
+  {
+    "id": 25,
+    "slug": "web3-gamification-platform",
+    "title": "Web3 Gamification Platform",
+    "description": {
+      "en": "Web3 platform combining gamification and blockchain. Implemented QA processes and E2E/API automation from scratch, improving release stability by 50%. Tested Web3 wallet integrations ensuring seamless user onboarding.",
+      "pl": "Platforma Web3 łącząca grywalizację i blockchain. Wdrożono procesy QA i automatyzację E2E/API od podstaw, poprawiając stabilność wydań o 50%. Przetestowano integracje portfeli Web3 zapewniając płynny onboarding użytkowników."
+    },
+    "technologies": ["Web3", "Blockchain", "AI", "React", "API"],
+    "domain": "Web3",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "50% improvement in release stability",
+        "Seamless Web3 wallet onboarding",
+        "Zero critical bugs in token mechanisms"
+      ],
+      "pl": [
+        "50% poprawy stabilności wydań",
+        "Płynny onboarding portfeli Web3",
+        "Zero krytycznych błędów w mechanizmach tokenów"
+      ]
+    },
+    "image": "../assets/projects/web3-gamification-platform.png",
+    "imageAlt": {
+      "en": "Web3 Gamification Platform — screenshot",
+      "pl": "Web3 Gamification Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 24,
+    "slug": "job-listings-web-scraper-with-csv-export",
+    "title": "Job Listings Web Scraper with CSV Export",
+    "description": {
+      "en": "Python web scraper for extracting job offer listings from job portals. Features robust error handling with exception logging to text files and exports scraped data to CSV format for easy analysis. Implements retry logic and handles dynamic content loading to ensure reliable data collection.",
+      "pl": "Scraper w Pythonie do pobierania ofert pracy z portali rekrutacyjnych. Zapewnia solidną obsługę błędów z logowaniem wyjątków do plików tekstowych i eksportuje zebrane dane do formatu CSV do łatwej analizy. Implementuje ponawianie prób i obsługuje dynamicznie ładowane treści, aby zapewnić niezawodne zbieranie danych."
+    },
+    "technologies": ["Python", "Web Scraping", "CSV", "Logging", "Error Handling", "Data Export"],
+    "domain": "Data Analysis",
+    "platform": "AI/Automation",
+    "type": "personal",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Robust exception handling and logging",
+        "CSV data export functionality",
+        "Automated job listing extraction"
+      ],
+      "pl": [
+        "Solidna obsługa wyjątków i logowanie",
+        "Eksport danych do CSV",
+        "Automatyczne pobieranie ofert pracy"
+      ]
+    },
+    "image": null,
+    "github": "https://github.com/MOrgacki?tab=repositories",
+    "demo": null
+  },
+  {
+    "id": 23,
+    "slug": "job-market-statistics-web-scraper",
+    "title": "Job Market Statistics Web Scraper",
+    "description": {
+      "en": "Python web scraper for collecting job market statistics and storing data in MongoDB database. Utilizes Selenium for browser automation to navigate dynamic job listing pages and requests library for HTTP requests. Automatically extracts job data including titles, salaries, locations, and requirements, then aggregates statistics for market analysis.",
+      "pl": "Scraper w Pythonie do zbierania statystyk rynku pracy i zapisywania danych w bazie MongoDB. Wykorzystuje Selenium do automatyzacji przeglądarki na dynamicznych stronach z ofertami oraz bibliotekę requests do zapytań HTTP. Automatycznie pobiera dane o ofertach, w tym stanowiska, wynagrodzenia, lokalizacje i wymagania, a następnie agreguje statystyki do analizy rynku."
+    },
+    "technologies": [
+      "Python",
+      "Selenium",
+      "MongoDB",
+      "Web Scraping",
+      "Requests",
+      "Data Analysis",
+      "Browser Automation"
+    ],
+    "domain": "Data Analysis",
+    "platform": "AI/Automation",
+    "type": "personal",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Automated job data collection",
+        "MongoDB integration for data storage",
+        "Market statistics aggregation"
+      ],
+      "pl": [
+        "Automatyczne zbieranie danych o ofertach pracy",
+        "Integracja z MongoDB do przechowywania danych",
+        "Agregacja statystyk rynku pracy"
+      ]
+    },
+    "image": null,
+    "github": "https://github.com/MOrgacki?tab=repositories",
+    "demo": null
+  },
+  {
+    "id": 22,
+    "slug": "api-integration-tools",
+    "title": "API Integration Tools",
+    "description": {
+      "en": "Custom tools and scripts for API testing, integration verification, and data quality validation.",
+      "pl": "Niestandardowe narzędzia i skrypty do testowania API, weryfikacji integracji i walidacji jakości danych."
+    },
+    "technologies": ["Python", "REST", "Postman", "OpenAPI"],
+    "domain": "Testing",
+    "platform": "AI/Automation",
+    "type": "personal",
+    "status": "in-progress",
+    "achievements": {
+      "en": ["Automated API validation", "Data quality checks", "Integration testing utilities"],
+      "pl": [
+        "Automatyczna walidacja API",
+        "Kontrola jakości danych",
+        "Narzędzia do testów integracyjnych"
+      ]
+    },
+    "image": "../assets/projects/api-integration-tools.png",
+    "imageAlt": {
+      "en": "API Integration Tools — screenshot",
+      "pl": "API Integration Tools — zrzut ekranu"
+    },
+    "github": "https://github.com/MOrgacki?tab=repositories",
+    "demo": null
+  },
+  {
+    "id": 21,
+    "slug": "web3-staking-vesting-platform",
+    "title": "Web3 Staking & Vesting Platform",
+    "description": {
+      "en": "Web3 application built in Laravel for staking, vesting, and ranking mechanisms. Tested staking smart contract integrations, vesting schedules, and ranking algorithms. Verified multi-chain support and Web3 wallet integrations across different blockchain networks.",
+      "pl": "Aplikacja Web3 zbudowana w Laravelu obsługująca mechanizmy stakingu, vestingu i rankingu. Przetestowałem integracje ze smart kontraktami stakingu, harmonogramy vestingu i algorytmy rankingowe. Zweryfikowałem obsługę wielu łańcuchów i integracje portfeli Web3 w różnych sieciach blockchain."
+    },
+    "technologies": [
+      "Laravel",
+      "Web3",
+      "Blockchain",
+      "Smart Contracts",
+      "Multi-chain",
+      "Wallet Integrations"
+    ],
+    "domain": "Blockchain",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Multi-chain integration tested successfully",
+        "Zero critical bugs in staking mechanisms",
+        "Seamless Web3 wallet connectivity across chains",
+        "Verified vesting schedules accuracy"
+      ],
+      "pl": [
+        "Pomyślnie przetestowana integracja wielu łańcuchów",
+        "Zero krytycznych błędów w mechanizmach stakingu",
+        "Płynne połączenie portfeli Web3 w różnych łańcuchach",
+        "Zweryfikowana poprawność harmonogramów vestingu"
+      ]
+    },
+    "image": "../assets/projects/web3-staking-vesting-platform.png",
+    "imageAlt": {
+      "en": "Web3 Staking & Vesting Platform — screenshot",
+      "pl": "Web3 Staking & Vesting Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 20,
+    "slug": "mmorpg-game-bot-tibia-automation",
+    "title": "MMORPG Game Bot - Tibia Automation",
+    "description": {
+      "en": "Pixel-based automation bot for Tibia MMORPG game with smart in-game function automation, designed to bypass BattlEye anti-cheat protection. Optimized for 800x600 resolution for performance. Features include map navigation via pixel detection, monster detection and combat, auto-chase mode, health/mana management, auto-looting, and food consumption. Implemented using async coroutines, RPA techniques, and image processing with comprehensive Pytest coverage.",
+      "pl": "Bot automatyzujący oparty na analizie pikseli dla gry MMORPG Tibia, z inteligentną automatyzacją funkcji w grze, zaprojektowany do omijania zabezpieczenia anti-cheat BattlEye. Zoptymalizowany pod rozdzielczość 800x600 dla wydajności. Funkcje obejmują nawigację po mapie przez detekcję pikseli, wykrywanie potworów i walkę, tryb automatycznego pościgu, zarządzanie zdrowiem i maną, automatyczne zbieranie łupów oraz jedzenie. Zaimplementowany z użyciem asynchronicznych korutyn, technik RPA i przetwarzania obrazu, z pełnym pokryciem testami w Pytest."
+    },
+    "technologies": [
+      "Python",
+      "RPA",
+      "Image Processing",
+      "Async Coroutines",
+      "Pytest",
+      "Pixel Detection",
+      "Automation"
+    ],
+    "domain": "Gaming",
+    "platform": "Desktop",
+    "type": "personal",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "BattlEye anti-cheat bypass implemented",
+        "Pixel-based map navigation system",
+        "Async automation with coroutines",
+        "Comprehensive test coverage with Pytest"
+      ],
+      "pl": [
+        "Zaimplementowane obejście anti-cheatu BattlEye",
+        "System nawigacji po mapie oparty na pikselach",
+        "Asynchroniczna automatyzacja z użyciem korutyn",
+        "Pełne pokrycie testami w Pytest"
+      ]
+    },
+    "image": null,
+    "github": "https://github.com/MOrgacki?tab=repositories",
+    "demo": null
+  },
+  {
+    "id": 19,
+    "slug": "oil-gas-tubular-goods-management-system",
+    "title": "Oil & Gas Tubular Goods Management System",
+    "description": {
+      "en": "Web platform for managing Oil Country Tubular Goods (OCTG) inventory, drilling operations, and supply chain logistics. System handles tubular product catalog, inventory tracking, logistics coordination, and order management for oil and gas drilling operations. Tested complex workflows for product specifications, inventory management, order processing, and supply chain integration. Verified data accuracy for technical product specifications and delivery tracking.",
+      "pl": "Platforma webowa do zarządzania zapasami rur wiertniczych (OCTG), operacjami wiertniczymi i logistyką łańcucha dostaw. System obsługuje katalog produktów rurowych, śledzenie zapasów, koordynację logistyki i zarządzanie zamówieniami dla operacji wiertniczych w branży naftowo-gazowej. Przetestowałem złożone procesy dotyczące specyfikacji produktów, zarządzania zapasami, obsługi zamówień i integracji łańcucha dostaw. Zweryfikowałem poprawność danych w specyfikacjach technicznych produktów i śledzeniu dostaw."
+    },
+    "technologies": [
+      "Inventory Management",
+      "Supply Chain",
+      "Logistics",
+      "Database",
+      "API Integration",
+      "Product Catalog"
+    ],
+    "domain": "Oil & Gas",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Complex inventory system verified",
+        "Supply chain workflows tested",
+        "Technical specifications validated"
+      ],
+      "pl": [
+        "Zweryfikowany złożony system magazynowy",
+        "Przetestowane procesy łańcucha dostaw",
+        "Zwalidowane specyfikacje techniczne"
+      ]
+    },
+    "image": "../assets/projects/oil-gas-tubular-goods-system.png",
+    "imageAlt": {
+      "en": "Oil & Gas Tubular Goods Management System — screenshot",
+      "pl": "Oil & Gas Tubular Goods Management System — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 18,
+    "slug": "professional-development-e-learning-platform",
+    "title": "Professional Development E-learning Platform",
+    "description": {
+      "en": "E-learning platform combining online courses with social features similar to LinkedIn Learning. Tested course system ensuring proper progress tracking for 5,000+ users and verified AI recommendation algorithms achieving 85% satisfaction.",
+      "pl": "Platforma e-learningowa łącząca kursy online z funkcjami społecznościowymi podobnymi do LinkedIn Learning. Przetestowano system kursów zapewniając prawidłowe śledzenie postępów dla ponad 5000 użytkowników i zweryfikowano algorytmy rekomendacji AI osiągając 85% satysfakcji."
+    },
+    "technologies": ["React", "Angular", "Vue", "API", "AI"],
+    "domain": "E-learning",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "5,000+ users proper progress tracking",
+        "85% AI recommendation satisfaction",
+        "Zero critical authentication bugs"
+      ],
+      "pl": [
+        "Poprawne śledzenie postępów ponad 5000 użytkowników",
+        "85% zadowolenia z rekomendacji AI",
+        "Zero krytycznych błędów uwierzytelniania"
+      ]
+    },
+    "image": "../assets/projects/professional-elearning-platform.png",
+    "imageAlt": {
+      "en": "Professional Development E-learning Platform — screenshot",
+      "pl": "Professional Development E-learning Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 17,
+    "slug": "welding-industry-management-platform",
+    "title": "Welding Industry Management Platform",
+    "description": {
+      "en": "Symfony-based web platform for welding industry enabling clients to submit quotes, review completed welding tests, order new inspections, and generate reports. Tested quote submission workflows, test result viewing, inspection ordering system, and automated report generation. Successfully deployed to production environment. Verified data integrity, PDF report generation, and customer notification systems.",
+      "pl": "Platforma webowa oparta na Symfony dla branży spawalniczej, umożliwiająca klientom składanie zapytań ofertowych, przeglądanie wyników wykonanych prób spawalniczych, zamawianie nowych inspekcji i generowanie raportów. Przetestowałem procesy składania zapytań, przeglądania wyników testów, system zamawiania inspekcji i automatyczne generowanie raportów. Platforma została pomyślnie wdrożona na produkcję. Zweryfikowałem integralność danych, generowanie raportów PDF i system powiadomień klientów."
+    },
+    "technologies": ["PHP", "Symfony", "MySQL", "PDF Generation", "Report System", "Client Portal"],
+    "domain": "Industry",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Successfully deployed to production",
+        "Quote and inspection system verified",
+        "Automated report generation tested"
+      ],
+      "pl": [
+        "Pomyślne wdrożenie na produkcję",
+        "Zweryfikowany system zapytań ofertowych i inspekcji",
+        "Przetestowane automatyczne generowanie raportów"
+      ]
+    },
+    "image": "../assets/projects/welding-industry-management-platform.png",
+    "imageAlt": {
+      "en": "Welding Industry Management Platform — screenshot",
+      "pl": "Welding Industry Management Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 16,
+    "slug": "brainwave-meditation-mobile-app",
+    "title": "Brainwave Meditation Mobile App",
+    "description": {
+      "en": "Mobile meditation app with EEG data analysis and brainwave-based coaching. 5/5 star rating in stores. Tested app using hardware EEG device integrations (MUSE) ensuring stable connection in 98% of sessions.",
+      "pl": "Aplikacja mobilna do medytacji z analizą danych EEG i coachingiem opartym na falach mózgowych. Przetestowano integracje urządzeń EEG (MUSE) zapewniając stabilne połączenie w 98% sesji. Osiągnięto ocenę satysfakcji użytkowników 4,5/5."
+    },
+    "technologies": [
+      "Hardware",
+      "React",
+      "React Native",
+      "iOS",
+      "Android",
+      "ADB",
+      "Simulators",
+      "Django",
+      "Python",
+      "Playwright",
+      "Pytest",
+      "Docker",
+      "Celery",
+      "Redis"
+    ],
+    "domain": "Health & Fitness",
+    "platform": "Mobile",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Prepared successful strategy when joining the project making able to release the product to stores",
+        "Successful migration from MQTT processing to Local processing without critical production found",
+        "Prepared complex custom automation framework combining Playwright, Requests, Pytest in Python speeding the release process by about 50%, implemented that in CI/CD",
+        "Implemented a few AI agents solving problem of no PM and no Junior QA in Project"
+      ],
+      "pl": [
+        "Przygotowałem skuteczną strategię po dołączeniu do projektu, która umożliwiła wydanie produktu w sklepach",
+        "Udana migracja z przetwarzania MQTT na przetwarzanie lokalne bez krytycznych błędów na produkcji",
+        "Przygotowałem złożony, autorski framework automatyzacji łączący Playwright, Requests i Pytest w Pythonie, przyspieszając proces wydawniczy o około 50%, i wdrożyłem go w CI/CD",
+        "Wdrożyłem kilku agentów AI rozwiązujących problem braku PM-a i juniora QA w projekcie"
+      ]
+    },
+    "image": "../assets/projects/brainwave-meditation-app.png",
+    "imageAlt": {
+      "en": "Brainwave Meditation Mobile App — screenshot",
+      "pl": "Brainwave Meditation Mobile App — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 15,
+    "slug": "banking-products-sales-platform",
+    "title": "Banking Products Sales Platform",
+    "description": {
+      "en": "Web application for bank employees to offer and sell financial products to retail customers. Platform integrated with major Swiss bank database infrastructure, enabling real-time product catalog access, customer data management, and transaction processing. Tested complex workflows for product recommendations, customer onboarding, compliance checks, and sales tracking. Verified secure integration with banking systems and data synchronization across distributed architecture.",
+      "pl": "Aplikacja webowa dla pracowników banku do oferowania i sprzedaży produktów finansowych klientom detalicznym. Platforma zintegrowana z infrastrukturą bazodanową dużego szwajcarskiego banku, umożliwiająca dostęp do katalogu produktów w czasie rzeczywistym, zarządzanie danymi klientów i przetwarzanie transakcji. Przetestowałem złożone procesy rekomendacji produktów, onboardingu klientów, kontroli zgodności i śledzenia sprzedaży. Zweryfikowałem bezpieczną integrację z systemami bankowymi i synchronizację danych w rozproszonej architekturze."
+    },
+    "technologies": [
+      "Banking Integration",
+      "Database Integration",
+      "CRM",
+      "Financial Systems",
+      "Security Testing",
+      "API Integration"
+    ],
+    "domain": "Fintech",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Swiss bank database integration verified",
+        "Complex sales workflows tested",
+        "Secure financial data handling validated"
+      ],
+      "pl": [
+        "Zweryfikowana integracja z bazą danych szwajcarskiego banku",
+        "Przetestowane złożone procesy sprzedażowe",
+        "Zwalidowane bezpieczne przetwarzanie danych finansowych"
+      ]
+    },
+    "image": "../assets/projects/banking-products-sales-platform.png",
+    "imageAlt": {
+      "en": "Banking Products Sales Platform — screenshot",
+      "pl": "Banking Products Sales Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 14,
+    "slug": "generative-ai-api-platform",
+    "title": "Generative AI API Platform",
+    "description": {
+      "en": "Unified API for integration with generative AI models offering text-to-image, text-to-speech, and video transcription. Tested all API endpoints ensuring 99.5% uptime and verified 95% accuracy rate for generated content.",
+      "pl": "Zunifikowane API do integracji z generatywnymi modelami AI oferujące konwersję tekst-na-obraz, tekst-na-mowę i transkrypcję wideo. Przetestowano wszystkie endpointy API zapewniając 99,5% uptime i zweryfikowano 95% wskaźnik dokładności generowanych treści."
+    },
+    "technologies": ["AI", "REST API", "Python", "Cloud"],
+    "domain": "AI",
+    "platform": "AI/Automation",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "99.5% API uptime",
+        "95% content accuracy rate",
+        "1000+ concurrent requests supported"
+      ],
+      "pl": [
+        "99,5% dostępności API",
+        "95% trafności generowanych treści",
+        "Obsługa ponad 1000 równoczesnych zapytań"
+      ]
+    },
+    "image": "../assets/projects/generative-ai-api-platform.png",
+    "imageAlt": {
+      "en": "Generative AI API Platform — screenshot",
+      "pl": "Generative AI API Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 13,
+    "slug": "medical-supplements-e-commerce-platform",
+    "title": "Medical Supplements E-commerce Platform",
+    "description": {
+      "en": "E-commerce platform for medical supplements featuring intelligent cart optimization system. Tested advanced algorithm that automatically assembles product combinations in the most cost-effective and fastest delivery form. Verified smart bundling logic, pricing calculations, and checkout flow to ensure customers receive optimal product packages with best value and shortest delivery times.",
+      "pl": "Platforma e-commerce z suplementami medycznymi z inteligentnym systemem optymalizacji koszyka. Przetestowałem zaawansowany algorytm, który automatycznie układa zestawy produktów w najbardziej opłacalnej formie i z najszybszą dostawą. Zweryfikowałem logikę inteligentnego łączenia produktów, wyliczenia cen i proces zamówienia, aby klienci otrzymywali optymalne pakiety w najlepszej cenie i z najkrótszym czasem dostawy."
+    },
+    "technologies": [
+      "E-commerce",
+      "Cart Optimization",
+      "Algorithm Testing",
+      "Payment Integration",
+      "Shipping Logic"
+    ],
+    "domain": "E-commerce",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Smart cart optimization algorithm verified",
+        "Cost-effective bundling tested",
+        "Delivery optimization validated"
+      ],
+      "pl": [
+        "Zweryfikowany algorytm inteligentnej optymalizacji koszyka",
+        "Przetestowane opłacalne łączenie produktów w zestawy",
+        "Zwalidowana optymalizacja dostaw"
+      ]
+    },
+    "image": null,
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 12,
+    "slug": "ai-powered-gpu-computing-app",
+    "title": "AI-Powered GPU Computing App",
+    "description": {
+      "en": "Windows desktop app allowing users to share GPU power for AI computations and content generation. Tested GPU/Compute integrations and AI modules ensuring stable content generation. Verified rewards mechanisms achieving 100% accuracy.",
+      "pl": "Aplikacja desktopowa Windows umożliwiająca użytkownikom udostępnianie mocy GPU do obliczeń AI i generowania treści. Przetestowano integracje GPU/Compute i moduły AI zapewniając stabilne generowanie treści. Zweryfikowano mechanizmy nagród osiągając 100% dokładności."
+    },
+    "technologies": ["C#", ".NET", "GPU Computing", "AI"],
+    "domain": "AI",
+    "platform": "Desktop",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "100% accuracy in rewards mechanisms",
+        "Stable AI content generation",
+        "Optimized GPU resource usage"
+      ],
+      "pl": [
+        "100% poprawności mechanizmów nagród",
+        "Stabilne generowanie treści AI",
+        "Zoptymalizowane wykorzystanie zasobów GPU"
+      ]
+    },
+    "image": "../assets/projects/ai-gpu-computing-app.png",
+    "imageAlt": {
+      "en": "AI-Powered GPU Computing App — screenshot",
+      "pl": "AI-Powered GPU Computing App — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 11,
+    "slug": "web3-gaming-mobile-app-rewards-marketplace",
+    "title": "Web3 Gaming Mobile App - Rewards Marketplace",
+    "description": {
+      "en": "Flutter-based mobile application for Web3 gaming platform featuring marketplace for exchanging crypto rewards for real-world benefits. Integrated MetaMask wallet connectivity for secure transactions. Tested reward code exchange system for Żabka store vouchers and other partner benefits. Used Fiddler Classic for API testing and traffic analysis to ensure secure payment flows and reward distribution.",
+      "pl": "Aplikacja mobilna we Flutterze dla platformy gier Web3 z marketplace'em do wymiany nagród kryptowalutowych na realne korzyści. Zintegrowana z portfelem MetaMask dla bezpiecznych transakcji. Przetestowałem system wymiany kodów nagród na bony do sklepów Żabka i inne korzyści partnerskie. Używałem Fiddler Classic do testów API i analizy ruchu, aby zapewnić bezpieczne przepływy płatności i dystrybucję nagród."
+    },
+    "technologies": [
+      "Flutter",
+      "MetaMask",
+      "Web3",
+      "Mobile",
+      "Fiddler Classic",
+      "API Testing",
+      "Crypto Wallet"
+    ],
+    "domain": "Blockchain",
+    "platform": "Mobile",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "MetaMask wallet integration tested",
+        "Secure reward exchange system verified",
+        "API traffic analysis with Fiddler Classic"
+      ],
+      "pl": [
+        "Przetestowana integracja z portfelem MetaMask",
+        "Zweryfikowany bezpieczny system wymiany nagród",
+        "Analiza ruchu API przy użyciu Fiddler Classic"
+      ]
+    },
+    "image": "../assets/projects/crypto-mining-mobile-app.png",
+    "imageAlt": {
+      "en": "Web3 Gaming Mobile App - Rewards Marketplace — screenshot",
+      "pl": "Web3 Gaming Mobile App - Rewards Marketplace — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 10,
+    "slug": "web3-gaming-crypto-platform",
+    "title": "Web3 Gaming & Crypto Platform",
+    "description": {
+      "en": "Web3 platform for account management, crypto wallet, and blockchain processes. Built QA strategy from scratch, leading team of 3 testers. Implemented E2E automation with Cypress, increasing coverage from 10% to 75%.",
+      "pl": "Platforma Web3 do zarządzania kontem, portfela kryptowalut i procesów blockchain. Zbudowano strategię QA od podstaw, prowadząc zespół 3 testerów. Wdrożono automatyzację E2E z Cypress, zwiększając pokrycie z 10% do 75%."
+    },
+    "technologies": [
+      "Laravel",
+      "Vue.js",
+      "Django",
+      "Docker",
+      "Redis",
+      "MySQL",
+      "Cypress",
+      "Playwright"
+    ],
+    "domain": "Blockchain",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "75% test coverage (from 10%)",
+        "60% reduction in production bugs",
+        "Led team of 3 QA engineers"
+      ],
+      "pl": [
+        "75% pokrycia testami (z 10%)",
+        "60% mniej błędów na produkcji",
+        "Kierowanie zespołem 3 inżynierów QA"
+      ]
+    },
+    "image": "../assets/projects/web3-gaming-crypto-platform.png",
+    "imageAlt": {
+      "en": "Web3 Gaming & Crypto Platform — screenshot",
+      "pl": "Web3 Gaming & Crypto Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 9,
+    "slug": "hr-interview-intelligence-platform",
+    "title": "HR Interview Intelligence Platform",
+    "description": {
+      "en": "Training platform and interview intelligence tool with AI-powered analytics. Tested SSO integrations with Azure AD and Okta for 10,000+ enterprise users and verified 15+ AI algorithm bugs.",
+      "pl": "Platforma szkoleniowa i narzędzie analityki rozmów kwalifikacyjnych z analizą opartą na AI. Przetestowano integracje SSO z Azure AD i Okta dla ponad 10 000 użytkowników korporacyjnych i zweryfikowano ponad 15 błędów algorytmów AI."
+    },
+    "technologies": ["AI", "SSO", "Azure AD", "Okta", "LMS", "ATS"],
+    "domain": "HR Tech",
+    "platform": "AI/Automation",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "10,000+ enterprise users seamless authentication",
+        "15+ AI algorithm bugs identified",
+        "GDPR and SOC 2 compliance verified"
+      ],
+      "pl": [
+        "Płynne uwierzytelnianie ponad 10 000 użytkowników korporacyjnych",
+        "Wykrytych ponad 15 błędów w algorytmach AI",
+        "Zweryfikowana zgodność z RODO i SOC 2"
+      ]
+    },
+    "image": "../assets/projects/hr-interview-intelligence-platform.png",
+    "imageAlt": {
+      "en": "HR Interview Intelligence Platform — screenshot",
+      "pl": "HR Interview Intelligence Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 8,
+    "slug": "transport-logistics-mobile-app",
+    "title": "Transport & Logistics Mobile App",
+    "description": {
+      "en": "Mobile app for customers and drivers enabling ride booking, real-time GPS tracking, and notifications. Tested GPS tracking achieving 98% positioning accuracy and ensured offline functionality.",
+      "pl": "Aplikacja mobilna dla klientów i kierowców umożliwiająca rezerwację przejazdów, śledzenie GPS w czasie rzeczywistym i powiadomienia. Przetestowano śledzenie GPS osiągając 98% dokładności pozycjonowania i zapewniono funkcjonalność offline."
+    },
+    "technologies": ["React Native", "GPS", "API", "Push Notifications"],
+    "domain": "Transport",
+    "platform": "Mobile",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "98% GPS positioning accuracy",
+        "Full offline functionality verified",
+        "10+ critical push notification bugs fixed"
+      ],
+      "pl": [
+        "98% dokładności pozycjonowania GPS",
+        "Zweryfikowane pełne działanie offline",
+        "Naprawionych ponad 10 krytycznych błędów powiadomień push"
+      ]
+    },
+    "image": "../assets/projects/transport-logistics-mobile-app.png",
+    "imageAlt": {
+      "en": "Transport & Logistics Mobile App — screenshot",
+      "pl": "Transport & Logistics Mobile App — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 7,
+    "slug": "multi-platform-e-learning-system",
+    "title": "Multi-Platform E-learning System",
+    "description": {
+      "en": "E-learning platform with web, TV, and mobile support. Ensured proper functionality on TV browsers across 5+ smart TV platforms and identified 20+ bugs in admin module before release.",
+      "pl": "Platforma e-learningowa z obsługą web, TV i mobile. Zapewniono prawidłową funkcjonalność w przeglądarkach TV na ponad 5 platformach smart TV i zidentyfikowano ponad 20 błędów w module administracyjnym przed wydaniem."
+    },
+    "technologies": ["PHP", "Laravel", "Redux", "React Native", "React", "PHPUnit"],
+    "domain": "E-learning",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "5+ smart TV platforms compatibility",
+        "20+ bugs prevented in admin module",
+        "Zero critical issues in production"
+      ],
+      "pl": [
+        "Kompatybilność z ponad 5 platformami smart TV",
+        "Ponad 20 błędów wychwyconych w module administracyjnym",
+        "Zero krytycznych problemów na produkcji"
+      ]
+    },
+    "image": "../assets/projects/multi-platform-elearning-system.png",
+    "imageAlt": {
+      "en": "Multi-Platform E-learning System — screenshot",
+      "pl": "Multi-Platform E-learning System — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 6,
+    "slug": "insurance-comparison-platform",
+    "title": "Insurance Comparison Platform",
+    "description": {
+      "en": "Insurance comparison platform with whitelabel distribution capability. Automated 80% of critical API endpoints with Codeception (PHP) and created utility tools reducing manual testing by 70%.",
+      "pl": "Platforma porównywania ubezpieczeń z możliwością dystrybucji whitelabel. Zautomatyzowano 80% krytycznych endpointów API z Codeception (PHP) i stworzono narzędzia pomocnicze redukujące testy manualne o 70%."
+    },
+    "technologies": ["PHP", "Symfony", "Angular", "Redux", "Codeception", "PHPUnit"],
+    "domain": "Fintech",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "80% API endpoint automation coverage",
+        "70% reduction in manual testing time",
+        "50% faster regression testing"
+      ],
+      "pl": [
+        "80% endpointów API objętych automatyzacją",
+        "70% mniej czasu na testy manualne",
+        "50% szybsze testy regresyjne"
+      ]
+    },
+    "image": "../assets/projects/insurance-comparison-platform.png",
+    "imageAlt": {
+      "en": "Insurance Comparison Platform — screenshot",
+      "pl": "Insurance Comparison Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 5,
+    "slug": "construction-engineering-software",
+    "title": "Construction Engineering Software",
+    "description": {
+      "en": "Software package for construction engineers for structural analysis. Implemented guided exploratory testing methodology, increasing test coverage by 60%. Identified and fixed 8 memory leaks, improving stability by 45%.",
+      "pl": "Pakiet oprogramowania dla inżynierów budowlanych do analizy konstrukcji. Wdrożono metodologię ukierunkowanych testów eksploracyjnych, zwiększając pokrycie testów o 60%. Zidentyfikowano i naprawiono 8 wycieków pamięci, poprawiając stabilność o 45%."
+    },
+    "technologies": ["C#", "WPF", "C++", "MFC", "TFS", "Jenkins", "NUnit", "Xmind"],
+    "domain": "Construction",
+    "platform": "Desktop",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "60% increase in test coverage",
+        "45% stability improvement",
+        "Fixed 8 critical memory leaks"
+      ],
+      "pl": [
+        "60% wzrostu pokrycia testami",
+        "45% poprawy stabilności",
+        "Naprawionych 8 krytycznych wycieków pamięci"
+      ]
+    },
+    "image": "../assets/projects/construction-engineering-software.png",
+    "imageAlt": {
+      "en": "Construction Engineering Software — screenshot",
+      "pl": "Construction Engineering Software — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 4,
+    "slug": "mobile-banking-leasing-app",
+    "title": "Mobile Banking & Leasing App",
+    "description": {
+      "en": "Mobile application for Swiss bank leasing management with AI features (face recognition, fingerprint). Tested AI integration achieving 99.9% accuracy and identified 15+ critical biometric security bugs.",
+      "pl": "Aplikacja mobilna do zarządzania leasingiem w banku szwajcarskim z funkcjami AI (rozpoznawanie twarzy, odcisk palca). Przetestowano integrację AI osiągając 99,9% dokładności i zidentyfikowano ponad 15 krytycznych błędów bezpieczeństwa biometrycznego."
+    },
+    "technologies": ["Xamarin", "T-SQL", "Proxyman", "NUnit"],
+    "domain": "Fintech",
+    "platform": "Mobile",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "99.9% AI accuracy in production",
+        "15+ critical biometric security bugs identified",
+        "Zero security incidents post-launch"
+      ],
+      "pl": [
+        "99,9% trafności AI na produkcji",
+        "Wykrytych ponad 15 krytycznych błędów zabezpieczeń biometrycznych",
+        "Zero incydentów bezpieczeństwa po starcie"
+      ]
+    },
+    "image": "../assets/projects/mobile-banking-leasing-app.png",
+    "imageAlt": {
+      "en": "Mobile Banking & Leasing App — screenshot",
+      "pl": "Mobile Banking & Leasing App — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 3,
+    "slug": "iot-agricultural-machinery-platform",
+    "title": "IoT Agricultural Machinery Platform",
+    "description": {
+      "en": "Web application for communication and management of agricultural machines using CAN/CAM standard. Conducted comprehensive security testing with OWASP ZAP, identifying 12 security vulnerabilities before production.",
+      "pl": "Aplikacja webowa do komunikacji i zarządzania maszynami rolniczymi wykorzystująca standard CAN/CAM. Przeprowadzono kompleksowe testy bezpieczeństwa z OWASP ZAP, identyfikując 12 luk bezpieczeństwa przed produkcją."
+    },
+    "technologies": ["ASP .NET Core", "Angular", "T-SQL", "Karma", "NUnit", "OWASP ZAP"],
+    "domain": "Automotive IoT",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "Identified 12 security vulnerabilities before production",
+        "Created complete English documentation",
+        "50% faster user onboarding"
+      ],
+      "pl": [
+        "Wykrytych 12 podatności bezpieczeństwa przed wdrożeniem na produkcję",
+        "Opracowana kompletna dokumentacja w języku angielskim",
+        "50% szybszy onboarding użytkowników"
+      ]
+    },
+    "image": "../assets/projects/iot-agricultural-machinery-platform.png",
+    "imageAlt": {
+      "en": "IoT Agricultural Machinery Platform — screenshot",
+      "pl": "IoT Agricultural Machinery Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 2,
+    "slug": "fintech-banking-platform",
+    "title": "Fintech Banking Platform",
+    "description": {
+      "en": "Comprehensive fintech platform for Swiss bank. Implemented SonarQube static analysis and TestCafe GUI automation, reducing production bugs by 35%. Built QA process from scratch, cutting testing costs by 40%.",
+      "pl": "Kompleksowa platforma fintech dla szwajcarskiego banku. Wdrożono analizę statyczną SonarQube i automatyzację GUI TestCafe, redukując błędy produkcyjne o 35%. Zbudowano proces QA od podstaw, obniżając koszty testów o 40%."
+    },
+    "technologies": [".NET Framework", "WPF", "Angular", "T-SQL", "TestCafe", "NUnit", "OWASP ZAP"],
+    "domain": "Fintech",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "35% reduction in production bugs",
+        "40% decrease in testing costs",
+        "Built QA process from scratch",
+        "Eliminated all high-risk security vulnerabilities"
+      ],
+      "pl": [
+        "35% mniej błędów na produkcji",
+        "40% niższe koszty testowania",
+        "Proces QA zbudowany od podstaw",
+        "Wyeliminowane wszystkie podatności bezpieczeństwa wysokiego ryzyka"
+      ]
+    },
+    "image": "../assets/projects/fintech-banking-platform.png",
+    "imageAlt": {
+      "en": "Fintech Banking Platform — screenshot",
+      "pl": "Fintech Banking Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  },
+  {
+    "id": 1,
+    "slug": "waste-management-platform",
+    "title": "Waste Management Platform",
+    "description": {
+      "en": "Web application for comprehensive waste management for small and medium enterprises. Ensured full compliance with Polish waste management regulations and verified integration with MOS API and payment systems.",
+      "pl": "Aplikacja webowa do kompleksowego zarządzania odpadami dla małych i średnich przedsiębiorstw. Zapewniono pełną zgodność z polskimi przepisami o gospodarce odpadami i zweryfikowano integrację z API MOS oraz systemami płatności."
+    },
+    "technologies": ["ASP .NET", "Angular", "Jenkins", "Octopus", "MySQL", "Karma", "NUnit"],
+    "domain": "Waste Management",
+    "platform": "Web",
+    "type": "client",
+    "status": "completed",
+    "achievements": {
+      "en": [
+        "100% compliance with Polish waste management regulations",
+        "Zero critical bugs in MOS API integration",
+        "Verified all payment system integrations"
+      ],
+      "pl": [
+        "100% zgodności z polskimi przepisami o gospodarce odpadami",
+        "Zero krytycznych błędów w integracji z API MOS",
+        "Zweryfikowane wszystkie integracje systemów płatności"
+      ]
+    },
+    "image": "../assets/projects/waste-management-platform.png",
+    "imageAlt": {
+      "en": "Waste Management Platform — screenshot",
+      "pl": "Waste Management Platform — zrzut ekranu"
+    },
+    "github": null,
+    "demo": null
+  }
+]

@@ -1,0 +1,168 @@
+---
+// Port of project_card() from portfolio/projects.py. Card data-* attributes drive src/scripts/projects.ts.
+import { Image } from 'astro:assets';
+import { Eye } from '@lucide/astro';
+import T from './T.astro';
+import {
+  PLATFORM_EMOJI,
+  domainLabels,
+  platformLabels,
+  searchText,
+  type Project,
+} from '../lib/projects';
+
+interface Props {
+  project: Project;
+}
+const { project: p } = Astro.props;
+const domain = domainLabels[p.domain];
+const platform = platformLabels[p.platform];
+---
+
+<li
+  class="card"
+  data-project={p.slug}
+  data-techs={p.technologies.join('|')}
+  data-domain={p.domain}
+  data-platform={p.platform}
+  data-type={p.type}
+  data-search-en={searchText(p, 'en')}
+  data-search-pl={searchText(p, 'pl')}
+>
+  <div class="media">
+    {p.image ? (
+      <Image
+        src={p.image}
+        alt={p.imageAlt!.en}
+        data-i18n-alt-en={p.imageAlt!.en}
+        data-i18n-alt-pl={p.imageAlt!.pl}
+        widths={[400, 720]}
+        sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <div class="fallback">
+        <span class="platform-emoji" aria-hidden="true">
+          {PLATFORM_EMOJI[p.platform]}
+        </span>
+        <T en={platform.en} pl={platform.pl} class="platform-badge" />
+      </div>
+    )}
+  </div>
+  <h2 class="title">{p.title}</h2>
+  <T en={p.description.en} pl={p.description.pl} as="p" class="description" />
+  <p class="domain">
+    <T en={domain.en} pl={domain.pl} />
+  </p>
+  <button type="button" class="btn btn-primary details" data-open-project={p.slug}>
+    <Eye size={16} aria-hidden="true" />
+    <T k="proj_view_details" />
+    <span class="visually-hidden">: {p.title}</span>
+  </button>
+</li>
+
+<style>
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 1rem;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9));
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 212, 255, 0.2);
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.25),
+      0 0 30px rgba(0, 212, 255, 0.1);
+  }
+  .card[hidden] {
+    display: none;
+  }
+  .media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(
+      135deg,
+      rgba(0, 212, 255, 0.05),
+      rgba(91, 115, 255, 0.05) 50%,
+      rgba(139, 92, 246, 0.05)
+    );
+  }
+  .media :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+  }
+  .fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .platform-emoji {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  .fallback :global(.platform-badge) {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 1rem;
+    background: rgba(139, 92, 246, 0.2);
+    color: #ddd6fe;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .title {
+    margin-bottom: 0.75rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  .card :global(.description) {
+    display: -webkit-box;
+    min-height: 4.5rem;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: center;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .domain {
+    align-self: center;
+    margin-bottom: 1.25rem;
+    padding: 0.35rem 1rem;
+    border: 1px solid rgba(91, 115, 255, 0.3);
+    border-radius: 1.5rem;
+    background: rgba(91, 115, 255, 0.15);
+    color: #b4c0ff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .details {
+    width: 100%;
+    margin-top: auto;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+  }
+</style>

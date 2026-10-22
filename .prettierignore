@@ -1,0 +1,17 @@
+dist/
+.astro/
+node_modules/
+package-lock.json
+playwright-report/
+test-results/
+portfolio/
+assets/
+specs/
+.specify/
+.claude/
+.states/
+.web/
+.venv/
+scripts/migrate/
+*.pdf
+*.md

@@ -1,0 +1,153 @@
+{
+  "domains": [
+    {
+      "value": "AI",
+      "label": {
+        "en": "AI",
+        "pl": "AI"
+      }
+    },
+    {
+      "value": "Automotive IoT",
+      "label": {
+        "en": "Automotive IoT",
+        "pl": "IoT motoryzacyjne"
+      }
+    },
+    {
+      "value": "Blockchain",
+      "label": {
+        "en": "Blockchain",
+        "pl": "Blockchain"
+      }
+    },
+    {
+      "value": "Construction",
+      "label": {
+        "en": "Construction",
+        "pl": "Budownictwo"
+      }
+    },
+    {
+      "value": "Data Analysis",
+      "label": {
+        "en": "Data Analysis",
+        "pl": "Analiza danych"
+      }
+    },
+    {
+      "value": "E-commerce",
+      "label": {
+        "en": "E-commerce",
+        "pl": "E-commerce"
+      }
+    },
+    {
+      "value": "E-learning",
+      "label": {
+        "en": "E-learning",
+        "pl": "E-learning"
+      }
+    },
+    {
+      "value": "Fintech",
+      "label": {
+        "en": "Fintech",
+        "pl": "Fintech"
+      }
+    },
+    {
+      "value": "Gaming",
+      "label": {
+        "en": "Gaming",
+        "pl": "Gry"
+      }
+    },
+    {
+      "value": "HR Tech",
+      "label": {
+        "en": "HR Tech",
+        "pl": "HR Tech"
+      }
+    },
+    {
+      "value": "Health & Fitness",
+      "label": {
+        "en": "Health & Fitness",
+        "pl": "Zdrowie i fitness"
+      }
+    },
+    {
+      "value": "Industry",
+      "label": {
+        "en": "Industry",
+        "pl": "Przemysł"
+      }
+    },
+    {
+      "value": "Oil & Gas",
+      "label": {
+        "en": "Oil & Gas",
+        "pl": "Ropa i gaz"
+      }
+    },
+    {
+      "value": "Testing",
+      "label": {
+        "en": "Testing",
+        "pl": "Testowanie"
+      }
+    },
+    {
+      "value": "Transport",
+      "label": {
+        "en": "Transport",
+        "pl": "Transport"
+      }
+    },
+    {
+      "value": "Waste Management",
+      "label": {
+        "en": "Waste Management",
+        "pl": "Gospodarka odpadami"
+      }
+    },
+    {
+      "value": "Web3",
+      "label": {
+        "en": "Web3",
+        "pl": "Web3"
+      }
+    }
+  ],
+  "platforms": [
+    {
+      "value": "Web",
+      "label": {
+        "en": "Web",
+        "pl": "Web"
+      }
+    },
+    {
+      "value": "Mobile",
+      "label": {
+        "en": "Mobile",
+        "pl": "Mobile"
+      }
+    },
+    {
+      "value": "Desktop",
+      "label": {
+        "en": "Desktop",
+        "pl": "Desktop"
+      }
+    },
+    {
+      "value": "AI/Automation",
+      "label": {
+        "en": "AI/Automation",
+        "pl": "AI/Automatyzacja"
+      }
+    }
+  ]
+}

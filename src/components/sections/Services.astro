@@ -1,0 +1,64 @@
+---
+// Port of the "Services & Expertise" block of experience_page() (portfolio/experience.py).
+import T from '../T.astro';
+import Icon from '../Icon.astro';
+import { services } from '../../lib/content';
+---
+
+<section class="panel services" aria-labelledby="services-title">
+  <h2 class="section-title gradient-text" id="services-title">
+    <T k="services_title" />
+  </h2>
+  <ul class="grid" role="list">
+    {services.map((s) => (
+      <li class={`card c-${s.color}`}>
+        <Icon name={s.icon} size={32} class="icon" />
+        <T k={s.titleKey} as="h3" class="card-title" />
+        <T k={s.descKey} as="p" class="card-text" />
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .services {
+    margin-bottom: 3rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(var(--c), 0.2);
+    border-radius: var(--radius-lg);
+    background: rgba(var(--c), 0.05);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: var(--transition);
+  }
+  .card:hover {
+    background: rgba(var(--c), 0.08);
+    border-color: rgba(var(--c), 0.4);
+    transform: translateX(4px);
+  }
+  .card :global(.icon) {
+    color: color-mix(in srgb, rgb(var(--c)) 60%, white);
+    margin-bottom: 0.5rem;
+  }
+  .card :global(.card-title) {
+    min-height: 3rem;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  .card :global(.card-text) {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+</style>

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "color": "cyan",
+    "problemKey": "achievement1_problem",
+    "solutionKey": "achievement1_solution",
+    "resultKey": "achievement1_result",
+    "projectTitle": "Web3 Gaming & Crypto Platform"
+  },
+  {
+    "id": 2,
+    "color": "blue",
+    "problemKey": "achievement2_problem",
+    "solutionKey": "achievement2_solution",
+    "resultKey": "achievement2_result",
+    "projectTitle": "Fintech Banking Platform"
+  },
+  {
+    "id": 3,
+    "color": "purple",
+    "problemKey": "achievement3_problem",
+    "solutionKey": "achievement3_solution",
+    "resultKey": "achievement3_result",
+    "projectTitle": "AI-Powered GPU Computing App"
+  },
+  {
+    "id": 4,
+    "color": "pink",
+    "problemKey": "achievement4_problem",
+    "solutionKey": "achievement4_solution",
+    "resultKey": "achievement4_result",
+    "projectTitle": "Web3 Gaming Mobile App - Rewards Marketplace"
+  },
+  {
+    "id": 5,
+    "color": "orange",
+    "problemKey": "achievement5_problem",
+    "solutionKey": "achievement5_solution",
+    "resultKey": "achievement5_result",
+    "projectTitle": "Web3 Gaming & Crypto Platform"
+  },
+  {
+    "id": 6,
+    "color": "green",
+    "problemKey": "achievement6_problem",
+    "solutionKey": "achievement6_solution",
+    "resultKey": "achievement6_result",
+    "projectTitle": "AI Research Analysis Platform (RAG)"
+  }
+]

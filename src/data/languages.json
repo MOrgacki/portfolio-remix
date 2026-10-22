@@ -1,0 +1,26 @@
+[
+  {
+    "code": "en",
+    "nameKey": "lang_english",
+    "levelKey": "lang_level_upper_intermediate",
+    "cefr": "B2+",
+    "percent": 75,
+    "color": "cyan"
+  },
+  {
+    "code": "pl",
+    "nameKey": "lang_polish",
+    "levelKey": "lang_level_native",
+    "cefr": "C2",
+    "percent": 100,
+    "color": "green"
+  },
+  {
+    "code": "de",
+    "nameKey": "lang_german",
+    "levelKey": "lang_level_beginner",
+    "cefr": "A1",
+    "percent": 15,
+    "color": "orange"
+  }
+]

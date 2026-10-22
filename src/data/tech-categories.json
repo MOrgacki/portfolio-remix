@@ -1,0 +1,179 @@
+[
+  {
+    "id": "languages",
+    "label": {
+      "en": "Programming Languages",
+      "pl": "Języki programowania"
+    },
+    "colorToken": "--tech-cyan",
+    "techs": ["Python", "TypeScript", "C#", "PHP", "C++", "Go", "Rust"]
+  },
+  {
+    "id": "testing",
+    "label": {
+      "en": "Testing Tools",
+      "pl": "Narzędzia testowe"
+    },
+    "colorToken": "--tech-blue",
+    "techs": [
+      "Selenium",
+      "Cypress",
+      "Playwright",
+      "Pytest",
+      "NUnit",
+      "PHPUnit",
+      "Karma",
+      "Codeception",
+      "TestCafe",
+      "Postman",
+      "Fiddler",
+      "Fiddler Classic",
+      "OWASP ZAP",
+      "Proxyman",
+      "API Testing"
+    ]
+  },
+  {
+    "id": "databases",
+    "label": {
+      "en": "Databases",
+      "pl": "Bazy danych"
+    },
+    "colorToken": "--tech-purple",
+    "techs": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "T-SQL",
+      "Database",
+      "Database Integration",
+      "Vector Database"
+    ]
+  },
+  {
+    "id": "frameworks",
+    "label": {
+      "en": "Frameworks & Technologies",
+      "pl": "Frameworki i technologie"
+    },
+    "colorToken": "--tech-pink",
+    "techs": [
+      "React",
+      "Angular",
+      "Vue.js",
+      "Laravel",
+      "Symfony",
+      "Django",
+      "FastAPI",
+      "Node.js",
+      ".NET",
+      ".NET Framework",
+      "ASP .NET",
+      "ASP .NET Core",
+      "React Native",
+      "Flutter",
+      "Xamarin",
+      "WPF",
+      "MFC",
+      "Redux",
+      "Web3",
+      "Blockchain",
+      "AI",
+      "Smart Contracts",
+      "DePIN"
+    ]
+  },
+  {
+    "id": "devops",
+    "label": {
+      "en": "DevOps & Tools",
+      "pl": "DevOps i narzędzia"
+    },
+    "colorToken": "--tech-green",
+    "techs": ["Docker", "Jenkins", "TFS", "Octopus", "Cloud"]
+  },
+  {
+    "id": "other",
+    "label": {
+      "en": "Other",
+      "pl": "Inne"
+    },
+    "colorToken": "--tech-orange",
+    "techs": [
+      "REST API",
+      "API",
+      "Payment Gateway",
+      "SSO",
+      "Azure AD",
+      "Okta",
+      "GPS",
+      "Push Notifications",
+      "WebOS",
+      "Tizen",
+      "Android TV",
+      "iOS",
+      "Android",
+      "Mobile",
+      "RPA",
+      "Image Processing",
+      "Automation",
+      "Web Scraping",
+      "CSV",
+      "Logging",
+      "Error Handling",
+      "Multi-chain",
+      "MetaMask",
+      "Crypto Wallet",
+      "ERC-20",
+      "BNB Chain",
+      "Solana",
+      "Bridge Protocol",
+      "Airdrop",
+      "Investment Platform",
+      "Admin Panel",
+      "Client Portal",
+      "Report System",
+      "PDF Generation",
+      "Cart Optimization",
+      "Algorithm Testing",
+      "Payment Integration",
+      "Shipping Logic",
+      "Banking Integration",
+      "CRM",
+      "Financial Systems",
+      "Security Testing",
+      "Inventory Management",
+      "Supply Chain",
+      "Logistics",
+      "Product Catalog",
+      "Wallet Integrations",
+      "HTTP",
+      "Crypto Payments",
+      "Decentralized Network",
+      "Node Infrastructure",
+      "Smart TV",
+      "Hardware",
+      "GPU Computing",
+      "LMS",
+      "ATS",
+      "ADB",
+      "Simulators",
+      "Celery",
+      "E-commerce",
+      "OpenAPI",
+      "Pixel Detection",
+      "Async Coroutines",
+      "Requests",
+      "Data Analysis",
+      "Browser Automation",
+      "Data Export",
+      "NFT",
+      "OpenSea",
+      "API Integration",
+      "REST",
+      "Vue",
+      "Xmind"
+    ]
+  }
+]

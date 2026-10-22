@@ -1,0 +1,70 @@
+---
+// Port of _create_breadcrumb_item() from portfolio/main.py.
+import { Mail } from '@lucide/astro';
+import BrandIcon from './BrandIcon.astro';
+import T from './T.astro';
+import { contactChannels } from '../lib/content';
+---
+
+<ul class="social" role="list">
+  {contactChannels.map((c) => (
+    <li>
+      <a
+        class={`social-link ${c.id}`}
+        href={c.href}
+        {...(c.id === 'email' ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+      >
+        {c.id === 'email' ? <Mail size={20} aria-hidden="true" /> : <BrandIcon name={c.id} />}
+        <T k={c.labelKey} />
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: 120px;
+    min-height: 44px;
+    padding: 0.5rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    backdrop-filter: blur(20px);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  .social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+  .github {
+    background: var(--brand-github);
+  }
+  .github:hover {
+    background: var(--brand-github-hover);
+  }
+  .linkedin {
+    background: var(--brand-linkedin);
+  }
+  .linkedin:hover {
+    background: var(--brand-linkedin-hover);
+  }
+  .email {
+    background: var(--brand-email);
+  }
+  .email:hover {
+    background: var(--brand-email-hover);
+  }
+</style>

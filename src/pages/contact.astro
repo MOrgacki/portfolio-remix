@@ -1,0 +1,27 @@
+---
+// The legacy /contact page repeated the home view; here it focuses on the contact channels.
+import { Mail } from '@lucide/astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactSection from '../components/sections/ContactSection.astro';
+import T from '../components/T.astro';
+---
+
+<BaseLayout titleKey="page_title_contact" descriptionKey="page_description_contact" nav="contact">
+  <div class="contact-page">
+    <ContactSection primary>
+      <a class="btn btn-primary" href="mailto:marcinorgacki@gmail.com">
+        <Mail size={20} aria-hidden="true" />
+        <T k="contact_me" />
+      </a>
+    </ContactSection>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-page {
+    display: flex;
+    align-items: center;
+    min-height: 60vh;
+    padding-block: 3rem;
+  }
+</style>

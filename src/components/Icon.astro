@@ -1,0 +1,43 @@
+---
+// Maps the Lucide icon names used by the legacy Reflex pages to build-time SVG components.
+import {
+  Bot,
+  BriefcaseBusiness,
+  Bug,
+  ClipboardList,
+  Code,
+  Lightbulb,
+  School,
+  Shield,
+  Sparkles,
+  Trophy,
+  Users,
+  Workflow,
+} from '@lucide/astro';
+
+const icons = {
+  bot: Bot,
+  'briefcase-business': BriefcaseBusiness,
+  bug: Bug,
+  'clipboard-list': ClipboardList,
+  code: Code,
+  lightbulb: Lightbulb,
+  school: School,
+  shield: Shield,
+  sparkles: Sparkles,
+  trophy: Trophy,
+  users: Users,
+  workflow: Workflow,
+};
+
+interface Props {
+  name: string;
+  size?: number;
+  class?: string;
+}
+const { name, size = 24, class: className } = Astro.props;
+const Component = icons[name as keyof typeof icons];
+if (!Component) throw new Error(`Unknown icon: ${name}`);
+---
+
+<Component size={size} class={className} aria-hidden="true" />

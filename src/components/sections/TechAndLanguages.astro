@@ -1,0 +1,179 @@
+---
+// Port of the "Tech Stack" and "Languages + Certificates" columns of experience_page().
+import { Award } from '@lucide/astro';
+import T from '../T.astro';
+import { certificates, skills, spokenLanguages } from '../../lib/content';
+---
+
+<div class="columns">
+  <section class="panel" aria-labelledby="stack-title">
+    <h2 class="col-title gradient-text" id="stack-title">
+      <T k="exp_tech_stack" />
+    </h2>
+    {skills.map((group) => (
+      <div class="group">
+        <T k={group.labelKey} as="h3" class="group-title" />
+        <ul class="badge-list" role="list">
+          {group.items.map((item) => (
+            <li class={`badge c-${group.color}`}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <section class="panel" aria-labelledby="languages-title">
+    <h2 class="col-title green" id="languages-title">
+      <T k="exp_languages" />
+    </h2>
+    <ul class="languages" role="list">
+      {spokenLanguages.map((l) => (
+        <li class={`language c-${l.color}`}>
+          <div class="language-row">
+            <span class="code" aria-hidden="true">
+              {l.code}
+            </span>
+            <T k={l.nameKey} class="language-name" />
+            <span class="level">
+              <T k={l.levelKey} /> ({l.cefr})
+            </span>
+          </div>
+          <div class="bar" aria-hidden="true">
+            <span style={`width:${l.percent}%`} />
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <hr />
+
+    <h2 class="col-title violet">
+      <T k="exp_certificates" />
+    </h2>
+    <ul class="certificates" role="list">
+      {certificates.map((c) => (
+        <li class={`certificate c-${c.color}`}>
+          <span class="award">
+            <Award size={20} aria-hidden="true" />
+          </span>
+          {c.name}
+        </li>
+      ))}
+    </ul>
+  </section>
+</div>
+
+<style>
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  @media (min-width: 1024px) {
+    .columns {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .col-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-align: center;
+  }
+  .col-title.green {
+    background: linear-gradient(135deg, #22c55e 0%, #10b981 50%, #14b8a6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .col-title.violet {
+    font-size: 1.35rem;
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #d946ef 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .group + .group {
+    margin-top: 1.5rem;
+  }
+  .group :global(.group-title) {
+    margin-bottom: 0.6rem;
+    color: var(--gray-300);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  .languages {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .language-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+  .code {
+    color: var(--gray-400);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .language-row :global(.language-name) {
+    flex: 1;
+    color: #fff;
+    font-weight: 600;
+  }
+  .level {
+    color: color-mix(in srgb, rgb(var(--c)) 55%, white);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .bar {
+    height: 12px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: rgba(30, 41, 59, 0.6);
+  }
+  .bar span {
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(var(--c), 0.8), rgba(91, 115, 255, 0.6));
+  }
+  hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid var(--border-strong);
+  }
+  .certificates {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .certificate {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(var(--c), 0.15);
+    border-radius: var(--radius);
+    background: rgba(var(--c), 0.05);
+    color: var(--gray-300);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  .award {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(var(--c), 0.3);
+    border-radius: 50%;
+    background: rgba(var(--c), 0.1);
+    color: color-mix(in srgb, rgb(var(--c)) 60%, white);
+  }
+</style>

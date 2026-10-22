@@ -1,0 +1,156 @@
+---
+// Pure-CSS port of animated_background() from the legacy portfolio/animations.py.
+const shapes = [
+  { cls: 'circle soft', size: 80, anim: 'float 6s infinite 0s', pos: 'top:10%;left:10%' },
+  {
+    cls: 'circle softer',
+    size: 120,
+    anim: 'floatReverse 8s infinite 1s',
+    pos: 'top:70%;right:15%',
+  },
+  { cls: 'circle soft', size: 60, anim: 'drift 10s infinite 2s', pos: 'top:30%;right:25%' },
+  { cls: 'diamond cyan', size: 40, anim: 'pulse 4s infinite 1.5s', pos: 'top:20%;right:10%' },
+  { cls: 'diamond blue', size: 35, anim: 'pulse 5s infinite 3s', pos: 'bottom:25%;left:20%' },
+  { cls: 'circle orb-cyan', size: 25, anim: 'glow 3s infinite 0.5s', pos: 'top:15%;left:70%' },
+  { cls: 'circle orb-blue', size: 30, anim: 'glow 4s infinite 2s', pos: 'bottom:20%;right:30%' },
+  { cls: 'circle faint', size: 50, anim: 'float 7s infinite 4s', pos: 'bottom:40%;left:5%' },
+  { cls: 'diamond faint-cyan', size: 45, anim: 'drift 9s infinite 1s', pos: 'top:60%;left:40%' },
+];
+const particles = Array.from({ length: 12 }, (_, i) => ({
+  pos: `top:${10 + i * 7}%;left:${5 + i * 8}%`,
+  anim: `pulse ${3 + (i % 3)}s infinite ${i * 0.5}s`,
+}));
+---
+
+<div class="bg" aria-hidden="true">
+  <div class="overlay"></div>
+  {shapes.map((s) => (
+    <span
+      class={`shape ${s.cls}`}
+      style={`${s.pos};width:${s.size}px;height:${s.size}px;animation:${s.anim}`}
+    />
+  ))}
+  {particles.map((p) => (
+    <span class="particle" style={`${p.pos};animation:${p.anim}`} />
+  ))}
+</div>
+
+<style>
+  .bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(91, 115, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+    animation: pulse 8s infinite;
+  }
+  .shape,
+  .particle {
+    position: absolute;
+  }
+  .circle {
+    border-radius: 50%;
+  }
+  .diamond {
+    border-radius: 10px;
+    transform: rotate(45deg);
+  }
+  .soft {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(91, 115, 255, 0.1));
+  }
+  .softer {
+    background: linear-gradient(135deg, rgba(91, 115, 255, 0.08), rgba(0, 212, 255, 0.08));
+  }
+  .faint {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.06), rgba(91, 115, 255, 0.06));
+  }
+  .cyan {
+    background: rgba(0, 212, 255, 0.15);
+  }
+  .blue {
+    background: rgba(91, 115, 255, 0.12);
+  }
+  .faint-cyan {
+    background: rgba(0, 212, 255, 0.08);
+  }
+  .orb-cyan {
+    background: rgba(0, 212, 255, 0.6);
+  }
+  .orb-blue {
+    background: rgba(91, 115, 255, 0.5);
+  }
+  .particle {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: rgba(0, 212, 255, 0.4);
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+      opacity: 1;
+    }
+  }
+  @keyframes floatReverse {
+    0%,
+    100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translateY(20px) rotate(-180deg);
+      opacity: 0.8;
+    }
+  }
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+  }
+  @keyframes drift {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(30px, -30px);
+    }
+    50% {
+      transform: translate(-20px, -60px);
+    }
+    75% {
+      transform: translate(-40px, -30px);
+    }
+  }
+  @keyframes glow {
+    0%,
+    100% {
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+    50% {
+      box-shadow:
+        0 0 40px rgba(0, 212, 255, 0.6),
+        0 0 60px rgba(91, 115, 255, 0.4);
+    }
+  }
+</style>

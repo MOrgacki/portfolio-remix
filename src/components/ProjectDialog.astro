@@ -1,0 +1,225 @@
+---
+// Port of project_modal() from portfolio/projects.py: one native <dialog>; each project's details are
+// pre-rendered (both languages) in a <template> that src/scripts/projects.ts copies in on open.
+import { ExternalLink, X } from '@lucide/astro';
+import T from './T.astro';
+import BrandIcon from './BrandIcon.astro';
+import { both } from '../i18n';
+import { categoryOf, domainLabels, platformLabels, type Project } from '../lib/projects';
+
+interface Props {
+  projects: Project[];
+}
+const { projects } = Astro.props;
+const close = both('proj_close');
+---
+
+<dialog class="dialog" data-project-dialog aria-labelledby="project-dialog-title">
+  <button
+    type="button"
+    class="close"
+    data-close-dialog
+    aria-label={close.en}
+    data-i18n-aria-label-en={close.en}
+    data-i18n-aria-label-pl={close.pl}
+  >
+    <X size={24} aria-hidden="true" />
+  </button>
+  <div class="body" data-dialog-body></div>
+</dialog>
+
+{projects.map((p) => (
+  <template data-project-template={p.slug}>
+    <h2 class="title" id="project-dialog-title">
+      {p.title}
+    </h2>
+    <p class="badges">
+      <span class="badge-domain">
+        <T en={domainLabels[p.domain].en} pl={domainLabels[p.domain].pl} />
+      </span>
+      <span class="badge-platform">
+        <T en={platformLabels[p.platform].en} pl={platformLabels[p.platform].pl} />
+      </span>
+    </p>
+    <T en={p.description.en} pl={p.description.pl} as="p" class="description" />
+    {p.achievements.en.length > 0 && (
+      <section>
+        <T k="proj_achievements" as="h3" class="achievements-title" />
+        <ul class="achievements" role="list">
+          {p.achievements.en.map((text, i) => (
+            <li>
+              <span class="medal" aria-hidden="true">
+                🏅
+              </span>
+              <T en={text} pl={p.achievements.pl[i]} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+    <section>
+      <h3 class="tech-title">
+        <span class="emoji-plain" aria-hidden="true">
+          🛠️{' '}
+        </span>
+        <T k="proj_technologies" />
+      </h3>
+      <ul class="badge-list techs" role="list">
+        {p.technologies.map((tech) => (
+          <li class="badge" style={`--c: var(${categoryOf(tech)?.colorToken ?? '--tech-cyan'})`}>
+            {tech}
+          </li>
+        ))}
+      </ul>
+    </section>
+    {(p.github || p.demo) && (
+      <p class="actions">
+        {p.github && (
+          <a class="btn code" href={p.github} target="_blank" rel="noopener noreferrer">
+            <BrandIcon name="github" size={18} />
+            <T k="proj_view_code" />
+          </a>
+        )}
+        {p.demo && (
+          <a class="btn btn-primary" href={p.demo} target="_blank" rel="noopener noreferrer">
+            <ExternalLink size={18} aria-hidden="true" />
+            <T k="proj_live_demo" />
+          </a>
+        )}
+      </p>
+    )}
+  </template>
+))}
+
+<style>
+  .dialog {
+    margin: auto;
+    width: min(800px, calc(100vw - 2rem));
+    max-height: 90vh;
+    padding: 2rem 1.25rem;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 1.5rem;
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.98));
+    color: var(--gray-300);
+    overflow-y: auto;
+  }
+  @media (min-width: 768px) {
+    .dialog {
+      padding: 2rem;
+    }
+  }
+  .dialog::backdrop {
+    background: rgba(2, 6, 23, 0.75);
+    backdrop-filter: blur(4px);
+  }
+  .close {
+    position: sticky;
+    top: 0;
+    float: right;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: -1rem -0.5rem 0 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(30, 41, 59, 0.8);
+    color: var(--gray-300);
+    cursor: pointer;
+  }
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .body :global(.title) {
+    padding-inline: 2.5rem;
+    background: var(--heading-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  .body :global(.badges) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  .body :global(.badge-domain),
+  .body :global(.badge-platform) {
+    padding: 0.45rem 1.1rem;
+    border-radius: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .body :global(.badge-domain) {
+    border: 1px solid rgba(91, 115, 255, 0.3);
+    background: rgba(91, 115, 255, 0.15);
+    color: #b4c0ff;
+  }
+  .body :global(.badge-platform) {
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    background: rgba(139, 92, 246, 0.15);
+    color: #ddd6fe;
+  }
+  .body :global(.description) {
+    line-height: 1.8;
+  }
+  .body :global(.achievements-title) {
+    margin-bottom: 1rem;
+    color: #fdba74;
+    font-size: 1.25rem;
+  }
+  .body :global(.achievements) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: left;
+  }
+  .body :global(.achievements li) {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    border-radius: var(--radius);
+    background: rgba(15, 23, 42, 0.4);
+    font-size: 0.95rem;
+  }
+  .body :global(.medal) {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(251, 191, 36, 0.4);
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    font-size: 1.6rem;
+  }
+  .body :global(.tech-title) {
+    margin-bottom: 1rem;
+    color: var(--accent-text);
+    font-size: 1.25rem;
+  }
+  .body :global(.techs) {
+    justify-content: center;
+  }
+  .body :global(.actions) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .body :global(.code) {
+    background: var(--brand-github);
+    color: #fff;
+  }
+</style>

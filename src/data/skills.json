@@ -1,0 +1,78 @@
+[
+  {
+    "id": "languages",
+    "labelKey": "tech_group_languages",
+    "color": "cyan",
+    "items": ["JavaScript", "Python", "Bash"]
+  },
+  {
+    "id": "testing",
+    "labelKey": "tech_group_testing",
+    "color": "blue",
+    "items": [
+      "Cypress",
+      "Playwright",
+      "Postman",
+      "TestRail",
+      "Swagger",
+      "Fiddler",
+      "OWASP ZAP",
+      "Selenium",
+      "Device Emulators",
+      "LambdaTest",
+      "DevTools",
+      "Mockoon",
+      "VMs",
+      "Locust",
+      "WireShark"
+    ]
+  },
+  {
+    "id": "databases",
+    "labelKey": "tech_group_databases",
+    "color": "purple",
+    "items": ["SQL", "NoSQL", "PostgreSQL", "MongoDB", "TimescaleDB", "MariaDB", "Redis", "MySQL"]
+  },
+  {
+    "id": "technologies",
+    "labelKey": "tech_group_technologies",
+    "color": "pink",
+    "items": [
+      "Node.js",
+      "Laravel",
+      "Symfony",
+      ".NET Core",
+      "Angular",
+      "Vue.js",
+      "React",
+      "Jenkins",
+      "AWS",
+      "GitHub",
+      "Flutter",
+      "Soketi",
+      "Django",
+      "Flask",
+      "GitLab",
+      "React Native",
+      "iOS",
+      "Android"
+    ]
+  },
+  {
+    "id": "others",
+    "labelKey": "tech_group_others",
+    "color": "orange",
+    "items": [
+      "CI/CD",
+      "Docker",
+      "Jira",
+      "ElasticSearch",
+      "Linux",
+      "GIT",
+      "Agile",
+      "Sentry",
+      "Windows",
+      "macOS"
+    ]
+  }
+]

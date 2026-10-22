@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import T from '../components/T.astro';
+import Services from '../components/sections/Services.astro';
+import TechAndLanguages from '../components/sections/TechAndLanguages.astro';
+import Timeline from '../components/sections/Timeline.astro';
+import ContactSection from '../components/sections/ContactSection.astro';
+---
+
+<BaseLayout
+  titleKey="page_title_experience"
+  descriptionKey="page_description_experience"
+  nav="experience"
+>
+  <div class="page">
+    <header class="page-header">
+      <h1 class="page-title gradient-text">
+        <T k="exp_title" />
+      </h1>
+      <T k="exp_subtitle" as="p" class="page-subtitle" />
+      <T k="exp_description" as="p" class="page-lead" />
+    </header>
+    <Services />
+    <TechAndLanguages />
+    <Timeline />
+  </div>
+  <ContactSection />
+</BaseLayout>
