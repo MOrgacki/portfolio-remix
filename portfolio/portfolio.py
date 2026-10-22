@@ -4,8 +4,14 @@ from portfolio.main import Main
 from portfolio.footer import Footer
 from portfolio.sidebar import sidebar
 from portfolio.projects import projects_page
+from portfolio.experience import experience_page
+from portfolio.case_studies import case_studies_page
+from portfolio.contact import contact_page
 from portfolio.blog import blog_page
 from portfolio.animations import animated_background, animations_css
+from portfolio.loader import initial_loader, page_transition_loader
+from portfolio.floating_button import floating_language_button
+from state import State
 
 dots_animation = {
     "@keyframes dots": {
@@ -13,7 +19,6 @@ dots_animation = {
         "100%": {"backgroundPosition": "40px 40px"},
     }
 }
-
 
 @rx.page(route="/", title="Marcin Orgacki")
 def index() -> rx.Component:
@@ -41,26 +46,45 @@ def index() -> rx.Component:
         }
     )
 
-    return rx.box(
-        # Animated background
-        animated_background(),
-        
+    return rx.fragment(
+        # Initial loading screen
+        rx.cond(
+            State.is_loading,
+            initial_loader()
+        ),
+
+        # Page transition loader
+        rx.cond(
+            State.is_page_loading,
+            page_transition_loader()
+        ),
+
         # Main content
-        layout,
-        
-        background="linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)",
-        style={
-            **animations_css,
-            "boxSizing": "border-box",
-            "width": "100%",
-            "minHeight": "100vh",
-            "margin": "0",
-            "padding": "0",
-            "position": "relative",
-            "overflow": "hidden"
-        },
-        width="100%",
-        min_height="100vh",
+        rx.box(
+            # Animated background
+            animated_background(),
+
+            # Main content
+            layout,
+
+            # Floating language button
+            floating_language_button(),
+
+            background="linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)",
+            style={
+                **animations_css,
+                "boxSizing": "border-box",
+                "width": "100%",
+                "minHeight": "100vh",
+                "margin": "0",
+                "padding": "0",
+                "position": "relative",
+                "overflow": "hidden"
+            },
+            width="100%",
+            min_height="100vh",
+            on_mount=State.finish_initial_load
+        )
     )
 
 
@@ -85,5 +109,8 @@ app = rx.App(
 # app.add_page(main.build, "/")
 
 app.add_page(index)
+app.add_page(experience_page)
+app.add_page(case_studies_page, route="/case-studies", title="Marcin Orgacki | Case Studies")
 app.add_page(projects_page)
+app.add_page(contact_page)
 app.add_page(blog_page)

@@ -1,4 +1,5 @@
 import reflex as rx
+from state import State
 
 def sidebar_item(
     text: str, icon: str, href: str
@@ -32,9 +33,10 @@ def sidebar_item(
 
 def sidebar_items() -> rx.Component:
     return rx.vstack(
-        sidebar_item("Home", "home", "/"),
-        sidebar_item("Projects", "square-library", "/projects"),
-        sidebar_item("Blog", "bar-chart-4", "/#"),
+        sidebar_item(State.nav_home, "home", "/"),
+        sidebar_item(State.nav_experience, "briefcase", "/experience"),
+        sidebar_item(State.nav_case_studies, "trophy", "/case-studies"),
+        sidebar_item(State.nav_projects, "square-library", "/projects"),
         spacing="1",
         width="100%",
     )

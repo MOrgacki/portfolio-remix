@@ -2,6 +2,8 @@ import reflex as rx
 from portfolio.header import Header
 from portfolio.footer import Footer
 from portfolio.animations import animated_background, animations_css
+from portfolio.loader import page_transition_loader
+from state import State
 
 @rx.page(route="/blog", title="Marcin Orgacki | Blog")
 def blog_page() -> rx.Component:
@@ -195,24 +197,34 @@ def blog_page() -> rx.Component:
         }
     )
 
-    return rx.box(
-        # Animated background
-        animated_background(),
-        
+    return rx.fragment(
+        # Page transition loader
+        rx.cond(
+            State.is_page_loading,
+            page_transition_loader()
+        ),
+
         # Main content
-        layout,
-        
-        background="linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)",
-        style={
-            **animations_css,
-            "boxSizing": "border-box",
-            "width": "100%",
-            "minHeight": "100vh",
-            "margin": "0",
-            "padding": "0",
-            "position": "relative",
-            "overflow": "hidden"
-        },
-        width="100%",
-        min_height="100vh"
+        rx.box(
+            # Animated background
+            animated_background(),
+
+            # Main content
+            layout,
+
+            background="linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)",
+            style={
+                **animations_css,
+                "boxSizing": "border-box",
+                "width": "100%",
+                "minHeight": "100vh",
+                "margin": "0",
+                "padding": "0",
+                "position": "relative",
+                "overflow": "hidden"
+            },
+            width="100%",
+            min_height="100vh",
+            on_mount=State.finish_page_transition
+        )
     )

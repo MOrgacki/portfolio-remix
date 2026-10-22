@@ -1,5 +1,6 @@
 import reflex as rx
 from reflex.components.radix.themes.layout.stack import HStack
+from state import State
 
 mail = "marcinorgacki@gmail.com"
 
@@ -23,20 +24,20 @@ css: dict = {
 def nav_item_desktop(text: str, icon: str, href: str) -> rx.Component:
     return rx.link(
         rx.hstack(
-            rx.icon(icon, color="white", size=18),
+            rx.icon(icon, color="white", size=16),
             rx.text(
                 text,
-                size="3",
+                size="2",
                 color="white",
                 weight="medium",
             ),
             align="center",
-            spacing="2"
+            spacing="1"
         ),
         href=href,
         underline="none",
-        padding_x="1.5rem",
-        padding_y="0.75rem",
+        padding_x="0.75rem",
+        padding_y="0.5rem",
         text_align="center",
         border_radius="0.25rem",
         _hover={
@@ -78,6 +79,42 @@ def nav_item_mobile(text: str, icon: str, href: str) -> rx.Component:
         width="100%"
     )
 
+def language_switcher() -> rx.Component:
+    """Language switcher button"""
+    return rx.button(
+        rx.hstack(
+            rx.icon("globe", size=16, color="white"),
+            rx.text(
+                rx.cond(
+                    State.language == "en",
+                    "EN",
+                    "PL"
+                ),
+                size="2",
+                color="white",
+                weight="bold"
+            ),
+            align="center",
+            spacing="1"
+        ),
+        on_click=State.toggle_language,
+        variant="ghost",
+        padding_x="0.75rem",
+        padding_y="0.5rem",
+        border_radius="0.5rem",
+        cursor="pointer",
+        style={
+            "background": "rgba(0, 212, 255, 0.1)",
+            "border": "1px solid rgba(0, 212, 255, 0.3)",
+            "transition": "all 0.3s ease",
+            "_hover": {
+                "background": "rgba(0, 212, 255, 0.2)",
+                "transform": "translateY(-1px)",
+                "boxShadow": "0 4px 12px rgba(0, 212, 255, 0.3)"
+            }
+        }
+    )
+
 class Header:
     def __init__(self) -> None:
         pass
@@ -102,10 +139,11 @@ class Header:
                 
                 # Navigation menu - right aligned
                 rx.hstack(
-                    nav_item_desktop("Home", "home", "/"),
-                    nav_item_desktop("Projects", "square-library", "/projects"),
-                    nav_item_desktop("Blog", "bar-chart-4", "/blog"),
-                    spacing="3",
+                    nav_item_desktop(State.nav_experience, "briefcase", "/experience"),
+                    nav_item_desktop(State.nav_case_studies, "trophy", "/case-studies"),
+                    nav_item_desktop(State.nav_projects, "square-library", "/projects"),
+                    nav_item_desktop(State.nav_contact, "mail", "/contact"),
+                    spacing="1",
                     align="center"
                 ),
                 
@@ -151,9 +189,10 @@ class Header:
                                     margin_bottom="2rem"
                                 ),
                                 rx.vstack(
-                                    nav_item_mobile("Home", "home", "/"),
-                                    nav_item_mobile("Projects", "square-library", "/projects"),
-                                    nav_item_mobile("Blog", "bar-chart-4", "/blog"),
+                                    nav_item_mobile(State.nav_experience, "briefcase", "/experience"),
+                                    nav_item_mobile(State.nav_case_studies, "trophy", "/case-studies"),
+                                    nav_item_mobile(State.nav_projects, "square-library", "/projects"),
+                                    nav_item_mobile(State.nav_contact, "mail", "/contact"),
                                     spacing="6",
                                     width="100%",
                                     align="stretch"
