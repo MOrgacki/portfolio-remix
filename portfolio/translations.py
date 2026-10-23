@@ -85,7 +85,7 @@ TRANSLATIONS = {
         "timeline_step4_desc": "Started career in IT industry",
         "timeline_step5": "2019 - Master's Degree",
         "timeline_step5_desc": "Advanced Computer Science studies",
-        "timeline_step6": "2025 - Present Day",
+        "timeline_step6": "Today",
         "timeline_step6_desc": "8+ years of experience in IT",
 
         # Services & Expertise
@@ -327,7 +327,7 @@ TRANSLATIONS = {
         "timeline_step4_desc": "Rozpoczęcie kariery w branży IT",
         "timeline_step5": "2019 - Magister",
         "timeline_step5_desc": "Zaawansowana informatyka",
-        "timeline_step6": "2025 - Dzisiaj",
+        "timeline_step6": "Dzisiaj",
         "timeline_step6_desc": "8+ lat doświadczenia w IT",
 
         # Usługi i Ekspertyza
