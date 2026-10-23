@@ -72,58 +72,6 @@ ADDED = {
         "automatyczne testy regresji zadań ETL i raportów.",
     ),
     # Contact page sections added after the migration
-    "contact_topics_title": (
-        "What we can talk about",
-        "O czym możemy porozmawiać",
-    ),
-    "contact_topic_qa_title": (
-        "QA strategy and audits",
-        "Strategia QA i audyty jakości",
-    ),
-    "contact_topic_qa_desc": (
-        "Reviewing your current testing process, finding the gaps and building a quality plan that fits your team and budget.",
-        "Przegląd obecnego procesu testowania, wskazanie luk i plan jakości dopasowany do zespołu i budżetu.",
-    ),
-    "contact_topic_automation_title": (
-        "Test automation",
-        "Automatyzacja testów",
-    ),
-    "contact_topic_automation_desc": (
-        "Building or fixing E2E, API and regression suites and plugging them into CI/CD, so every release is checked automatically.",
-        "Budowa lub naprawa testów E2E, API i regresji oraz podpięcie ich do CI/CD, aby każde wydanie było sprawdzane automatycznie.",
-    ),
-    "contact_topic_ai_title": (
-        "AI product quality",
-        "Jakość produktów AI",
-    ),
-    "contact_topic_ai_desc": (
-        "Evaluating chatbots, RAG systems and AI agents: accuracy, hallucinations, guardrails and regression after model changes.",
-        "Ewaluacja chatbotów, systemów RAG i agentów AI: trafność, halucynacje, guardrails i regresja po zmianie modelu.",
-    ),
-    "contact_topic_process_title": (
-        "Process automation",
-        "Automatyzacja procesów",
-    ),
-    "contact_topic_process_desc": (
-        "Automating repetitive business work with scripts, integrations and AI agents, so your team can focus on what matters.",
-        "Automatyzacja powtarzalnej pracy w firmie za pomocą skryptów, integracji i agentów AI, aby zespół mógł skupić się na tym, co ważne.",
-    ),
-    "contact_topic_data_title": (
-        "Data and ETL testing",
-        "Testowanie danych i ETL",
-    ),
-    "contact_topic_data_desc": (
-        "Checking data pipelines, reports and integrations, so the numbers your business relies on are correct.",
-        "Sprawdzanie potoków danych, raportów i integracji, aby liczby, na których opiera się firma, były poprawne.",
-    ),
-    "contact_topic_other_title": (
-        "Something else?",
-        "Coś innego?",
-    ),
-    "contact_topic_other_desc": (
-        "Have a different challenge? Write to me anyway and I will tell you honestly whether I can help.",
-        "Masz inne wyzwanie? Napisz mimo to, a szczerze powiem, czy mogę pomóc.",
-    ),
     "contact_steps_title": (
         "How we start",
         "Jak zaczynamy",

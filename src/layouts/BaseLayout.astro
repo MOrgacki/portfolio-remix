@@ -46,6 +46,69 @@ const ogImage = await getImage({ src: profile, format: 'png', width: 600 });
           !matchMedia('(prefers-reduced-motion: reduce)').matches
         )
           document.documentElement.classList.add('reveal-on');
+        document.documentElement.classList.add('is-loading');
+      })();
+    </script>
+    <!-- Loading bar + scroll reveal. Inline in <head> so elements are revealed while the HTML
+         is still streaming in; waiting for a bundle or the end of a large page leaves it blank. -->
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        addEventListener('load', function () {
+          root.classList.remove('is-loading');
+        });
+
+        // Fades [data-reveal] elements in as they scroll into view (styles in global.css).
+        if (!root.classList.contains('reveal-on')) return;
+        var pending = [];
+        var queued = false;
+        // Reveal everything that has reached the viewport or was scrolled past (fast scrolls
+        // and anchor jumps can skip an element entirely), including off-screen timeline steps.
+        var reveal = function () {
+          queued = false;
+          var batch = 0;
+          pending = pending.filter(function (el) {
+            var rect = el.getBoundingClientRect();
+            if (rect.height === 0 || rect.top > innerHeight * 0.95) return true; // hidden by a filter or still below
+            // Stagger elements that appear together (e.g. a row of cards), capped so none waits long.
+            el.style.setProperty('--reveal-delay', Math.min(batch++, 5) * 90 + 'ms');
+            el.classList.add('is-revealed');
+            observer.unobserve(el);
+            return false;
+          });
+        };
+        var schedule = function () {
+          if (queued) return;
+          queued = true;
+          requestAnimationFrame(reveal);
+        };
+        // Also catches project cards that become visible again after filtering, without a scroll.
+        var observer = new IntersectionObserver(schedule);
+        var track = function (el) {
+          if (el.revealTracked) return;
+          el.revealTracked = true;
+          pending.push(el);
+          observer.observe(el);
+        };
+        var scan = function (node) {
+          if (node.nodeType !== 1) return;
+          if (node.hasAttribute('data-reveal')) track(node);
+          node.querySelectorAll('[data-reveal]').forEach(track);
+        };
+        var parsing = new MutationObserver(function (mutations) {
+          mutations.forEach(function (m) {
+            m.addedNodes.forEach(scan);
+          });
+          schedule();
+        });
+        parsing.observe(root, { childList: true, subtree: true });
+        document.addEventListener('DOMContentLoaded', function () {
+          parsing.disconnect();
+          scan(document.body);
+          schedule();
+        });
+        addEventListener('scroll', schedule, { passive: true });
+        addEventListener('resize', schedule);
       })();
     </script>
     <title>{t(titleKey, 'en')}</title>
@@ -62,6 +125,7 @@ const ogImage = await getImage({ src: profile, format: 'png', width: 600 });
     <meta name="twitter:card" content="summary" />
   </head>
   <body>
+    <div class="page-loader" aria-hidden="true"></div>
     <a class="skip-link" href="#main">
       <T k="skip_to_content" />
     </a>
@@ -76,7 +140,6 @@ const ogImage = await getImage({ src: profile, format: 'png', width: 600 });
     <LanguageButton floating />
     <script>
       import '../scripts/lang';
-      import '../scripts/reveal';
     </script>
   </body>
 </html>

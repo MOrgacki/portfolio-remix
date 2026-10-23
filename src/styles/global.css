@@ -230,7 +230,7 @@ html[data-lang='pl'] [lang='en'] {
   animation: slideInUp 0.8s ease-out both;
 }
 
-/* Scroll reveal (src/scripts/reveal.ts). BaseLayout sets .reveal-on before first paint, and only
+/* Scroll reveal (inline script in BaseLayout). BaseLayout sets .reveal-on before first paint, and only
    when motion is allowed, so content stays visible without JS or under reduced motion. */
 @keyframes revealIn {
   from {
@@ -247,6 +247,58 @@ html[data-lang='pl'] [lang='en'] {
 }
 .reveal-on [data-reveal].is-revealed {
   animation: revealIn 0.7s ease-out var(--reveal-delay, 0s) both;
+}
+
+/* Loading bar shown until the window load event (BaseLayout toggles .is-loading). */
+.page-loader {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 3000;
+  height: 3px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.is-loading .page-loader {
+  opacity: 1;
+}
+.page-loader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 40%;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
+  animation: loaderSlide 1.1s ease-in-out infinite;
+}
+@keyframes loaderSlide {
+  from {
+    translate: -100% 0;
+  }
+  to {
+    translate: 250% 0;
+  }
+}
+
+/* Skeleton shimmer for media that is still loading. */
+.skeleton {
+  background-image: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.03) 30%,
+    rgba(255, 255, 255, 0.09) 50%,
+    rgba(255, 255, 255, 0.03) 70%
+  );
+  background-size: 300% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -50% 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

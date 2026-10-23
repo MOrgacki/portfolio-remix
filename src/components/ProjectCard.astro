@@ -30,7 +30,7 @@ const platform = platformLabels[p.platform];
   data-search-en={searchText(p, 'en')}
   data-search-pl={searchText(p, 'pl')}
 >
-  <div class="media">
+  <div class:list={['media', { skeleton: p.image }]}>
     {p.image ? (
       <Image
         src={p.image}
@@ -41,6 +41,8 @@ const platform = platformLabels[p.platform];
         sizes="(min-width: 1024px) 400px, (min-width: 768px) 50vw, 100vw"
         loading="lazy"
         decoding="async"
+        onload="this.parentElement.classList.remove('skeleton')"
+        onerror="this.parentElement.classList.remove('skeleton')"
       />
     ) : (
       <div class="fallback">

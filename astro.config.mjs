@@ -9,5 +9,7 @@ export default defineConfig({
   output: 'static',
   build: {
     format: 'directory',
+    // Inline CSS so an uncached first visit paints fully styled without an extra request.
+    inlineStylesheets: 'always',
   },
 });

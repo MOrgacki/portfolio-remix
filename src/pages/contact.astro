@@ -1,52 +1,12 @@
 ---
-// The legacy /contact page repeated the home view; here it focuses on the contact channels,
-// the topics I help with and how a collaboration starts.
+// The legacy /contact page repeated the home view; here it focuses on the contact channels
+// and how a collaboration starts.
 import { CircleCheck, FileText, Languages, Mail, Video } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactSection from '../components/sections/ContactSection.astro';
-import Icon from '../components/Icon.astro';
 import T from '../components/T.astro';
 
 const EMAIL = 'marcinorgacki@gmail.com';
-
-const topics = [
-  {
-    icon: 'clipboard-list',
-    color: 'cyan',
-    titleKey: 'contact_topic_qa_title',
-    descKey: 'contact_topic_qa_desc',
-  },
-  {
-    icon: 'code',
-    color: 'blue',
-    titleKey: 'contact_topic_automation_title',
-    descKey: 'contact_topic_automation_desc',
-  },
-  {
-    icon: 'brain-circuit',
-    color: 'purple',
-    titleKey: 'contact_topic_ai_title',
-    descKey: 'contact_topic_ai_desc',
-  },
-  {
-    icon: 'workflow',
-    color: 'pink',
-    titleKey: 'contact_topic_process_title',
-    descKey: 'contact_topic_process_desc',
-  },
-  {
-    icon: 'database-zap',
-    color: 'green',
-    titleKey: 'contact_topic_data_title',
-    descKey: 'contact_topic_data_desc',
-  },
-  {
-    icon: 'lightbulb',
-    color: 'orange',
-    titleKey: 'contact_topic_other_title',
-    descKey: 'contact_topic_other_desc',
-  },
-] as const;
 
 const steps = [
   { icon: Mail, n: 1, titleKey: 'contact_step_1_title', descKey: 'contact_step_1_desc' },
@@ -58,36 +18,16 @@ const brief = ['contact_brief_1', 'contact_brief_2', 'contact_brief_3', 'contact
 ---
 
 <BaseLayout titleKey="page_title_contact" descriptionKey="page_description_contact" nav="contact">
-  <ContactSection primary>
-    <a class="btn btn-primary" href={`mailto:${EMAIL}`}>
-      <Mail size={20} aria-hidden="true" />
-      <T k="contact_me" />
-    </a>
-  </ContactSection>
+  <ContactSection primary />
 
   <div class="page">
-    <section class="panel block" aria-labelledby="topics-title">
-      <h2 class="section-title gradient-text" id="topics-title">
-        <T k="contact_topics_title" />
-      </h2>
-      <ul class="topics" role="list">
-        {topics.map((t) => (
-          <li class={`topic c-${t.color}`}>
-            <Icon name={t.icon} size={28} class="topic-icon" />
-            <T k={t.titleKey} as="h3" class="topic-title" />
-            <T k={t.descKey} as="p" class="topic-text" />
-          </li>
-        ))}
-      </ul>
-    </section>
-
-    <section class="panel block" aria-labelledby="steps-title">
+    <section class="panel block" aria-labelledby="steps-title" data-reveal>
       <h2 class="section-title gradient-text" id="steps-title">
         <T k="contact_steps_title" />
       </h2>
       <ol class="steps" role="list">
         {steps.map(({ icon: StepIcon, n, titleKey, descKey }) => (
-          <li class="step">
+          <li class="step" data-reveal>
             <span class="step-number" aria-hidden="true">
               {n}
             </span>
@@ -100,7 +40,7 @@ const brief = ['contact_brief_1', 'contact_brief_2', 'contact_brief_3', 'contact
     </section>
 
     <div class="columns">
-      <section class="panel" aria-labelledby="brief-title">
+      <section class="panel" aria-labelledby="brief-title" data-reveal>
         <h2 class="col-title" id="brief-title">
           <T k="contact_brief_title" />
         </h2>
@@ -118,7 +58,7 @@ const brief = ['contact_brief_1', 'contact_brief_2', 'contact_brief_3', 'contact
         </p>
       </section>
 
-      <section class="panel cta" aria-labelledby="cta-title">
+      <section class="panel cta" aria-labelledby="cta-title" data-reveal>
         <h2 class="col-title gradient-text" id="cta-title">
           <T k="contact_cta_title" />
         </h2>
@@ -135,35 +75,10 @@ const brief = ['contact_brief_1', 'contact_brief_2', 'contact_brief_3', 'contact
   .block {
     margin-bottom: 2rem;
   }
-  .topics {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-    gap: 1.25rem;
-  }
-  .topic {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1.5rem;
-    border: 1px solid rgba(var(--c), 0.2);
-    border-radius: var(--radius-lg);
-    background: rgba(var(--c), 0.05);
-    transition: var(--transition);
-  }
-  .topic:hover {
-    border-color: rgba(var(--c), 0.4);
-    background: rgba(var(--c), 0.08);
-    transform: translateY(-4px);
-  }
-  .topic :global(.topic-icon) {
-    color: color-mix(in srgb, rgb(var(--c)) 60%, white);
-  }
-  .topic :global(.topic-title),
   .step :global(.step-title) {
     color: #fff;
     font-size: 1.1rem;
   }
-  .topic :global(.topic-text),
   .step :global(.step-text) {
     color: var(--gray-400);
     font-size: 0.95rem;

@@ -20,7 +20,7 @@ TRANSLATIONS = {
         # Experience page
         "exp_title": "Experience",
         "exp_subtitle": "8+ Years Driving Quality Through Automation, AI & Business Process Optimization",
-        "exp_description": "Quality and automation expert with hands-on experience in fintech, AI, data science, e-commerce, and Web3. I help businesses scale quality beyond testing through AI agents, process automation, and smart orchestration strategies aligned with real business goals.",
+        "exp_description": "Quality and automation expert with hands-on experience in fintech, AI, data science, e-commerce and Web3, across web, mobile, desktop and cloud platforms. I help businesses scale quality beyond testing through AI agents, process automation, and smart orchestration strategies aligned with real business goals.",
         "exp_tech_stack": "🛠️ Tech Stack",
         "exp_testing_frameworks": "Testing Frameworks",
         "exp_languages_tech": "Languages & Technologies",
@@ -98,7 +98,7 @@ TRANSLATIONS = {
         "service_ai_desc": "Implementing tailored AI solutions and intelligent agents to automate complex decision-making and enhance productivity.",
         "service_strategy_title": "QA Engineering",
         "service_strategy_desc": "Designing comprehensive testing strategies and building test pipelines tailored to project needs and requirements, organizing QA processes, and leading teams toward quality excellence and business objectives.",
-        "service_relations_title": "Business Relations & Stakeholder Management",
+        "service_relations_title": "Project Management & Business Relations",
 
         # Key Achievements
         "achievements_title": "🏆 Key Achievements",
@@ -143,7 +143,7 @@ TRANSLATIONS = {
         "case_studies_intro": "I'm a problem solver with no limits. Whether it's business challenges, technical debt, or quality issues - I find solutions that work. Here are real examples of problems I've tackled and the measurable results I delivered.",
         "case_studies_cta": "Ready to solve your challenges? Let's talk.",
 
-        "service_relations_desc": "Bridging technical QA activities with business needs, improving stakeholder communication and aligning testing efforts with company goals.",
+        "service_relations_desc": "Running projects from requirements to release: planning, prioritisation and risk control, clear stakeholder communication, and aligning technical and QA work with business goals.",
         "service_security_title": "Security, Infrastructure & Performance Testing",
         "service_security_desc": "Conducting security audits, infrastructure validation, and performance testing to ensure robust, scalable, and secure applications.",
 
@@ -262,7 +262,7 @@ TRANSLATIONS = {
         # Strona doświadczenia
         "exp_title": "Doświadczenie",
         "exp_subtitle": "8+ Lat Budowania Jakości przez Automatyzację, AI i Optymalizację Procesów Biznesowych",
-        "exp_description": "Ekspert jakości i automatyzacji z praktycznym doświadczeniem w fintech, AI, data science, e-commerce i Web3. Pomagam firmom skalować jakość poza testowanie przez agenty AI, automatyzację procesów i inteligentne strategie orkiestracji dopasowane do celów biznesowych.",
+        "exp_description": "Ekspert jakości i automatyzacji z praktycznym doświadczeniem w fintech, AI, data science, e-commerce i Web3, na platformach webowych, mobilnych, desktopowych i chmurowych. Pomagam firmom skalować jakość poza testowanie przez agenty AI, automatyzację procesów i inteligentne strategie orkiestracji dopasowane do celów biznesowych.",
         "exp_tech_stack": "🛠️ Stack Technologiczny",
         "exp_testing_frameworks": "Frameworki Testowe",
         "exp_languages_tech": "Języki i Technologie",
@@ -340,7 +340,7 @@ TRANSLATIONS = {
         "service_ai_desc": "Wdrażanie dostosowanych rozwiązań AI i inteligentnych agentów do automatyzacji złożonych procesów decyzyjnych i zwiększenia produktywności.",
         "service_strategy_title": "QA Engineering",
         "service_strategy_desc": "Projektowanie kompleksowych strategii testowania i budowanie pipelineów testowych dopasowanych do potrzeb i wymagań projektu, organizacja procesów QA i prowadzenie zespołów w kierunku doskonałości jakościowej i celów biznesowych.",
-        "service_relations_title": "Relacje Biznesowe i Zarządzanie Interesariuszami",
+        "service_relations_title": "Zarządzanie Projektami i Relacje Biznesowe",
 
         # Kluczowe Osiągnięcia
         "achievements_title": "🏆 Kluczowe Osiągnięcia",
@@ -385,7 +385,7 @@ TRANSLATIONS = {
         "case_studies_intro": "Jestem rozwiązywaczem problemów bez ograniczeń. Czy to wyzwania biznesowe, dług techniczny czy problemy z jakością - znajduję rozwiązania, które działają. Oto prawdziwe przykłady problemów, z którymi się zmierzyłem i mierzalne rezultaty, które dostarczyłem.",
         "case_studies_cta": "Gotowy rozwiązać swoje wyzwania? Porozmawiajmy.",
 
-        "service_relations_desc": "Łączenie technicznych działań QA z potrzebami biznesowymi, poprawa komunikacji z interesariuszami i dopasowanie wysiłków testowych do celów firmy.",
+        "service_relations_desc": "Prowadzenie projektów od wymagań do wdrożenia: planowanie, priorytetyzacja i kontrola ryzyk, sprawna komunikacja z interesariuszami oraz łączenie prac technicznych i QA z celami biznesowymi.",
         "service_security_title": "Testy Bezpieczeństwa, Infrastruktury i Wydajności",
         "service_security_desc": "Przeprowadzanie audytów bezpieczeństwa, walidacji infrastruktury i testów wydajności w celu zapewnienia solidnych, skalowalnych i bezpiecznych aplikacji.",
 
