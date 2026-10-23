@@ -95,6 +95,12 @@ import SocialLinks from '../SocialLinks.astro';
       translate: 0 4px;
     }
   }
+  /* On phones the wave wraps onto its own line and only takes up space. */
+  @media (max-width: 767px) {
+    .wave {
+      display: none;
+    }
+  }
   @keyframes wave {
     from {
       transform: rotate(25deg);

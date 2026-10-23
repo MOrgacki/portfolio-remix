@@ -129,8 +129,8 @@ TRANSLATIONS = {
 
         # Achievement 5
         "achievement5_problem": "A lot of testing required for platform provider migration.",
-        "achievement5_solution": "Managed interdisciplinary and distributed teams to prepare test environment, tested it and successfully released on production migrating platform with over 700,000+ active users.",
-        "achievement5_result": "700,000+ users migrated",
+        "achievement5_solution": "Managed interdisciplinary and distributed teams to prepare test environment, tested it and released to production, migrating the entire platform with 700,000+ active users without a single critical bug.",
+        "achievement5_result": "Seamless migration of the entire platform with 700,000+ users and zero critical bugs",
 
         # Achievement 6
         "achievement6_problem": "A 100% vibe-coded project accumulated critical quality degradation: growing regression across key functional areas and mounting technical debt that threatened the product's stability and scalability.",
@@ -371,8 +371,8 @@ TRANSLATIONS = {
 
         # Osiągnięcie 5
         "achievement5_problem": "Dużo testów wymaganych do migracji dostawcy platformy.",
-        "achievement5_solution": "Zarządzano interdyscyplinarnymi i rozproszonymi zespołami w celu przygotowania środowiska testowego, przetestowano je i pomyślnie wydano na produkcję migrując platformę z ponad 700 000+ aktywnymi użytkownikami.",
-        "achievement5_result": "700 000+ użytkowników zmigrowanych",
+        "achievement5_solution": "Zarządzano interdyscyplinarnymi i rozproszonymi zespołami w celu przygotowania środowiska testowego, przetestowano je i wydano na produkcję, bezproblemowo migrując całą platformę z 700 000+ aktywnymi użytkownikami bez ani jednego krytycznego błędu.",
+        "achievement5_result": "Bezproblemowa migracja całej platformy z 700 000+ użytkowników, zero krytycznych błędów",
 
         # Osiągnięcie 6
         "achievement6_problem": "Projekt tworzony w 100% metodą vibe codingu zgromadził krytyczną degradację jakości: narastającą regresję w kluczowych obszarach funkcjonalnych oraz rosnący dług techniczny zagrażający stabilności i skalowalności produktu.",

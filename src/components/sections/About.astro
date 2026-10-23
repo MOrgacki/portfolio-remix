@@ -1,8 +1,9 @@
 ---
 // Port of _create_window_box() + _create_info_view() from portfolio/main.py.
-// The legacy AI-chat placeholder is replaced by a "Let's talk" email link that covers the whole
-// window (FR-005).
+// The legacy AI-chat placeholder is replaced by a "Let's talk" link to Contact that covers the
+// whole window (FR-005).
 import T from '../T.astro';
+import { url } from '../../lib/url';
 
 const tags = [
   { k: 'about_tag_1', c: 'c-cyan' },
@@ -47,8 +48,8 @@ const tags = [
           </li>
         ))}
       </ul>
-      <!-- Stretched over the whole window (::after), so a click anywhere starts an email. -->
-      <a class="window-link" href="mailto:marcinorgacki@gmail.com" data-cta="lets-talk">
+      <!-- Stretched over the whole window (::after), so a click anywhere opens Contact. -->
+      <a class="window-link" href={url('contact/')} data-cta="lets-talk">
         <span class="visually-hidden">
           <T k="about_cta_lets_talk" />
         </span>
