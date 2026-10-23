@@ -2,6 +2,7 @@
 // Port of _create_window_box() + _create_info_view() from portfolio/main.py.
 // The legacy AI-chat placeholder is replaced by a "Let's talk" link to Contact that covers the
 // whole window (FR-005).
+import { ArrowRight } from '@lucide/astro';
 import T from '../T.astro';
 import { url } from '../../lib/url';
 
@@ -54,6 +55,11 @@ const tags = [
           <T k="about_cta_lets_talk" />
         </span>
       </a>
+    </div>
+    <!-- Touch screens have no hover feedback, so show where the tile leads. -->
+    <div class="tap-hint" aria-hidden="true">
+      <T k="about_cta_lets_talk" />
+      <ArrowRight size={18} class="tap-arrow" />
     </div>
   </div>
 </section>
@@ -176,6 +182,34 @@ const tags = [
     box-shadow:
       var(--shadow-lg),
       0 0 40px rgba(0, 212, 255, 0.25);
+  }
+  .tap-hint {
+    display: none;
+  }
+  @media (hover: none) {
+    .tap-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1rem;
+      border-top: 1px solid rgba(0, 212, 255, 0.25);
+      background: linear-gradient(90deg, rgba(0, 212, 255, 0.14), rgba(139, 92, 246, 0.14));
+      color: var(--accent-text);
+      font-weight: 700;
+    }
+    .tap-hint :global(.tap-arrow) {
+      animation: nudge 1.4s ease-in-out infinite;
+    }
+  }
+  @keyframes nudge {
+    0%,
+    100% {
+      translate: 0 0;
+    }
+    50% {
+      translate: 5px 0;
+    }
   }
   .window-link::after {
     content: '';
