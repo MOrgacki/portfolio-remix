@@ -4,7 +4,7 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="footer">
-  <p>© {year} Marcin Orgacki</p>
+  <p>© 2018-{year} Marcin Orgacki</p>
 </footer>
 
 <style>
@@ -16,5 +16,10 @@ const year = new Date().getFullYear();
     padding: 1.5rem 1rem 5.5rem;
     color: var(--gray-400);
     font-size: 0.85rem;
+  }
+  @media (max-width: 767px) {
+    .footer {
+      font-size: 0.65rem;
+    }
   }
 </style>

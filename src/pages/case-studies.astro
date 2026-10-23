@@ -21,8 +21,8 @@ import { url } from '../lib/url';
       <T k="case_studies_intro" as="p" class="page-lead" />
     </header>
     <div class="cases">
-      {achievements.map((item) => (
-        <AchievementCard item={item} />
+      {achievements.map((item, i) => (
+        <AchievementCard item={item} index={i + 1} />
       ))}
     </div>
     <section class="panel cta" data-reveal>

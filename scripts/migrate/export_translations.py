@@ -203,8 +203,8 @@ ADDED = {
         "Marcin Orgacki: zapewnianie jakości, automatyzacja testów i automatyzacja procesów z wykorzystaniem AI.",
     ),
     "page_description_experience": (
-        "7+ years of QA, test automation, AI and business process optimisation experience.",
-        "Ponad 7 lat doświadczenia w QA, automatyzacji testów, AI i optymalizacji procesów biznesowych.",
+        "8+ years of QA, test automation, AI and business process optimisation experience.",
+        "Ponad 8 lat doświadczenia w QA, automatyzacji testów, AI i optymalizacji procesów biznesowych.",
     ),
     "page_description_case_studies": (
         "Real problems, real solutions, measurable results. Selected QA and automation case studies.",

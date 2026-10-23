@@ -19,7 +19,7 @@ TRANSLATIONS = {
 
         # Experience page
         "exp_title": "Experience",
-        "exp_subtitle": "7+ Years Driving Quality Through Automation, AI & Business Process Optimization",
+        "exp_subtitle": "8+ Years Driving Quality Through Automation, AI & Business Process Optimization",
         "exp_description": "Quality and automation expert with hands-on experience in fintech, AI, data science, e-commerce, and Web3. I help businesses scale quality beyond testing through AI agents, process automation, and smart orchestration strategies aligned with real business goals.",
         "exp_tech_stack": "🛠️ Tech Stack",
         "exp_testing_frameworks": "Testing Frameworks",
@@ -86,7 +86,7 @@ TRANSLATIONS = {
         "timeline_step5": "2019 - Master's Degree",
         "timeline_step5_desc": "Advanced Computer Science studies",
         "timeline_step6": "2025 - Present Day",
-        "timeline_step6_desc": "7+ years of experience in IT",
+        "timeline_step6_desc": "8+ years of experience in IT",
 
         # Services & Expertise
         "services_title": "💼 Services & Expertise",
@@ -261,7 +261,7 @@ TRANSLATIONS = {
 
         # Strona doświadczenia
         "exp_title": "Doświadczenie",
-        "exp_subtitle": "7+ Lat Budowania Jakości przez Automatyzację, AI i Optymalizację Procesów Biznesowych",
+        "exp_subtitle": "8+ Lat Budowania Jakości przez Automatyzację, AI i Optymalizację Procesów Biznesowych",
         "exp_description": "Ekspert jakości i automatyzacji z praktycznym doświadczeniem w fintech, AI, data science, e-commerce i Web3. Pomagam firmom skalować jakość poza testowanie przez agenty AI, automatyzację procesów i inteligentne strategie orkiestracji dopasowane do celów biznesowych.",
         "exp_tech_stack": "🛠️ Stack Technologiczny",
         "exp_testing_frameworks": "Frameworki Testowe",
@@ -328,7 +328,7 @@ TRANSLATIONS = {
         "timeline_step5": "2019 - Magister",
         "timeline_step5_desc": "Zaawansowana informatyka",
         "timeline_step6": "2025 - Dzisiaj",
-        "timeline_step6_desc": "7+ lat doświadczenia w IT",
+        "timeline_step6_desc": "8+ lat doświadczenia w IT",
 
         # Usługi i Ekspertyza
         "services_title": "💼 Usługi i Ekspertyza",
