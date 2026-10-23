@@ -1,7 +1,7 @@
 ---
 // The legacy /contact page repeated the home view; here it focuses on the contact channels
 // and how a collaboration starts.
-import { CircleCheck, FileText, Languages, Mail, Video } from '@lucide/astro';
+import { CircleCheck, FileText, Handshake, Languages, Mail } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactSection from '../components/sections/ContactSection.astro';
 import T from '../components/T.astro';
@@ -10,7 +10,7 @@ const EMAIL = 'marcinorgacki@gmail.com';
 
 const steps = [
   { icon: Mail, n: 1, titleKey: 'contact_step_1_title', descKey: 'contact_step_1_desc' },
-  { icon: Video, n: 2, titleKey: 'contact_step_2_title', descKey: 'contact_step_2_desc' },
+  { icon: Handshake, n: 2, titleKey: 'contact_step_2_title', descKey: 'contact_step_2_desc' },
   { icon: FileText, n: 3, titleKey: 'contact_step_3_title', descKey: 'contact_step_3_desc' },
 ] as const;
 

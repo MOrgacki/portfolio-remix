@@ -11,7 +11,7 @@ export const PLATFORM_EMOJI: Record<Project['platform'], string> = {
   'AI/Automation': '🤖',
 };
 
-/** Newest first, as in the legacy app (sorted by id descending). */
+/** Display order: highest id first (ids in projects.json set the curated order). */
 export async function loadProjects(): Promise<Project[]> {
   const entries = await getCollection('projects');
   return entries.map((e) => e.data).sort((a, b) => b.order - a.order);

@@ -9,6 +9,16 @@ test.describe('accessibility (FR-020, FR-021)', () => {
       for (const route of ROUTES) {
         test(`/${route.path} has no serious axe violations`, async ({ page }) => {
           await page.goto(route.path);
+          // Let the scroll-reveal fades finish: half-faded text would fail the contrast check.
+          await page.waitForFunction(() =>
+            document
+              .getAnimations()
+              .every(
+                (a) =>
+                  a.playState === 'finished' ||
+                  a.effect?.getComputedTiming().iterations === Infinity,
+              ),
+          );
           const results = await new AxeBuilder({ page }).analyze();
           const serious = results.violations
             .filter((v) => v.impact === 'serious' || v.impact === 'critical')

@@ -55,7 +55,7 @@ TECH_CATEGORIES = {
         "border": "rgba(139, 92, 246, 0.3)"
     },
     "Frameworks & Technologies": {
-        "techs": ["React", "Angular", "Vue.js", "Laravel", "Symfony", "Django", "Flask", "FastAPI", "Node.js", ".NET", ".NET Core", ".NET Framework", "ASP .NET", "ASP .NET Core", "React Native", "Flutter", "Xamarin", "WPF", "MFC", "Redux", "Web3", "Blockchain", "AI", "Smart Contracts", "DePIN"],
+        "techs": ["React", "Angular", "Vue.js", "Laravel", "Symfony", "Django", "Flask", "FastAPI", "Node.js", ".NET", ".NET Core", ".NET Framework", "ASP .NET", "ASP .NET Core", "React Native", "Flutter", "Xamarin", "WPF", "MFC", "Redux", "Web3", "Blockchain", "AI", "Smart Contracts"],
         "color": "pink",
         "bg": "rgba(236, 72, 153, 0.1)",
         "border": "rgba(236, 72, 153, 0.3)"
@@ -481,15 +481,15 @@ PROJECTS_DATA = [
     },
     {
         "id": 24,
-        "title": "DePIN - Decentralized AI Network",
-        "description": "Decentralized Physical Infrastructure Network (DePIN) platform built on decentralized network infrastructure delivering AI-powered content generation to Web3 communities. Tested decentralized node operations, AI content generation APIs, and blockchain-based reward distribution. Verified network stability and content delivery across distributed nodes.",
-        "technologies": ["DePIN", "Web3", "AI", "Blockchain", "Decentralized Network", "Node Infrastructure", "API"],
+        "title": "Decentralized AI Network",
+        "description": "Platform built on decentralized network infrastructure, delivering AI-powered content generation to Web3 communities. Tested decentralized node operations, AI content generation APIs, and blockchain-based reward distribution. Verified network stability and content delivery across distributed nodes.",
+        "technologies": ["Web3", "AI", "Blockchain", "Decentralized Network", "Node Infrastructure", "API"],
         "domain": "AI",
         "platform": "AI/Automation",
         "project_type": "Client Projects",
         "github": "",
         "demo": "",
-        "image": "/gentok.png",
+        "image": "/decentralized-ai-network.png",
         "status": "Completed",
         "achievements": [
             "Tested decentralized node network with 100+ active nodes",

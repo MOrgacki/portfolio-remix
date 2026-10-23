@@ -85,12 +85,12 @@ ADDED = {
         "Krótko opisz produkt, problem do rozwiązania i oczekiwany termin.",
     ),
     "contact_step_2_title": (
-        "Short call",
-        "Krótka rozmowa",
+        "Short call / meeting",
+        "Krótka rozmowa / spotkanie",
     ),
     "contact_step_2_desc": (
-        "A short online call to understand your goals, your team and the current state of the project.",
-        "Krótka rozmowa online, żeby zrozumieć cele, zespół i obecny stan projektu.",
+        "A short online call or an in-person meeting to understand your goals, your team and the current state of the project.",
+        "Krótka rozmowa online lub spotkanie na żywo, żeby zrozumieć cele, zespół i obecny stan projektu.",
     ),
     "contact_step_3_title": (
         "Concrete proposal",
@@ -133,10 +133,6 @@ ADDED = {
         "Najprostszy sposób kontaktu to e-mail. Możesz też napisać do mnie na LinkedIn.",
     ),
     # Case studies added after the migration
-    "achievement7_title": (
-        "AI adoption across the team",
-        "Wdrożenie AI w zespole",
-    ),
     "achievement7_problem": (
         "No AI adoption in the project: the team did not use AI in its daily work, and team throughput stayed at around 30 tasks a month.",
         "Brak adopcji AI w projekcie: zespół nie korzystał z AI w codziennej pracy, a przepustowość zespołu utrzymywała się na poziomie ok. 30 zadań miesięcznie.",
@@ -149,10 +145,6 @@ ADDED = {
         "Over 4x higher productivity: from 30 to 130 tasks a month, at a fraction of the added cost",
         "Ponad 4-krotny wzrost produktywności: z 30 do 130 zadań miesięcznie przy ułamkowym wzroście kosztów",
     ),
-    "case_area_label": (
-        "Area",
-        "Obszar",
-    ),
     "about_tag_1": ("AI Orchestration", "Orkiestracja AI"),
     "about_tag_2": ("Business Automation", "Automatyzacja biznesu"),
     "about_tag_3": ("Quality Strategy", "Strategia jakości"),
@@ -161,7 +153,7 @@ ADDED = {
     "case_project_label": ("Project", "Projekt"),
     "case_view_project": ("View Project", "Zobacz projekt"),
     "case_get_in_touch": ("Get in Touch", "Skontaktuj się"),
-    "page_title_home": ("Marcin Orgacki", "Marcin Orgacki"),
+    "page_title_home": ("Marcin Orgacki | IT Services", "Marcin Orgacki | Usługi IT"),
     "page_title_experience": ("Marcin Orgacki | Experience", "Marcin Orgacki | Doświadczenie"),
     "page_title_case_studies": ("Marcin Orgacki | Case Studies", "Marcin Orgacki | Studia przypadków"),
     "page_title_projects": ("Marcin Orgacki | Projects", "Marcin Orgacki | Projekty"),

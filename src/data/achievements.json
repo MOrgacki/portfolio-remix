@@ -50,9 +50,9 @@
   {
     "id": 7,
     "color": "cyan",
-    "titleKey": "achievement7_title",
     "problemKey": "achievement7_problem",
     "solutionKey": "achievement7_solution",
-    "resultKey": "achievement7_result"
+    "resultKey": "achievement7_result",
+    "projectTitle": "Brainwave Meditation Mobile App"
   }
 ]

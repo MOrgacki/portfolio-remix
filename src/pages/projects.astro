@@ -6,8 +6,21 @@ import ProjectFilters from '../components/ProjectFilters.astro';
 import ProjectDialog from '../components/ProjectDialog.astro';
 import ContactSection from '../components/sections/ContactSection.astro';
 import { loadProjects } from '../lib/projects';
+import { t } from '../i18n';
 
 const projects = await loadProjects();
+
+// proj_description has a {count} placeholder filled with the number of listed projects;
+// Polish also needs the matching noun form (2-4 → "projekty", otherwise "projektów").
+const count = projects.length;
+const plNoun =
+  count % 10 >= 2 && count % 10 <= 4 && !(count % 100 >= 12 && count % 100 <= 14)
+    ? 'projekty'
+    : 'projektów';
+const lead = {
+  en: t('proj_description', 'en').replace('{count}', String(count)),
+  pl: t('proj_description', 'pl').replace('{count}', `${count} ${plNoun}`),
+};
 ---
 
 <BaseLayout
@@ -20,7 +33,7 @@ const projects = await loadProjects();
       <h1 class="page-title gradient-text">
         <T k="proj_title" />
       </h1>
-      <T k="proj_description" as="p" class="page-lead" />
+      <T en={lead.en} pl={lead.pl} as="p" class="page-lead" />
     </header>
 
     <ProjectFilters projects={projects} />

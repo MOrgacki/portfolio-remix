@@ -37,9 +37,6 @@ export const achievements = achievementsData.map((a) => ({
   problemKey: key(a.problemKey),
   solutionKey: key(a.solutionKey),
   resultKey: key(a.resultKey),
-  // Cases without a matching project show a plain heading instead of a project link.
-  titleKey: a.titleKey ? key(a.titleKey) : undefined,
-  projectTitle: a.projectTitle,
 }));
 
 export const skills = skillsData.map((g) => ({

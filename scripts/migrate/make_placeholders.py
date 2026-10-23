@@ -22,6 +22,9 @@ PLACEHOLDERS = {
     "job-market-statistics-web-scraper": ("Job Market Statistics", (20, 184, 166)),
     "mmorpg-game-bot-tibia-automation": ("Tibia Automation Bot", (249, 115, 22)),
     "medical-supplements-e-commerce-platform": ("Medical Supplements Shop", (236, 72, 153)),
+    "decentralized-ai-network": ("Decentralized AI Network", (6, 182, 212)),
+    "ai-conversation-service": ("AI Conversation Service", (99, 102, 241)),
+    "meditation-data-etl-pipeline": ("Meditation Data ETL", (16, 185, 129)),
 }
 
 CAPTION_TOP = 535  # the legacy caption pill sits below this line

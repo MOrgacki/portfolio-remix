@@ -1,25 +1,65 @@
 ---
-// The legacy footer (portfolio/footer.py) is intentionally empty; keep a minimal attribution.
+// The legacy footer (portfolio/footer.py) is intentionally empty; keep a minimal attribution bar.
+import { Image } from 'astro:assets';
+import profile from '../assets/profile.png';
+import { url } from '../lib/url';
+
 const year = new Date().getFullYear();
 ---
 
 <footer class="footer">
-  <p>© 2018-{year} Marcin Orgacki</p>
+  <div class="inner">
+    <a class="logo" href={url('')} aria-label="Marcin Orgacki">
+      <Image src={profile} alt="" width={46} height={26} />
+    </a>
+    <p class="copy">© 2018-{year} Marcin Orgacki</p>
+  </div>
 </footer>
 
 <style>
+  /* Bar styled like the header. Its height and right padding line the text up with the floating
+     language button (LanguageButton.astro) instead of running underneath it. */
   .footer {
     position: relative;
     z-index: 10;
     display: flex;
-    justify-content: center;
-    padding: 1.5rem 1rem 5.5rem;
-    color: var(--gray-400);
-    font-size: 0.85rem;
+    align-items: center;
+    min-height: 5.5rem;
+    padding: 0 7rem 0 1rem;
+    border-top: 1px solid var(--border);
+    background: var(--surface-header);
+    backdrop-filter: blur(20px);
   }
-  @media (max-width: 767px) {
+  .inner {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: var(--content-width);
+    margin-inline: auto;
+  }
+  .logo img {
+    width: 34px;
+    height: auto;
+    opacity: 0.8;
+  }
+  .copy {
+    color: var(--gray-400);
+    font-size: 0.65rem;
+  }
+  @media (min-width: 768px) {
     .footer {
-      font-size: 0.65rem;
+      min-height: 7rem;
+      padding: 0 2rem;
+    }
+    .inner {
+      padding-right: 8rem;
+    }
+    .logo img {
+      width: 46px;
+    }
+    .copy {
+      font-size: 0.85rem;
     }
   }
 </style>

@@ -45,7 +45,9 @@ import SocialLinks from '../SocialLinks.astro';
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding-bottom: 0.1rem;
+    /* The gradient is clipped to the text box; leave room for descenders (the "g"). */
+    padding-bottom: 0.2em;
+    margin-bottom: -0.1em;
   }
   .wave {
     display: inline-block;

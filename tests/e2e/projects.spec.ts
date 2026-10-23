@@ -17,8 +17,8 @@ test.describe('projects (US3)', () => {
     await page.goto('projects/');
   });
 
-  test('lists all 35 projects newest first', async ({ page }) => {
-    await expect(cards(page)).toHaveCount(35);
+  test('lists all projects in display order', async ({ page }) => {
+    await expect(cards(page)).toHaveCount(projects.length);
     const titles = await page.locator('[data-project] h2').allInnerTexts();
     const expected = [...projects].sort((a, b) => b.id - a.id).map((p) => p.title);
     expect(titles).toEqual(expected);
@@ -53,7 +53,7 @@ test.describe('projects (US3)', () => {
     await expect(page.getByText(en.projects_empty_result)).toBeVisible();
 
     await page.getByRole('button', { name: en.proj_clear_filters }).click();
-    await expect(cards(page)).toHaveCount(35);
+    await expect(cards(page)).toHaveCount(projects.length);
     await expect(page.getByText(en.projects_empty_result)).toBeHidden();
   });
 
@@ -99,16 +99,27 @@ test.describe('projects (US3)', () => {
   });
 
   test('no broken images and no dead code/demo buttons', async ({ page }) => {
-    for (const card of await page.locator('[data-project] img').all())
-      await card.scrollIntoViewIfNeeded();
-    const broken = await page.$$eval(
-      '[data-project] img',
-      (imgs) =>
-        imgs.filter(
-          (i) => !(i as HTMLImageElement).complete || (i as HTMLImageElement).naturalWidth === 0,
-        ).length,
+    // Load every lazy image at once instead of scrolling card by card: each scroll waits for the
+    // card's reveal animation to settle, which adds up past the test timeout.
+    await page.$$eval('[data-project] img', (imgs) =>
+      imgs.forEach((i) => ((i as HTMLImageElement).loading = 'eager')),
     );
-    expect(broken).toBe(0);
+    // Images may still be downloading, so poll; a broken image finishes with naturalWidth 0
+    // and keeps the count above zero.
+    await expect
+      .poll(
+        () =>
+          page.$$eval(
+            '[data-project] img',
+            (imgs) =>
+              imgs.filter(
+                (i) =>
+                  !(i as HTMLImageElement).complete || (i as HTMLImageElement).naturalWidth === 0,
+              ).length,
+          ),
+        { timeout: 15_000 },
+      )
+      .toBe(0);
 
     const withoutCode = projects.find((p) => !p.github)!;
     await page.locator(`[data-project="${withoutCode.slug}"] [data-open-project]`).click();

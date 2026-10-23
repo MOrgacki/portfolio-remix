@@ -6,7 +6,7 @@
       "pl": "Języki programowania"
     },
     "colorToken": "--tech-cyan",
-    "techs": ["Python", "TypeScript", "C#", "PHP", "C++", "Go", "Rust"]
+    "techs": ["Python", "TypeScript", "C#", "PHP", "C++", "Go", "Rust", "JavaScript"]
   },
   {
     "id": "testing",
@@ -48,7 +48,8 @@
       "T-SQL",
       "Database",
       "Database Integration",
-      "Vector Database"
+      "Vector Database",
+      "SQL"
     ]
   },
   {
@@ -81,7 +82,7 @@
       "Blockchain",
       "AI",
       "Smart Contracts",
-      "DePIN"
+      "RAG"
     ]
   },
   {
@@ -91,7 +92,7 @@
       "pl": "DevOps i narzędzia"
     },
     "colorToken": "--tech-green",
-    "techs": ["Docker", "Jenkins", "TFS", "Octopus", "Cloud"]
+    "techs": ["Docker", "Jenkins", "TFS", "Octopus", "Cloud", "AWS"]
   },
   {
     "id": "other",
@@ -173,7 +174,11 @@
       "API Integration",
       "REST",
       "Vue",
-      "Xmind"
+      "Xmind",
+      "Taskiq",
+      "ETL",
+      "Machine Learning",
+      "Data Quality"
     ]
   }
 ]
