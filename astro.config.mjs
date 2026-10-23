@@ -1,10 +1,10 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Moving to a custom domain later: change `site`, set `base: '/'` and add public/CNAME.
+// Served from the custom domain in public/CNAME (GitHub Pages), so the base is the root.
 export default defineConfig({
-  site: 'https://morgacki.github.io',
-  base: '/portfolio-remix',
+  site: 'https://marcinorgacki.com',
+  base: '/',
   trailingSlash: 'always',
   output: 'static',
   build: {

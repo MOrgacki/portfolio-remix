@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 // BASE_URL lets the same suite run against a root-base build (custom-domain readiness, FR-014).
-const baseURL = process.env.BASE_URL ?? 'http://localhost:4321/portfolio-remix/';
+const baseURL = process.env.BASE_URL ?? 'http://localhost:4321/';
 
 export default defineConfig({
   testDir: 'tests/e2e',
