@@ -184,6 +184,27 @@ ADDED = {
         "The easiest way to reach me is by email. You can also message me on LinkedIn.",
         "Najprostszy sposób kontaktu to e-mail. Możesz też napisać do mnie na LinkedIn.",
     ),
+    # Case studies added after the migration
+    "achievement7_title": (
+        "AI adoption across the team",
+        "Wdrożenie AI w zespole",
+    ),
+    "achievement7_problem": (
+        "No AI adoption in the project: the team did not use AI in its daily work, and team throughput stayed at around 30 tasks a month.",
+        "Brak adopcji AI w projekcie: zespół nie korzystał z AI w codziennej pracy, a przepustowość zespołu utrzymywała się na poziomie ok. 30 zadań miesięcznie.",
+    ),
+    "achievement7_solution": (
+        "We analysed and documented how the team actually works and identified the company's available resources. Building on solutions from Anthropic, OpenRouter and open source, we created our own AI framework with numerous workflows, plus a basic AI harness for every team member.",
+        "Przeanalizowaliśmy i spisaliśmy, jak zespół faktycznie pracuje, oraz określiliśmy zasoby przedsiębiorstwa. Korzystając z rozwiązań Anthropic, OpenRouter i open source, stworzyliśmy własny framework AI z licznymi workflowami oraz podstawowy harness AI dla każdego członka zespołu.",
+    ),
+    "achievement7_result": (
+        "Over 4x higher productivity: from 30 to 130 tasks a month, at a fraction of the added cost",
+        "Ponad 4-krotny wzrost produktywności: z 30 do 130 zadań miesięcznie przy ułamkowym wzroście kosztów",
+    ),
+    "case_area_label": (
+        "Area",
+        "Obszar",
+    ),
     "about_tag_1": ("AI Orchestration", "Orkiestracja AI"),
     "about_tag_2": ("Business Automation", "Automatyzacja biznesu"),
     "about_tag_3": ("Quality Strategy", "Strategia jakości"),

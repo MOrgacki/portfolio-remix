@@ -8,6 +8,7 @@ import {
   CircleCheck,
   ExternalLink,
   Lightbulb,
+  Sparkles,
 } from '@lucide/astro';
 import T from '../T.astro';
 import type { achievements } from '../../lib/content';
@@ -26,7 +27,7 @@ const { item, index } = Astro.props;
     {String(index).padStart(2, '0')}
   </span>
 
-  {item.projectTitle && (
+  {item.projectTitle ? (
     <header class="head">
       <span class="label small">
         <Briefcase size={14} aria-hidden="true" />
@@ -37,6 +38,18 @@ const { item, index } = Astro.props;
         <ExternalLink size={14} aria-hidden="true" />
       </a>
     </header>
+  ) : (
+    item.titleKey && (
+      <header class="head">
+        <span class="label small">
+          <Sparkles size={14} aria-hidden="true" />
+          <T k="case_area_label" />
+        </span>
+        <span class="project">
+          <T k={item.titleKey} />
+        </span>
+      </header>
+    )
   )}
 
   <div class="flow">

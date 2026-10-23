@@ -46,5 +46,13 @@
     "solutionKey": "achievement6_solution",
     "resultKey": "achievement6_result",
     "projectTitle": "AI Research Analysis Platform (RAG)"
+  },
+  {
+    "id": 7,
+    "color": "cyan",
+    "titleKey": "achievement7_title",
+    "problemKey": "achievement7_problem",
+    "solutionKey": "achievement7_solution",
+    "resultKey": "achievement7_result"
   }
 ]
