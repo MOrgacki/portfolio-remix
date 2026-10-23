@@ -89,6 +89,8 @@ const brief = ['contact_brief_1', 'contact_brief_2', 'contact_brief_3', 'contact
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
     gap: 1.25rem;
+    /* An <ol>: the global reset only clears the indent of ul[role='list']. */
+    padding: 0;
   }
   .step {
     position: relative;
@@ -116,6 +118,28 @@ const brief = ['contact_brief_1', 'contact_brief_2', 'contact_brief_3', 'contact
   }
   .step :global(.step-icon) {
     color: var(--accent-text);
+  }
+  /* Phones: compact rows (number on the left, text beside it) instead of tall centred cards. */
+  @media (max-width: 639px) {
+    .steps {
+      gap: 0.75rem;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 1.8rem 1fr;
+      column-gap: 0.9rem;
+      row-gap: 0.25rem;
+      align-items: start;
+      padding: 1rem;
+      text-align: left;
+    }
+    .step-number {
+      position: static;
+      grid-row: 1 / span 2;
+    }
+    .step :global(.step-icon) {
+      display: none;
+    }
   }
 
   .columns {

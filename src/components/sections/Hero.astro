@@ -1,5 +1,6 @@
 ---
 // Port of the name/social block of Main.build_view() in portfolio/main.py.
+import { ChevronDown } from '@lucide/astro';
 import T from '../T.astro';
 import SocialLinks from '../SocialLinks.astro';
 ---
@@ -15,6 +16,14 @@ import SocialLinks from '../SocialLinks.astro';
     </span>
   </h1>
   <SocialLinks />
+  <a class="scroll-hint" href="#about">
+    <span class="visually-hidden">
+      <T k="scroll_hint" />
+    </span>
+    <ChevronDown size={30} aria-hidden="true" />
+    <ChevronDown size={30} aria-hidden="true" />
+    <ChevronDown size={30} aria-hidden="true" />
+  </a>
 </section>
 
 <style>
@@ -54,6 +63,37 @@ import SocialLinks from '../SocialLinks.astro';
     font-size: 0.85em;
     transform-origin: 70% 70%;
     animation: wave 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
+  }
+  /* Three stacked chevrons that light up top to bottom, pointing at the tile below. */
+  .scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
+    color: var(--accent);
+  }
+  .scroll-hint :global(svg) {
+    margin-top: -16px;
+    opacity: 0.15;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.9));
+    animation: chevron 1.6s ease-in-out infinite;
+  }
+  .scroll-hint :global(svg:nth-of-type(2)) {
+    animation-delay: 0.2s;
+  }
+  .scroll-hint :global(svg:nth-of-type(3)) {
+    animation-delay: 0.4s;
+  }
+  @keyframes chevron {
+    0%,
+    100% {
+      opacity: 0.15;
+      translate: 0 -4px;
+    }
+    50% {
+      opacity: 1;
+      translate: 0 4px;
+    }
   }
   @keyframes wave {
     from {

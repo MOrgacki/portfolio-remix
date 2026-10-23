@@ -1,9 +1,8 @@
 ---
 // Port of _create_window_box() + _create_info_view() from portfolio/main.py.
-// The legacy AI-chat placeholder is replaced by a "Let's talk" link to Contact (FR-005).
-import { MessageCircle } from '@lucide/astro';
+// The legacy AI-chat placeholder is replaced by a "Let's talk" email link that covers the whole
+// window (FR-005).
 import T from '../T.astro';
-import { url } from '../../lib/url';
 
 const tags = [
   { k: 'about_tag_1', c: 'c-cyan' },
@@ -14,7 +13,7 @@ const tags = [
 ] as const;
 ---
 
-<section class="window-wrap animate-in" aria-labelledby="about-title">
+<section class="window-wrap animate-in" id="about" aria-labelledby="about-title">
   <span class="emoji e1" aria-hidden="true">
     🚀
   </span>
@@ -48,9 +47,11 @@ const tags = [
           </li>
         ))}
       </ul>
-      <a class="btn btn-primary" href={url('contact/')} data-cta="lets-talk">
-        <MessageCircle size={20} aria-hidden="true" />
-        <T k="about_cta_lets_talk" />
+      <!-- Stretched over the whole window (::after), so a click anywhere starts an email. -->
+      <a class="window-link" href="mailto:marcinorgacki@gmail.com" data-cta="lets-talk">
+        <span class="visually-hidden">
+          <T k="about_cta_lets_talk" />
+        </span>
       </a>
     </div>
   </div>
@@ -100,7 +101,13 @@ const tags = [
     }
   }
   .window {
+    position: relative;
     overflow: hidden;
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
     border: 1px solid var(--border-strong);
     border-radius: 12px;
     background: var(--surface-strong);
@@ -159,6 +166,28 @@ const tags = [
   }
   .tags {
     justify-content: center;
-    margin: 1rem 0 1.25rem;
+    margin: 1rem 0 0.5rem;
+  }
+  .window:hover,
+  .window:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(0, 212, 255, 0.45);
+    box-shadow:
+      var(--shadow-lg),
+      0 0 40px rgba(0, 212, 255, 0.25);
+  }
+  .window-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  .window-link:focus-visible {
+    outline: none;
+  }
+  .window-link:focus-visible::after {
+    outline: 3px solid var(--accent);
+    outline-offset: -3px;
+    border-radius: 12px;
   }
 </style>

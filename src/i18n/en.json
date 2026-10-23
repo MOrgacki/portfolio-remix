@@ -149,6 +149,7 @@
   "proj_view_details": "View Details",
   "projects_count": "Projects shown:",
   "projects_empty_result": "No projects match your search and filters.",
+  "scroll_hint": "Scroll down",
   "service_ai_desc": "Implementing tailored AI solutions and intelligent agents to automate complex decision-making and enhance productivity.",
   "service_ai_quality_desc": "Testing AI-powered products (RAG, chatbots and agents): evaluation datasets, hallucination and accuracy checks, prompt-injection and guardrail testing, and regression testing after model or prompt changes.",
   "service_ai_quality_title": "AI Quality & LLM Evaluation",

@@ -10,14 +10,17 @@ test.describe('accessibility (FR-020, FR-021)', () => {
         test(`/${route.path} has no serious axe violations`, async ({ page }) => {
           await page.goto(route.path);
           // Let the scroll-reveal fades finish: half-faded text would fail the contrast check.
-          await page.waitForFunction(() =>
-            document
-              .getAnimations()
-              .every(
-                (a) =>
-                  a.playState === 'finished' ||
-                  a.effect?.getComputedTiming().iterations === Infinity,
-              ),
+          await page.waitForFunction(
+            () =>
+              document
+                .getAnimations()
+                .every(
+                  (a) =>
+                    a.playState === 'finished' ||
+                    a.effect?.getComputedTiming().iterations === Infinity,
+                ),
+            undefined,
+            { polling: 100 },
           );
           const results = await new AxeBuilder({ page }).analyze();
           const serious = results.violations

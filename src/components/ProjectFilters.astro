@@ -290,6 +290,10 @@ const types = [
   .more summary::-webkit-details-marker {
     display: none;
   }
+  /* Once expanded, the whole group is visible, so the "+N" toggle has nothing left to add. */
+  .more[open] summary {
+    display: none;
+  }
   .more-items {
     display: flex;
     flex-wrap: wrap;

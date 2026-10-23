@@ -6,12 +6,13 @@ import { ROUTES } from './routes';
 test.describe('contact (US5)', () => {
   test.use({ locale: 'en-US' });
 
-  test("home 'Let's talk' leads to Contact and keeps the language", async ({ page }) => {
+  test("home 'Let's talk' tile starts an email in the chosen language", async ({ page }) => {
     await page.goto('');
     await page.locator('[data-lang-toggle]').last().click();
-    await page.getByRole('link', { name: pl.about_cta_lets_talk }).click();
-    await expect(page).toHaveURL(/contact\/$/);
-    await expect(page.locator('h1')).toHaveText(pl.contact_title, { useInnerText: true });
+    await expect(page.getByRole('link', { name: pl.about_cta_lets_talk })).toHaveAttribute(
+      'href',
+      'mailto:marcinorgacki@gmail.com',
+    );
   });
 
   test('contact channels', async ({ page }) => {

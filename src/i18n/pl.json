@@ -149,6 +149,7 @@
   "proj_view_details": "Zobacz Szczegóły",
   "projects_count": "Wyświetlone projekty:",
   "projects_empty_result": "Żaden projekt nie pasuje do wyszukiwania i filtrów.",
+  "scroll_hint": "Przewiń w dół",
   "service_ai_desc": "Wdrażanie dostosowanych rozwiązań AI i inteligentnych agentów do automatyzacji złożonych procesów decyzyjnych i zwiększenia produktywności.",
   "service_ai_quality_desc": "Testowanie produktów opartych na AI (RAG, chatbotów i agentów): zestawy ewaluacyjne, wykrywanie halucynacji i sprawdzanie trafności, testy prompt injection i guardrails oraz testy regresji po zmianie modelu lub promptu.",
   "service_ai_quality_title": "Jakość AI i ewaluacja LLM",

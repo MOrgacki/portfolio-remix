@@ -145,6 +145,7 @@ ADDED = {
         "Over 4x higher productivity: from 30 to 130 tasks a month, at a fraction of the added cost",
         "Ponad 4-krotny wzrost produktywności: z 30 do 130 zadań miesięcznie przy ułamkowym wzroście kosztów",
     ),
+    "scroll_hint": ("Scroll down", "Przewiń w dół"),
     "about_tag_1": ("AI Orchestration", "Orkiestracja AI"),
     "about_tag_2": ("Business Automation", "Automatyzacja biznesu"),
     "about_tag_3": ("Quality Strategy", "Strategia jakości"),
