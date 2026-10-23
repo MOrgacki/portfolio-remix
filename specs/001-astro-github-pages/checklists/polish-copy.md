@@ -38,3 +38,7 @@ had no Polish text or showed another project's description.
 - [ ] Technology category labels (`src/data/tech-categories.json`)
 - [ ] Image alt texts ("<title> — zrzut ekranu")
 - [ ] New UI strings: 404 page, menu labels, language button, page titles/descriptions
+
+## Added after go-live
+
+- [ ] Experience services: AI Quality & LLM Evaluation, Data Warehouse & ETL Testing (`service_ai_quality_*`, `service_data_*`) — EN and PL drafts

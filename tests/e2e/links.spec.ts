@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { ROUTES } from './routes';
 
 // SC-003: every same-origin link, image and stylesheet reachable from the home page returns 200.
 test('internal links and images resolve', async ({ page, request, baseURL }) => {
@@ -48,5 +49,5 @@ test('internal links and images resolve', async ({ page, request, baseURL }) => 
 
   const broken = [...checked].filter(([, status]) => status !== 200);
   expect(broken, JSON.stringify(broken, null, 2)).toEqual([]);
-  expect(seenPages.size).toBeGreaterThanOrEqual(6);
+  expect(seenPages.size).toBeGreaterThanOrEqual(ROUTES.length);
 });

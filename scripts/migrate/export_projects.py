@@ -71,6 +71,9 @@ def main() -> None:
         slugs.add(slug)
         legacy_image = p["image"].lstrip("/")
         image = f"../assets/projects/{image_map[legacy_image]}" if legacy_image else None
+        # Projects without a legacy screenshot use a generated placeholder (make_placeholders.py).
+        if image is None and (ROOT / "src" / "assets" / "projects" / f"{slug}.png").exists():
+            image = f"../assets/projects/{slug}.png"
         out.append(
             {
                 "id": len(ordered) - index,

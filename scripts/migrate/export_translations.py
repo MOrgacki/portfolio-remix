@@ -45,6 +45,29 @@ ADDED = {
     "tech_group_databases": ("Databases", "Bazy danych"),
     "tech_group_technologies": ("Technologies", "Technologie"),
     "tech_group_others": ("Others", "Inne"),
+    # Services added after the migration (Experience page)
+    "service_testing_desc": (
+        "A holistic approach to product quality — combining manual and automated testing, verifying that business requirements are correctly understood and delivered, and catching gaps before they reach users.",
+        "Holistyczne podejście do jakości produktu — łączę testy manualne i automatyczne, weryfikuję, czy wymagania biznesowe zostały poprawnie zrozumiane i zrealizowane, oraz wychwytuję luki, zanim trafią do użytkowników.",
+    ),
+    "service_ai_quality_title": ("AI Quality & LLM Evaluation", "Jakość AI i ewaluacja LLM"),
+    "service_ai_quality_desc": (
+        "Testing AI-powered products — RAG, chatbots and agents: evaluation datasets, hallucination and "
+        "accuracy checks, prompt-injection and guardrail testing, and regression testing after model or "
+        "prompt changes.",
+        "Testowanie produktów opartych na AI — RAG, chatbotów i agentów: zestawy ewaluacyjne, wykrywanie "
+        "halucynacji i sprawdzanie trafności, testy prompt injection i guardrails oraz testy regresji po "
+        "zmianie modelu lub promptu.",
+    ),
+    "service_data_title": ("Data Warehouse & ETL Testing", "Testowanie hurtowni danych i ETL"),
+    "service_data_desc": (
+        "Validating data pipelines end to end: source-to-target reconciliation, transformation and "
+        "business-rule checks, data quality (completeness, duplicates, schema drift) and automated "
+        "regression of ETL jobs and reports.",
+        "Walidacja potoków danych od źródła do raportu: uzgadnianie danych źródło–cel, weryfikacja "
+        "transformacji i reguł biznesowych, jakość danych (kompletność, duplikaty, zmiany schematu) oraz "
+        "automatyczne testy regresji zadań ETL i raportów.",
+    ),
     "about_tag_1": ("AI Orchestration", "Orkiestracja AI"),
     "about_tag_2": ("Business Automation", "Automatyzacja biznesu"),
     "about_tag_3": ("Quality Strategy", "Strategia jakości"),
@@ -58,7 +81,6 @@ ADDED = {
     "page_title_case_studies": ("Marcin Orgacki | Case Studies", "Marcin Orgacki | Studia przypadków"),
     "page_title_projects": ("Marcin Orgacki | Projects", "Marcin Orgacki | Projekty"),
     "page_title_contact": ("Marcin Orgacki | Contact", "Marcin Orgacki | Kontakt"),
-    "page_title_blog": ("Marcin Orgacki | Blog", "Marcin Orgacki | Blog"),
     "page_title_not_found": ("Marcin Orgacki | Page not found", "Marcin Orgacki | Nie znaleziono strony"),
     "page_description_home": (
         "Marcin Orgacki — Quality Automation Architect, AI Solutions Advisor and Business Process Expert.",
@@ -80,15 +102,15 @@ ADDED = {
         "Get in touch with Marcin Orgacki by email, LinkedIn or GitHub.",
         "Skontaktuj się z Marcinem Orgackim przez e-mail, LinkedIn lub GitHub.",
     ),
-    "page_description_blog": (
-        "Upcoming articles about QA strategy, test automation and software development.",
-        "Nadchodzące artykuły o strategii QA, automatyzacji testów i wytwarzaniu oprogramowania.",
-    ),
 }
 
 
+# The blog page was removed after go-live.
+DROPPED_PREFIXES = ("proj_desc_", "blog_")
+
+
 def keep(key: str) -> bool:
-    return key not in DROPPED and not key.startswith("proj_desc_")
+    return key not in DROPPED and key != "nav_blog" and not key.startswith(DROPPED_PREFIXES)
 
 
 def main() -> None:

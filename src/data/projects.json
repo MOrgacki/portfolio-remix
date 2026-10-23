@@ -84,7 +84,11 @@
         "Zwalidowana optymalizacja opłat gas w wielu łańcuchach"
       ]
     },
-    "image": null,
+    "image": "../assets/projects/nft-marketplace-platform.png",
+    "imageAlt": {
+      "en": "NFT Marketplace Platform — screenshot",
+      "pl": "NFT Marketplace Platform — zrzut ekranu"
+    },
     "github": null,
     "demo": null
   },
@@ -443,7 +447,11 @@
         "Automatyczne pobieranie ofert pracy"
       ]
     },
-    "image": null,
+    "image": "../assets/projects/job-listings-web-scraper-with-csv-export.png",
+    "imageAlt": {
+      "en": "Job Listings Web Scraper with CSV Export — screenshot",
+      "pl": "Job Listings Web Scraper with CSV Export — zrzut ekranu"
+    },
     "github": "https://github.com/MOrgacki?tab=repositories",
     "demo": null
   },
@@ -480,7 +488,11 @@
         "Agregacja statystyk rynku pracy"
       ]
     },
-    "image": null,
+    "image": "../assets/projects/job-market-statistics-web-scraper.png",
+    "imageAlt": {
+      "en": "Job Market Statistics Web Scraper — screenshot",
+      "pl": "Job Market Statistics Web Scraper — zrzut ekranu"
+    },
     "github": "https://github.com/MOrgacki?tab=repositories",
     "demo": null
   },
@@ -590,7 +602,11 @@
         "Pełne pokrycie testami w Pytest"
       ]
     },
-    "image": null,
+    "image": "../assets/projects/mmorpg-game-bot-tibia-automation.png",
+    "imageAlt": {
+      "en": "MMORPG Game Bot - Tibia Automation — screenshot",
+      "pl": "MMORPG Game Bot - Tibia Automation — zrzut ekranu"
+    },
     "github": "https://github.com/MOrgacki?tab=repositories",
     "demo": null
   },
@@ -854,7 +870,11 @@
         "Zwalidowana optymalizacja dostaw"
       ]
     },
-    "image": null,
+    "image": "../assets/projects/medical-supplements-e-commerce-platform.png",
+    "imageAlt": {
+      "en": "Medical Supplements E-commerce Platform — screenshot",
+      "pl": "Medical Supplements E-commerce Platform — zrzut ekranu"
+    },
     "github": null,
     "demo": null
   },

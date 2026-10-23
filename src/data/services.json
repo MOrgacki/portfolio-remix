@@ -40,5 +40,19 @@
     "color": "green",
     "titleKey": "service_security_title",
     "descKey": "service_security_desc"
+  },
+  {
+    "id": "ai-quality",
+    "icon": "brain-circuit",
+    "color": "cyan",
+    "titleKey": "service_ai_quality_title",
+    "descKey": "service_ai_quality_desc"
+  },
+  {
+    "id": "data",
+    "icon": "database-zap",
+    "color": "purple",
+    "titleKey": "service_data_title",
+    "descKey": "service_data_desc"
   }
 ]

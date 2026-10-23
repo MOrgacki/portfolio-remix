@@ -11,7 +11,6 @@ Trailing slash is canonical; GitHub Pages redirects the slash-less form.
 | `/case-studies/` | `src/pages/case-studies.astro` | Case Studies | Problem → solution → result stories |
 | `/projects/` | `src/pages/projects.astro` | Projects | 35 projects, search, filters, details pop-up |
 | `/contact/` | `src/pages/contact.astro` | Contact | Email, LinkedIn, GitHub |
-| `/blog/` | `src/pages/blog.astro` | Blog | "Coming soon" with planned topics |
 | any other path | `src/pages/404.astro` → `404.html` | — | Branded not-found page with link to Home |
 
 ## Guarantees

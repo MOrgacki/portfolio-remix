@@ -40,10 +40,9 @@ section and language. `[x]` = present on the new site with the same content.
 - [x] EN/PL: Get in Touch title, description, social links, "Contact Me" mail button
 - Note: legacy `/contact` repeated the home view; the new page focuses on contact channels.
 
-## Blog (`/blog/`) — legacy `blog_page()`
+## Blog
 
-- [x] EN/PL: title, description, "coming soon" box, 4 topics, suggestion text, Home button
-  (legacy texts were hard-coded English; now translated keys)
+- Removed by the owner on 2026-10-23 (not ported).
 
 ## Sign-off
 

@@ -177,12 +177,11 @@ GitHub with one click.
 
 **Content & pages**
 
-- **FR-001**: The site MUST provide six pages — Home, Experience, Case Studies, Projects, Contact,
-  Blog — plus a "page not found" page.
+- **FR-001**: The site MUST provide five pages — Home, Experience, Case Studies, Projects, Contact —
+  plus a "page not found" page. (The Blog page was removed by the owner on 2026-10-23.)
 - **FR-002**: Each page MUST contain all content currently shown on its counterpart in the
   existing site, in both languages, with no section dropped or rewritten from memory.
-- **FR-003**: The Blog page MUST keep the current "coming soon" content (planned topics and an
-  invitation to suggest topics).
+- **FR-003**: *(Removed 2026-10-23: the Blog page is out of scope.)*
 - **FR-004**: All 35 existing projects MUST be carried over with their title, descriptions,
   technologies, domain, platform, type (personal/client), status, achievements, image, and links.
 - **FR-005**: The "About me" AI chat placeholder MUST be removed and replaced by a "Let's talk"

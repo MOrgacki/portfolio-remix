@@ -1,9 +1,8 @@
 ---
 // Port of portfolio/header.py (desktop nav + mobile drawer).
 import { Image } from 'astro:assets';
-import { Briefcase, Trophy, SquareLibrary, Mail, PenLine, House, Menu, X } from '@lucide/astro';
+import { Briefcase, Trophy, SquareLibrary, Mail, House, Menu, X } from '@lucide/astro';
 import T from './T.astro';
-import LanguageButton from './LanguageButton.astro';
 import profile from '../assets/profile.png';
 import { both } from '../i18n';
 import { url } from '../lib/url';
@@ -19,7 +18,6 @@ const items = [
   { key: 'experience', label: 'nav_experience', href: 'experience/', icon: Briefcase },
   { key: 'case_studies', label: 'nav_case_studies', href: 'case-studies/', icon: Trophy },
   { key: 'projects', label: 'nav_projects', href: 'projects/', icon: SquareLibrary },
-  { key: 'blog', label: 'nav_blog', href: 'blog/', icon: PenLine },
   { key: 'contact', label: 'nav_contact', href: 'contact/', icon: Mail },
 ] as const;
 const openLabel = both('menu_open');
@@ -42,7 +40,6 @@ const closeLabel = both('menu_close');
         </li>
       ))}
     </ul>
-    <LanguageButton />
   </nav>
 
   <button
