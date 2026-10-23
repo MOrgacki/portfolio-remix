@@ -5,13 +5,13 @@ import Icon from '../Icon.astro';
 import { services } from '../../lib/content';
 ---
 
-<section class="panel services" aria-labelledby="services-title">
+<section class="panel services" aria-labelledby="services-title" data-reveal>
   <h2 class="section-title gradient-text" id="services-title">
     <T k="services_title" />
   </h2>
   <ul class="grid" role="list">
     {services.map((s) => (
-      <li class={`card c-${s.color}`}>
+      <li class={`card c-${s.color}`} data-reveal>
         <Icon name={s.icon} size={32} class="icon" />
         <T k={s.titleKey} as="h3" class="card-title" />
         <T k={s.descKey} as="p" class="card-text" />

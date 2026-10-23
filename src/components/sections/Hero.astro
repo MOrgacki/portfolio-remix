@@ -1,9 +1,7 @@
 ---
-// Port of the name/badges/social block of Main.build_view() in portfolio/main.py.
+// Port of the name/social block of Main.build_view() in portfolio/main.py.
 import T from '../T.astro';
 import SocialLinks from '../SocialLinks.astro';
-
-const titles = ['home_title_1', 'home_title_2', 'home_title_3'] as const;
 ---
 
 <section class="hero">
@@ -16,13 +14,6 @@ const titles = ['home_title_1', 'home_title_2', 'home_title_3'] as const;
       👋
     </span>
   </h1>
-  <ul class="badges" role="list">
-    {titles.map((k) => (
-      <li class="title-badge">
-        <T k={k} />
-      </li>
-    ))}
-  </ul>
   <SocialLinks />
 </section>
 
@@ -69,20 +60,5 @@ const titles = ['home_title_1', 'home_title_2', 'home_title_3'] as const;
     to {
       transform: rotate(-15deg);
     }
-  }
-  .badges {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  .title-badge {
-    padding: 0.2rem 0.7rem;
-    border: 1px solid rgba(0, 212, 255, 0.25);
-    border-radius: var(--radius-sm);
-    background: rgba(0, 212, 255, 0.1);
-    color: var(--accent-text);
-    font-size: clamp(0.7rem, 2vw, 0.8rem);
-    font-weight: 600;
   }
 </style>

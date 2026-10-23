@@ -20,7 +20,7 @@ TRANSLATIONS = {
         # Experience page
         "exp_title": "Experience",
         "exp_subtitle": "7+ Years Driving Quality Through Automation, AI & Business Process Optimization",
-        "exp_description": "Quality and automation expert with hands-on experience in fintech, AI, data science, e-commerce, and Web3. I help businesses scale quality beyond testing — through AI agents, process automation, and smart orchestration strategies aligned with real business goals.",
+        "exp_description": "Quality and automation expert with hands-on experience in fintech, AI, data science, e-commerce, and Web3. I help businesses scale quality beyond testing through AI agents, process automation, and smart orchestration strategies aligned with real business goals.",
         "exp_tech_stack": "🛠️ Tech Stack",
         "exp_testing_frameworks": "Testing Frameworks",
         "exp_languages_tech": "Languages & Technologies",
@@ -133,8 +133,8 @@ TRANSLATIONS = {
         "achievement5_result": "700,000+ users migrated",
 
         # Achievement 6
-        "achievement6_problem": "A 100% vibe-coded project accumulated critical quality degradation — growing regression across key functional areas and mounting technical debt that threatened the product's stability and scalability.",
-        "achievement6_solution": "Shifted from unstructured AI prompting to a structured context-file approach: created detailed context documents per feature area to guide AI-assisted development precisely. Systematically reduced regression in core functional areas through targeted test coverage, and tackled technical debt by refactoring critical modules — separating concerns and stabilising the codebase.",
+        "achievement6_problem": "A 100% vibe-coded project accumulated critical quality degradation: growing regression across key functional areas and mounting technical debt that threatened the product's stability and scalability.",
+        "achievement6_solution": "Shifted from unstructured AI prompting to a structured context-file approach: created detailed context documents per feature area to guide AI-assisted development precisely. Systematically reduced regression in core functional areas through targeted test coverage, and tackled technical debt by refactoring critical modules, separating concerns and stabilising the codebase.",
         "achievement6_result": "Regression reduced, technical debt minimised in core modules",
 
         # Case Studies page
@@ -149,7 +149,7 @@ TRANSLATIONS = {
 
         # About Me Window
         "about_title": "👋 What I bring to your business",
-        "about_intro_1": "I help businesses deliver quality through intelligent automation, AI orchestration, and process optimization — going far beyond traditional testing.",
+        "about_intro_1": "I help businesses deliver quality through intelligent automation, AI orchestration, and process optimization, going far beyond traditional testing.",
         "about_intro_2": "From designing AI agents and automation pipelines to building quality strategies, I bridge technical solutions with measurable business outcomes.",
         "about_chat_button": "Chat with my AI Assistant",
         "about_chat_title": "ai_assistant.chat",
@@ -165,7 +165,7 @@ TRANSLATIONS = {
         "contact_description": "Let's connect! Feel free to reach out through any of these channels.",
 
         # Core Skills
-        "skills_skill_1": "🔹 Building automation strategies that go beyond testing — full business quality coverage",
+        "skills_skill_1": "🔹 Building automation strategies that go beyond testing, with full business quality coverage",
         "skills_skill_2": "🔹 Designing and implementing AI agents, orchestrators and automation pipelines",
         "skills_skill_3": "🔹 Leading quality initiatives: from SDLC optimization to AI-driven process automation",
         "skills_skill_4": "🔹 Bridging technology and business: turning automation into measurable value",
@@ -262,7 +262,7 @@ TRANSLATIONS = {
         # Strona doświadczenia
         "exp_title": "Doświadczenie",
         "exp_subtitle": "7+ Lat Budowania Jakości przez Automatyzację, AI i Optymalizację Procesów Biznesowych",
-        "exp_description": "Ekspert jakości i automatyzacji z praktycznym doświadczeniem w fintech, AI, data science, e-commerce i Web3. Pomagam firmom skalować jakość poza testowanie — przez agenty AI, automatyzację procesów i inteligentne strategie orkiestracji dopasowane do celów biznesowych.",
+        "exp_description": "Ekspert jakości i automatyzacji z praktycznym doświadczeniem w fintech, AI, data science, e-commerce i Web3. Pomagam firmom skalować jakość poza testowanie przez agenty AI, automatyzację procesów i inteligentne strategie orkiestracji dopasowane do celów biznesowych.",
         "exp_tech_stack": "🛠️ Stack Technologiczny",
         "exp_testing_frameworks": "Frameworki Testowe",
         "exp_languages_tech": "Języki i Technologie",
@@ -375,8 +375,8 @@ TRANSLATIONS = {
         "achievement5_result": "700 000+ użytkowników zmigrowanych",
 
         # Osiągnięcie 6
-        "achievement6_problem": "Projekt tworzony w 100% metodą vibe codingu zgromadził krytyczną degradację jakości — narastającą regresję w kluczowych obszarach funkcjonalnych oraz rosnący dług techniczny zagrażający stabilności i skalowalności produktu.",
-        "achievement6_solution": "Przejście z nieustrukturyzowanego promptowania AI na podejście oparte na plikach kontekstowych: stworzenie szczegółowych dokumentów kontekstowych dla każdego obszaru funkcjonalnego, precyzyjnie prowadzących rozwój wspomagany przez AI. Systematyczna redukcja regresji w kluczowych obszarach funkcjonalnych poprzez ukierunkowane pokrycie testami oraz minimalizacja długu technicznego przez refaktoring krytycznych modułów — rozdzielenie odpowiedzialności i stabilizacja bazy kodu.",
+        "achievement6_problem": "Projekt tworzony w 100% metodą vibe codingu zgromadził krytyczną degradację jakości: narastającą regresję w kluczowych obszarach funkcjonalnych oraz rosnący dług techniczny zagrażający stabilności i skalowalności produktu.",
+        "achievement6_solution": "Przejście z nieustrukturyzowanego promptowania AI na podejście oparte na plikach kontekstowych: stworzenie szczegółowych dokumentów kontekstowych dla każdego obszaru funkcjonalnego, precyzyjnie prowadzących rozwój wspomagany przez AI. Systematyczna redukcja regresji w kluczowych obszarach funkcjonalnych poprzez ukierunkowane pokrycie testami oraz minimalizacja długu technicznego przez refaktoring krytycznych modułów, rozdzielenie odpowiedzialności i stabilizacja bazy kodu.",
         "achievement6_result": "Regresja zredukowana, dług techniczny zminimalizowany w kluczowych modułach",
 
         # Strona Studia Przypadków
@@ -391,8 +391,8 @@ TRANSLATIONS = {
 
         # Okno O Mnie
         "about_title": "👋 Co wnoszę do Twojego biznesu",
-        "about_intro_1": "Pomagam firmom osiągać jakość przez inteligentną automatyzację, orkiestrację AI i optymalizację procesów — daleko poza tradycyjnym testowaniem.",
-        "about_intro_2": "Od projektowania agentów AI i pipeline'ów automatyzacji po strategie jakości — łączę rozwiązania techniczne z mierzalnymi wynikami biznesowymi.",
+        "about_intro_1": "Pomagam firmom osiągać jakość przez inteligentną automatyzację, orkiestrację AI i optymalizację procesów, daleko poza tradycyjnym testowaniem.",
+        "about_intro_2": "Łączę rozwiązania techniczne z mierzalnymi wynikami biznesowymi, od projektowania agentów AI i pipeline'ów automatyzacji po strategie jakości.",
         "about_chat_button": "Czat z moim Asystentem AI",
         "about_chat_title": "asystent_ai.czat",
         "about_file_title": "o_mnie.txt",
@@ -407,7 +407,7 @@ TRANSLATIONS = {
         "contact_description": "Połączmy się! Skontaktuj się ze mną przez dowolny z tych kanałów.",
 
         # Kluczowe Umiejętności
-        "skills_skill_1": "🔹 Budowanie strategii automatyzacji wykraczających poza testowanie — pełne pokrycie jakości biznesowej",
+        "skills_skill_1": "🔹 Budowanie strategii automatyzacji wykraczających poza testowanie, z pełnym pokryciem jakości biznesowej",
         "skills_skill_2": "🔹 Projektowanie i wdrażanie agentów AI, orkiestratorów i pipeline'ów automatyzacji",
         "skills_skill_3": "🔹 Prowadzenie inicjatyw jakościowych: od optymalizacji SDLC po automatyzację procesów z AI",
         "skills_skill_4": "🔹 Łączenie technologii z biznesem: przekształcanie automatyzacji w mierzalną wartość",
@@ -464,7 +464,7 @@ TRANSLATIONS = {
         "proj_desc_23": "System dwuplatformowy z aplikacją kliencką i dedykowanym portalem strefy partnera. Aplikacja kliencka umożliwia użytkownikom dostęp do usług, śledzenie zamówień i zarządzanie kontami. Strefa partnera zapewnia partnerom biznesowym panel, analitykę, śledzenie prowizji i narzędzia administracyjne. Przetestowano integracje między platformami zapewniając płynną synchronizację danych.",
         "proj_desc_24": "Platforma Zdecentralizowanej Infrastruktury Fizycznej (DePIN), gdzie Gentok buduje na zdecentralizowanej infrastrukturze sieciowej dostarczając generowanie treści AI dla społeczności Web3. Przetestowano operacje zdecentralizowanych węzłów, API generowania treści AI oraz dystrybucję nagród opartą na blockchain. Zweryfikowano stabilność sieci i dostarczanie treści w rozproszonych węzłach.",
         "proj_desc_25": "Aplikacja Smart TV zaprojektowana dla wewnętrznych wyświetlaczy korporacyjnych pokazujących ogłoszenia firmowe, KPI, dashboardy i dane w czasie rzeczywistym. Przetestowano na wielu platformach sprzętowych TV zapewniając kompatybilność z różnymi rozdzielczościami ekranu i systemami operacyjnymi TV. Zweryfikowano synchronizację treści, automatyczne aktualizacje i funkcjonalność harmonogramowania wyświetlania.",
-        "proj_desc_27": "Platforma SaaS oparta na AI do analizy artykułów naukowych i dokumentów badawczych z wykorzystaniem Retrieval-Augmented Generation (RAG). Zbudowana z frontendem React Native, backendem FastAPI (Python), wektorową bazą danych do semantycznej indeksacji dokumentów oraz PostgreSQL do danych strukturalnych. Projekt rozpoczął się od audytu funkcjonalnego przed wydaniem produkcyjnym, gdzie zidentyfikowano kluczowe błędy. Następnie przeprowadzono wydanie produkcyjne, wdrożono standardy QA i automatyzację testów od podstaw, po czym objęto rolę Lead Technicznego — implementując pipeline RAG, semantyczne wyszukiwanie i kolejne funkcje AI. Platforma stała się mikroserwisem obsługującym korporacyjne zespoły badawcze.",
+        "proj_desc_27": "Platforma SaaS oparta na AI do analizy artykułów naukowych i dokumentów badawczych z wykorzystaniem Retrieval-Augmented Generation (RAG). Zbudowana z frontendem React Native, backendem FastAPI (Python), wektorową bazą danych do semantycznej indeksacji dokumentów oraz PostgreSQL do danych strukturalnych. Projekt rozpoczął się od audytu funkcjonalnego przed wydaniem produkcyjnym, gdzie zidentyfikowano kluczowe błędy. Następnie przeprowadzono wydanie produkcyjne, wdrożono standardy QA i automatyzację testów od podstaw, po czym objęto rolę Lead Technicznego, implementując pipeline RAG, semantyczne wyszukiwanie i kolejne funkcje AI. Platforma stała się mikroserwisem obsługującym korporacyjne zespoły badawcze.",
 
         # Tytuły Projektów
         "proj_title_1": "Platforma Zarządzania Odpadami",

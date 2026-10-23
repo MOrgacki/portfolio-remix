@@ -10,7 +10,7 @@ interface Props {
 const { primary = false } = Astro.props;
 ---
 
-<section class="contact" id="contact">
+<section class="contact" id="contact" data-reveal={primary ? undefined : true}>
   <T k="contact_title" as={primary ? 'h1' : 'h2'} class="contact-title gradient-text" />
   <T k="contact_description" as="p" class="contact-text" />
   <SocialLinks />

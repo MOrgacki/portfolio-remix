@@ -6,13 +6,13 @@ import Icon from '../Icon.astro';
 import { timeline } from '../../lib/content';
 ---
 
-<section class="panel timeline-panel" aria-labelledby="timeline-title">
+<section class="panel timeline-panel" aria-labelledby="timeline-title" data-reveal>
   <h2 class="section-title warm" id="timeline-title">
     <T k="timeline_title" />
   </h2>
   <ol class="timeline" role="list" tabindex="0" aria-labelledby="timeline-title">
     {timeline.map((step) => (
-      <li class={`step c-${step.color}`}>
+      <li class={`step c-${step.color}`} data-reveal>
         <span class="dot">
           <Icon name={step.icon} size={32} />
         </span>

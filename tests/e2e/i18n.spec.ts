@@ -29,13 +29,13 @@ test.describe('language (US2)', () => {
       await page.goto('experience/');
       await expect(page.locator('h1')).toHaveText(en.exp_title, { useInnerText: true });
       const toggle = page.locator('[data-lang-toggle]').last();
-      await expect(toggle).toHaveAccessibleName(`EN – ${en.lang_switch_label}`);
+      await expect(toggle).toHaveAccessibleName(`EN ${en.lang_switch_label}`);
 
       await toggle.click();
       expect(await htmlLang(page)).toBe('pl');
       await expect(page.locator('h1')).toHaveText(pl.exp_title, { useInnerText: true });
       await expect(page).toHaveTitle(pl.page_title_experience);
-      await expect(toggle).toHaveAccessibleName(`PL – ${pl.lang_switch_label}`);
+      await expect(toggle).toHaveAccessibleName(`PL ${pl.lang_switch_label}`);
 
       await page.reload();
       expect(await htmlLang(page)).toBe('pl');

@@ -90,7 +90,7 @@ def main() -> None:
                 "status": "completed" if p["status"] == "Completed" else "in-progress",
                 "achievements": {"en": p.get("achievements", []), "pl": drafts["achievements"].get(slug, [])},
                 "image": image,
-                "imageAlt": {"en": f"{p['title']} — screenshot", "pl": f"{p['title']} — zrzut ekranu"} if image else None,
+                "imageAlt": {"en": f"{p['title']} screenshot", "pl": f"Zrzut ekranu: {p['title']}"} if image else None,
                 "github": p["github"] or None,
                 "demo": p["demo"] or None,
             }

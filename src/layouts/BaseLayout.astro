@@ -41,6 +41,11 @@ const ogImage = await getImage({ src: profile, format: 'png', width: 600 });
         }
         document.documentElement.dataset.lang = lang;
         document.documentElement.lang = lang;
+        if (
+          'IntersectionObserver' in window &&
+          !matchMedia('(prefers-reduced-motion: reduce)').matches
+        )
+          document.documentElement.classList.add('reveal-on');
       })();
     </script>
     <title>{t(titleKey, 'en')}</title>
@@ -71,6 +76,7 @@ const ogImage = await getImage({ src: profile, format: 'png', width: 600 });
     <LanguageButton floating />
     <script>
       import '../scripts/lang';
+      import '../scripts/reveal';
     </script>
   </body>
 </html>

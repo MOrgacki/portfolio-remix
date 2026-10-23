@@ -19,6 +19,9 @@ DROPPED = {
     "chat_close",
     "about_chat_button",
     "about_chat_title",
+    "home_title_1",
+    "home_title_2",
+    "home_title_3",
 }
 
 ADDED = {
@@ -47,15 +50,15 @@ ADDED = {
     "tech_group_others": ("Others", "Inne"),
     # Services added after the migration (Experience page)
     "service_testing_desc": (
-        "A holistic approach to product quality — combining manual and automated testing, verifying that business requirements are correctly understood and delivered, and catching gaps before they reach users.",
-        "Holistyczne podejście do jakości produktu — łączę testy manualne i automatyczne, weryfikuję, czy wymagania biznesowe zostały poprawnie zrozumiane i zrealizowane, oraz wychwytuję luki, zanim trafią do użytkowników.",
+        "A holistic approach to product quality: combining manual and automated testing, verifying that business requirements are correctly understood and delivered, and catching gaps before they reach users.",
+        "Holistyczne podejście do jakości produktu: łączę testy manualne i automatyczne, weryfikuję, czy wymagania biznesowe zostały poprawnie zrozumiane i zrealizowane, oraz wychwytuję luki, zanim trafią do użytkowników.",
     ),
     "service_ai_quality_title": ("AI Quality & LLM Evaluation", "Jakość AI i ewaluacja LLM"),
     "service_ai_quality_desc": (
-        "Testing AI-powered products — RAG, chatbots and agents: evaluation datasets, hallucination and "
+        "Testing AI-powered products (RAG, chatbots and agents): evaluation datasets, hallucination and "
         "accuracy checks, prompt-injection and guardrail testing, and regression testing after model or "
         "prompt changes.",
-        "Testowanie produktów opartych na AI — RAG, chatbotów i agentów: zestawy ewaluacyjne, wykrywanie "
+        "Testowanie produktów opartych na AI (RAG, chatbotów i agentów): zestawy ewaluacyjne, wykrywanie "
         "halucynacji i sprawdzanie trafności, testy prompt injection i guardrails oraz testy regresji po "
         "zmianie modelu lub promptu.",
     ),
@@ -67,6 +70,119 @@ ADDED = {
         "Walidacja potoków danych od źródła do raportu: uzgadnianie danych źródło–cel, weryfikacja "
         "transformacji i reguł biznesowych, jakość danych (kompletność, duplikaty, zmiany schematu) oraz "
         "automatyczne testy regresji zadań ETL i raportów.",
+    ),
+    # Contact page sections added after the migration
+    "contact_topics_title": (
+        "What we can talk about",
+        "O czym możemy porozmawiać",
+    ),
+    "contact_topic_qa_title": (
+        "QA strategy and audits",
+        "Strategia QA i audyty jakości",
+    ),
+    "contact_topic_qa_desc": (
+        "Reviewing your current testing process, finding the gaps and building a quality plan that fits your team and budget.",
+        "Przegląd obecnego procesu testowania, wskazanie luk i plan jakości dopasowany do zespołu i budżetu.",
+    ),
+    "contact_topic_automation_title": (
+        "Test automation",
+        "Automatyzacja testów",
+    ),
+    "contact_topic_automation_desc": (
+        "Building or fixing E2E, API and regression suites and plugging them into CI/CD, so every release is checked automatically.",
+        "Budowa lub naprawa testów E2E, API i regresji oraz podpięcie ich do CI/CD, aby każde wydanie było sprawdzane automatycznie.",
+    ),
+    "contact_topic_ai_title": (
+        "AI product quality",
+        "Jakość produktów AI",
+    ),
+    "contact_topic_ai_desc": (
+        "Evaluating chatbots, RAG systems and AI agents: accuracy, hallucinations, guardrails and regression after model changes.",
+        "Ewaluacja chatbotów, systemów RAG i agentów AI: trafność, halucynacje, guardrails i regresja po zmianie modelu.",
+    ),
+    "contact_topic_process_title": (
+        "Process automation",
+        "Automatyzacja procesów",
+    ),
+    "contact_topic_process_desc": (
+        "Automating repetitive business work with scripts, integrations and AI agents, so your team can focus on what matters.",
+        "Automatyzacja powtarzalnej pracy w firmie za pomocą skryptów, integracji i agentów AI, aby zespół mógł skupić się na tym, co ważne.",
+    ),
+    "contact_topic_data_title": (
+        "Data and ETL testing",
+        "Testowanie danych i ETL",
+    ),
+    "contact_topic_data_desc": (
+        "Checking data pipelines, reports and integrations, so the numbers your business relies on are correct.",
+        "Sprawdzanie potoków danych, raportów i integracji, aby liczby, na których opiera się firma, były poprawne.",
+    ),
+    "contact_topic_other_title": (
+        "Something else?",
+        "Coś innego?",
+    ),
+    "contact_topic_other_desc": (
+        "Have a different challenge? Write to me anyway and I will tell you honestly whether I can help.",
+        "Masz inne wyzwanie? Napisz mimo to, a szczerze powiem, czy mogę pomóc.",
+    ),
+    "contact_steps_title": (
+        "How we start",
+        "Jak zaczynamy",
+    ),
+    "contact_step_1_title": (
+        "Send a message",
+        "Napisz wiadomość",
+    ),
+    "contact_step_1_desc": (
+        "Briefly describe your product, the problem you want to solve and your timeline.",
+        "Krótko opisz produkt, problem do rozwiązania i oczekiwany termin.",
+    ),
+    "contact_step_2_title": (
+        "Short call",
+        "Krótka rozmowa",
+    ),
+    "contact_step_2_desc": (
+        "A short online call to understand your goals, your team and the current state of the project.",
+        "Krótka rozmowa online, żeby zrozumieć cele, zespół i obecny stan projektu.",
+    ),
+    "contact_step_3_title": (
+        "Concrete proposal",
+        "Konkretna propozycja",
+    ),
+    "contact_step_3_desc": (
+        "You get a clear plan: scope, approach and next steps.",
+        "Otrzymujesz jasny plan: zakres, podejście i kolejne kroki.",
+    ),
+    "contact_brief_title": (
+        "What to include in your message",
+        "Co warto napisać w wiadomości",
+    ),
+    "contact_brief_1": (
+        "What the product does and who uses it",
+        "Czym jest produkt i kto z niego korzysta",
+    ),
+    "contact_brief_2": (
+        "The current state of testing and the tools you use",
+        "Obecny stan testów i używane narzędzia",
+    ),
+    "contact_brief_3": (
+        "The main problem or goal",
+        "Główny problem lub cel",
+    ),
+    "contact_brief_4": (
+        "Expected timeline and form of collaboration",
+        "Oczekiwany termin i forma współpracy",
+    ),
+    "contact_languages_note": (
+        "I communicate in Polish and English.",
+        "Rozmawiam po polsku i angielsku.",
+    ),
+    "contact_cta_title": (
+        "Let's talk about your project",
+        "Porozmawiajmy o Twoim projekcie",
+    ),
+    "contact_cta_text": (
+        "The easiest way to reach me is by email. You can also message me on LinkedIn.",
+        "Najprostszy sposób kontaktu to e-mail. Możesz też napisać do mnie na LinkedIn.",
     ),
     "about_tag_1": ("AI Orchestration", "Orkiestracja AI"),
     "about_tag_2": ("Business Automation", "Automatyzacja biznesu"),
@@ -83,16 +199,16 @@ ADDED = {
     "page_title_contact": ("Marcin Orgacki | Contact", "Marcin Orgacki | Kontakt"),
     "page_title_not_found": ("Marcin Orgacki | Page not found", "Marcin Orgacki | Nie znaleziono strony"),
     "page_description_home": (
-        "Marcin Orgacki — Quality Automation Architect, AI Solutions Advisor and Business Process Expert.",
-        "Marcin Orgacki — architekt automatyzacji jakości, doradca ds. rozwiązań AI i ekspert procesów biznesowych.",
+        "Marcin Orgacki: quality assurance, test automation and AI-driven process automation.",
+        "Marcin Orgacki: zapewnianie jakości, automatyzacja testów i automatyzacja procesów z wykorzystaniem AI.",
     ),
     "page_description_experience": (
         "7+ years of QA, test automation, AI and business process optimisation experience.",
         "Ponad 7 lat doświadczenia w QA, automatyzacji testów, AI i optymalizacji procesów biznesowych.",
     ),
     "page_description_case_studies": (
-        "Real problems, real solutions, measurable results — selected QA and automation case studies.",
-        "Prawdziwe problemy, prawdziwe rozwiązania, mierzalne wyniki — wybrane studia przypadków QA i automatyzacji.",
+        "Real problems, real solutions, measurable results. Selected QA and automation case studies.",
+        "Prawdziwe problemy, prawdziwe rozwiązania, mierzalne wyniki. Wybrane studia przypadków QA i automatyzacji.",
     ),
     "page_description_projects": (
         "Client and personal projects in fintech, AI, Web3, e-learning and more.",

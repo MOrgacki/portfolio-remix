@@ -13,7 +13,7 @@ import { url } from '../lib/url';
   nav="case_studies"
 >
   <div class="page">
-    <header class="page-header">
+    <header class="page-header" data-reveal>
       <h1 class="page-title gradient-text">
         <T k="case_studies_title" />
       </h1>
@@ -25,7 +25,7 @@ import { url } from '../lib/url';
         <AchievementCard item={item} />
       ))}
     </div>
-    <section class="panel cta">
+    <section class="panel cta" data-reveal>
       <T k="case_studies_cta" as="p" class="cta-text" />
       <a class="btn btn-primary" href={url('contact/')}>
         <Mail size={20} aria-hidden="true" />
