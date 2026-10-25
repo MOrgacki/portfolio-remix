@@ -1,10 +1,9 @@
 ---
-import { Mail } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import T from '../components/T.astro';
 import AchievementCard from '../components/sections/AchievementCard.astro';
+import GetInTouch from '../components/sections/GetInTouch.astro';
 import { achievements } from '../lib/content';
-import { url } from '../lib/url';
 ---
 
 <BaseLayout
@@ -25,32 +24,6 @@ import { url } from '../lib/url';
         <AchievementCard item={item} index={i + 1} />
       ))}
     </div>
-    <section class="panel cta" data-reveal>
-      <T k="case_studies_cta" as="p" class="cta-text" />
-      <a class="btn btn-primary" href={url('contact/')}>
-        <Mail size={20} aria-hidden="true" />
-        <T k="case_get_in_touch" />
-      </a>
-    </section>
+    <GetInTouch />
   </div>
 </BaseLayout>
-
-<style>
-  .cases {
-    margin-bottom: 3rem;
-  }
-  .cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .cta :global(.cta-text) {
-    color: var(--gray-300);
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-</style>

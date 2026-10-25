@@ -4,7 +4,7 @@ import T from '../components/T.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ProjectFilters from '../components/ProjectFilters.astro';
 import ProjectDialog from '../components/ProjectDialog.astro';
-import ContactSection from '../components/sections/ContactSection.astro';
+import GetInTouch from '../components/sections/GetInTouch.astro';
 import { loadProjects } from '../lib/projects';
 import { t } from '../i18n';
 
@@ -49,8 +49,8 @@ const lead = {
     <div data-empty hidden>
       <T k="projects_empty_result" as="p" class="empty" />
     </div>
+    <GetInTouch />
   </div>
-  <ContactSection />
   <ProjectDialog projects={projects} />
 </BaseLayout>
 

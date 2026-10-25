@@ -1,12 +1,12 @@
 ---
 // The legacy /contact page repeated the home view; here it focuses on the contact channels
 // and how a collaboration starts.
-import { CircleCheck, FileText, Handshake, Languages, Mail } from '@lucide/astro';
+import { CalendarDays, CircleCheck, FileText, Handshake, Languages, Mail } from '@lucide/astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactSection from '../components/sections/ContactSection.astro';
 import T from '../components/T.astro';
 
-const EMAIL = 'marcinorgacki@gmail.com';
+const CALENDLY = 'https://calendly.com/marcinorgacki/15min';
 
 const steps = [
   { icon: Mail, n: 1, titleKey: 'contact_step_1_title', descKey: 'contact_step_1_desc' },
@@ -63,8 +63,9 @@ const brief = ['contact_brief_1', 'contact_brief_2', 'contact_brief_3', 'contact
           <T k="contact_cta_title" />
         </h2>
         <T k="contact_cta_text" as="p" class="cta-text" />
-        <a class="email" href={`mailto:${EMAIL}`}>
-          {EMAIL}
+        <a class="btn btn-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
+          <CalendarDays size={20} aria-hidden="true" />
+          <T k="contact_cta_book" />
         </a>
       </section>
     </div>
@@ -191,10 +192,5 @@ const brief = ['contact_brief_1', 'contact_brief_2', 'contact_brief_3', 'contact
   }
   .cta :global(.cta-text) {
     color: var(--gray-300);
-  }
-  .email {
-    font-size: clamp(1rem, 3.5vw, 1.25rem);
-    font-weight: 700;
-    overflow-wrap: anywhere;
   }
 </style>

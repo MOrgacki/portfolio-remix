@@ -1,0 +1,31 @@
+---
+// Closing call to action shared by the subpages: one line of copy and a button to /contact.
+import { Mail } from '@lucide/astro';
+import T from '../T.astro';
+import { url } from '../../lib/url';
+---
+
+<section class="panel cta" data-reveal>
+  <T k="case_studies_cta" as="p" class="cta-text" />
+  <a class="btn btn-primary" href={url('contact/')}>
+    <Mail size={20} aria-hidden="true" />
+    <T k="case_get_in_touch" />
+  </a>
+</section>
+
+<style>
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 3rem auto 0;
+    text-align: center;
+  }
+  .cta :global(.cta-text) {
+    color: var(--gray-300);
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+</style>
